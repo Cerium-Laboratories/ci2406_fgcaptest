@@ -1,0 +1,23 @@
+| units: 500000 tech: sky130A format: MIT
+x vb int1 a_400_700# VSS s=30000,800 d=15000,400 l=200 w=300 x=200 y=700 sky130_fd_pr__nfet_g5v0d10v5
+x int3 VDD int3 VDD s=15000,400 d=30000,800 l=200 w=300 x=500 y=2400 sky130_fd_pr__pfet_g5v0d10v5
+x vb a_400_700# VSS VSS s=15000,400 d=30000,800 l=200 w=300 x=500 y=700 sky130_fd_pr__nfet_g5v0d10v5
+x v1 int4 int1 VSS s=30000,800 d=15000,400 l=200 w=300 x=200 y=1200 sky130_fd_pr__nfet_g5v0d10v5
+x int4 int4 VDD VDD s=30000,800 d=15000,400 l=200 w=300 x=200 y=1800 sky130_fd_pr__pfet_g5v0d10v5
+x int2 int2 VSS VSS s=30000,800 d=15000,400 l=200 w=300 x=200 y=200 sky130_fd_pr__nfet_g5v0d10v5
+x v2 int1 int3 VSS s=15000,400 d=30000,800 l=200 w=300 x=500 y=1200 sky130_fd_pr__nfet_g5v0d10v5
+x int2 VSS vout VSS s=15000,400 d=30000,800 l=200 w=300 x=500 y=200 sky130_fd_pr__nfet_g5v0d10v5
+x int3 int2 VDD VDD s=30000,800 d=15000,400 l=200 w=300 x=200 y=2400 sky130_fd_pr__pfet_g5v0d10v5
+x int4 VDD vout VDD s=15000,400 d=30000,800 l=200 w=300 x=500 y=1800 sky130_fd_pr__pfet_g5v0d10v5
+R vb 366
+R v2 132
+R v1 132
+R vout 1012
+C VDD0 4.3
+R VDD 3500
+R VSS 2349
+R a_400_700# 342
+R int1 1188
+R int4 1485
+R int2 1467
+R int3 1440
