@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1716414739
+timestamp 1716676693
 << nwell >>
 rect -1576 -75 -1194 291
 rect -710 -200 -84 416
@@ -361,19 +361,19 @@ rect -452 -288 -444 -204
 rect -360 -288 -352 -204
 rect -452 -296 -352 -288
 << labels >>
-flabel metal2 556 168 656 268 0 FreeSans 160 0 0 0 vinj_en_b
-port 2 nsew signal input
-flabel metal2 798 304 898 404 0 FreeSans 160 0 0 0 vinj
-port 1 nsew power default
-flabel metal2 748 -96 848 4 0 FreeSans 160 0 0 0 vsrc
-port 5 nsew signal input
-flabel metal2 -452 -296 -352 -196 0 FreeSans 160 0 0 0 vctrl
-port 4 nsew analog input
-flabel metal2 -1460 -28 -1310 244 0 FreeSans 160 0 0 0 vtun
-port 3 nsew analog input
-flabel metal2 -1810 426 -1710 526 0 FreeSans 160 0 0 0 VGND
+flabel poly -1154 58 -1054 158 0 FreeSans 480 0 0 0 fg
+flabel metal2 -1810 426 -1710 526 0 FreeSans 480 0 0 0 VGND
 port 6 nsew ground default
-flabel poly -1154 58 -1054 158 0 FreeSans 160 0 0 0 fg
+flabel metal2 -1460 -28 -1310 244 0 FreeSans 480 0 0 0 vtun
+port 3 nsew analog input
+flabel metal2 -452 -296 -352 -196 0 FreeSans 480 0 0 0 vctrl
+port 4 nsew analog input
+flabel metal2 748 -96 848 4 0 FreeSans 480 0 0 0 vsrc
+port 5 nsew signal input
+flabel metal2 798 304 898 404 0 FreeSans 480 0 0 0 vinj
+port 1 nsew power default
+flabel metal2 556 168 656 268 0 FreeSans 480 0 0 0 vinj_en_b
+port 2 nsew signal input
 << properties >>
 string FIXED_BBOX -2010 -510 1394 726
 << end >>
