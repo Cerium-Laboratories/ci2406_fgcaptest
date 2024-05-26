@@ -1,5 +1,5 @@
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell.sch
-.subckt fgcell vctrl vtun vinj vinj_en_b vsrc vfg VGND
+.subckt fgcell vinj vinj_en_b vfg vtun vctrl vsrc VGND
 *.PININFO vctrl:I vtun:I vinj:I vinj_en_b:I vsrc:I vfg:O VGND:I
 XC1 vfg vtun vtun sky130_fd_pr__cap_var_hvt W=0.5 L=0.5 m=1
 XM1 vsrc vfg net1 vinj sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1

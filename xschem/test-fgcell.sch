@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 880 -740 1680 -340 {flags=graph
-y1=-1.0751162
+y1=-1.075116
 y2=12.620014
 ypos1=0
 ypos2=2
@@ -33,7 +33,7 @@ vinj_en_b
 x1.net1
 vsrc
 vinj"
-hilight_wave=-1}
+hilight_wave=0}
 B 2 1680 -740 2480 -340 {flags=graph
 y1=-7.0322876e-09
 y2=1.1105597e-08
@@ -59,7 +59,7 @@ rainbow=1
 color="4 5 6 10 12"
 node="i(vtun)
 i(vsrc)
-i(vinj1)
+i(vinj_en_b)
 i(vinj)
 i(vctrl)"}
 B 2 1680 -1140 2480 -740 {flags=graph
@@ -157,13 +157,13 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options reltol=0.0001 abstol=10e-15 chgtol=1e-15
-.include "fgcell.spice"
+* .include fgcell.spice
 .param VTUN=12
 .param VINJ=6
 .param VDD=1.8
 .param VSS=0
 .option savecurrents
-.ic v(vinj)=6 v(vinj_en_b)=6 v(vtun)=0 v(vsrc)=6 v(vfg)=0
+.ic v(vinj)=6 v(vinj_en_b)=6 v(vtun)=0 v(vsrc)=6 v(vfg)=0 v(x1.net1)=6
 .control
   save all
   *op
