@@ -22,17 +22,9 @@ lab=A}
 N 220 -260 240 -260 {
 lab=A}
 N 300 -310 360 -310 {
-lab=VPWR}
+lab=VPB}
 N 300 -210 360 -210 {
-lab=VGND}
-N 300 -350 310 -350 {
-lab=VPWR}
-N 310 -350 310 -310 {
-lab=VPWR}
-N 300 -170 310 -170 {
-lab=VGND}
-N 310 -210 310 -170 {
-lab=VGND}
+lab=VNB}
 C {sky130_fd_pr/nfet_01v8.sym} 280 -210 0 0 {name=M1
 W=1
 L=0.15
