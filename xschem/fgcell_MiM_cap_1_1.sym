@@ -1,0 +1,26 @@
+v {xschem version=3.4.5 file_version=1.2}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+T {@symname} -99 -6 0 0 0.3 0.3 {}
+T {@name} 135 -62 0 0 0.2 0.2 {}
+L 4 -130 -50 130 -50 {}
+L 4 -130 50 130 50 {}
+L 4 -130 -50 -130 50 {}
+L 4 130 -50 130 50 {}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=vinj dir=in}
+L 4 -150 -40 -130 -40 {}
+T {vinj} -125 -44 0 0 0.2 0.2 {}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=vinj_en_b dir=in}
+L 4 -150 -20 -130 -20 {}
+T {vinj_en_b} -125 -24 0 0 0.2 0.2 {}
+B 5 -152.5 -2.5 -147.5 2.5 {name=vtun dir=in}
+L 4 -150 0 -130 0 {}
+T {vtun} -125 -4 0 0 0.2 0.2 {}
+B 5 -152.5 17.5 -147.5 22.5 {name=vctrl dir=in}
+L 4 -150 20 -130 20 {}
+T {vctrl} -125 16 0 0 0.2 0.2 {}
+B 5 -152.5 37.5 -147.5 42.5 {name=vsrc dir=in}
+L 4 -150 40 -130 40 {}
+T {vsrc} -125 36 0 0 0.2 0.2 {}

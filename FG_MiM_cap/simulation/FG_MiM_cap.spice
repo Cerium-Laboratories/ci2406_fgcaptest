@@ -1,0 +1,12 @@
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/Test/FG_MiM_cap.sch
+**.subckt FG_MiM_cap vinj vinj_en_b vtun vctrl vsrc
+*.ipin vinj
+*.ipin vinj_en_b
+*.ipin vtun
+*.ipin vctrl
+*.ipin vsrc
+x1 vinj vinj_en_b top vtun vctrl vsrc GND fgcell
+XC1 top GND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
+**.ends
+.GLOBAL GND
+.end

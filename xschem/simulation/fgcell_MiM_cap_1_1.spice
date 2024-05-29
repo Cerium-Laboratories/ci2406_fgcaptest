@@ -1,38 +1,14 @@
-** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/test-fgcell.sch
-**.subckt test-fgcell
-x1 vinj vinj_en_b vfg vtun vctrl vsrc GND fgcell
-vinj_en_b vinj_en_b GND pwl(0 {VINJ} 80u {VINJ} 85u 0)
-vctrl vctrl GND 0 pwl(0 0 10u 0 15u {VINJ} 20u {VINJ} 25u 0)
-vsrc vsrc GND pwl(0 {VINJ} 70u {VINJ} 75u 0)
-vtun vtun GND pwl(0 0 30u 0 40u {VTUN} 50u {VTUN} 60u 0)
-vinj vinj GND {VINJ}
-R1 vfg GND 1T m=1
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/fgcell_MiM_cap_1_1.sch
+**.subckt fgcell_MiM_cap_1_1 vinj vinj_en_b vtun vctrl vsrc
+*.ipin vinj
+*.ipin vinj_en_b
+*.ipin vtun
+*.ipin vctrl
+*.ipin vsrc
+x1 vinj vinj_en_b net1 vtun vctrl vsrc GND fgcell
+XC1 net1 GND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 **** begin user architecture code
 .lib /Users/dalejulson/Desktop/OpenCircuitDesign/open_pdks/sky130//sky130A/libs.tech/combined/sky130.lib.spice tt
-
-
-
-.options reltol=0.0001 abstol=10e-15 chgtol=1e-15
-* .include fgcell.spice
-.param VTUN=12
-.param VINJ=6
-.param VDD=1.8
-.param VSS=0
-.option savecurrents
-.ic v(vinj)=6 v(vinj_en_b)=6 v(vtun)=0 v(vsrc)=6 v(vfg)=0 v(x1.net1)=6
-.control
-  save all
-  *op
-  *remzerovec
-  *write test-fgcell.raw
-  *set appendwrite
-  tran 10n 120u uic
-  remzerovec
-  write test-fgcell.raw
-.endc
-
-
-
 **** end user architecture code
 **.ends
 

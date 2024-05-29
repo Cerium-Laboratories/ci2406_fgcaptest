@@ -1,0 +1,52 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1716993460
+<< checkpaint >>
+rect 8 -5612 3244 -2298
+<< error_s >>
+rect 226 -3957 465 -3368
+rect 226 -4031 350 -3957
+rect 226 -4067 321 -4031
+rect 759 -4096 776 -3480
+rect 813 -4145 830 -3529
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+use sky130_fd_pr__cap_var_hvt_FT7WKT  XC1
+timestamp 0
+transform 1 0 28 0 1 -3766
+box -293 -301 293 301
+use sky130_fd_pr__pfet_g5v0d10v5_KLAZY6  XM1
+timestamp 0
+transform 1 0 534 0 1 -3765
+box -308 -397 308 397
+use sky130_fd_pr__pfet_g5v0d10v5_KLAZY6  XM2
+timestamp 0
+transform 1 0 1055 0 1 -3860
+box -308 -397 308 397
+use sky130_fd_pr__pfet_g5v0d10v5_FGUWVM  XM3
+timestamp 0
+transform 1 0 1626 0 1 -3955
+box -358 -397 358 397
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 vinj
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 vinj_en_b
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 vfg
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 vtun
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 vctrl
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 256 0 0 0 vsrc
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 256 0 0 0 VGND
+port 6 nsew
+<< end >>

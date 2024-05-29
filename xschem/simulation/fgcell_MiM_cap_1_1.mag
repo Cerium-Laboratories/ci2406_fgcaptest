@@ -1,0 +1,23 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1716993460
+<< checkpaint >>
+rect -1472 -2743 1820 257
+<< error_p >>
+rect 279 -1088 518 -499
+rect 279 -1162 403 -1088
+rect 279 -1198 374 -1162
+rect 812 -1227 829 -611
+rect 866 -1276 883 -660
+rect 1333 -1322 1350 -706
+rect 1387 -1371 1404 -755
+use fgcell  x1
+timestamp 1716993460
+transform 1 0 53 0 1 2869
+box -265 -4352 1984 200
+use sky130_fd_pr__cap_mim_m3_1_FJFAMD  XC1
+timestamp 0
+transform 1 0 174 0 1 -1243
+box -386 -240 386 240
+<< end >>

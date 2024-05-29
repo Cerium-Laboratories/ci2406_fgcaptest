@@ -1,0 +1,49 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1716993254
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+rect 0 -3200 200 -3000
+rect 0 -3600 200 -3400
+use ideal_fgcell  x1
+timestamp 1716945357
+transform 1 0 0 0 1 -3600
+box 0 -2400 200 200
+use ideal_diffamp_nmos  x2
+timestamp 1716945357
+transform 1 0 1 0 1 -3600
+box 0 -2000 200 200
+use ideal_tg6v0  x3
+timestamp 1716945357
+transform 1 0 2 0 1 -3600
+box 0 -1200 200 200
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 vb
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 row_en_6v0
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 vinj
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 vout
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 row_en_6v0_b
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 256 0 0 0 vtun
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 256 0 0 0 vctrl
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 256 0 0 0 vsrc
+port 7 nsew
+flabel metal1 0 -3200 200 -3000 0 FreeSans 256 0 0 0 VGND
+port 8 nsew
+flabel metal1 0 -3600 200 -3400 0 FreeSans 256 0 0 0 vfg
+port 9 nsew
+<< end >>

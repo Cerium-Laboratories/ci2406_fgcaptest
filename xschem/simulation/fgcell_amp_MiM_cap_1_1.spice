@@ -1,0 +1,98 @@
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/fgcell_amp_MiM_cap_1_1.sch
+**.subckt fgcell_amp_MiM_cap_1_1 vinj vsrc vb vctrl vtun row_en_6v0_b row_en_6v0 vout
+*.ipin vinj
+*.ipin vsrc
+*.ipin vb
+*.ipin vctrl
+*.ipin vtun
+*.ipin row_en_6v0_b
+*.ipin row_en_6v0
+*.opin vout
+x1 vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc GND net1 fgcell_amp
+XC1 net1 GND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
+**** begin user architecture code
+.lib /Users/dalejulson/Desktop/OpenCircuitDesign/open_pdks/sky130//sky130A/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  fgcell_amp.sym # of pins=10
+** sym_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/fgcell_amp.sym
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/fgcell_amp.sch
+.subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
+*.ipin vinj
+*.ipin row_en_6v0_b
+*.ipin vtun
+*.ipin vctrl
+*.ipin vsrc
+*.ipin vb
+*.ipin VGND
+*.opin vout
+*.iopin vfg
+*.ipin row_en_6v0
+x1 vinj row_en_6v0_b vtun vctrl vsrc VGND vfg ideal_fgcell
+x2 net1 vfg net1 vb vinj VGND ideal_diffamp_nmos
+x3 net1 vout row_en_6v0 row_en_6v0_b ideal_tg6v0
+.ends
+
+
+* expanding   symbol:  ideal_fgcell.sym # of pins=7
+** sym_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_fgcell.sym
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_fgcell.sch
+.subckt ideal_fgcell vinj vinj_en_b vtun vctrl vsrc VGND vfg
+*.ipin vctrl
+*.ipin vtun
+*.ipin vinj
+*.ipin vinj_en_b
+*.ipin vsrc
+*.ipin VGND
+*.opin vfg
+C1 vtun vfg 1.9e-15 m=1
+C2 vfg vctrl 1f m=1
+S1 vinj vsrc vinj vinj_en_b sw_vinj
+**** begin user architecture code
+
+
+.model sw_vinj SW vt={VINJ/2} ron=14k roff=10gig
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ideal_diffamp_nmos.sym # of pins=6
+** sym_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_diffamp_nmos.sym
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_diffamp_nmos.sch
+.subckt ideal_diffamp_nmos vout v1 v2 vb VDD VSS
+*.ipin v1
+*.ipin v2
+*.ipin VSS
+*.ipin VDD
+*.ipin vb
+*.opin vout
+E1 vout VSS v1 v2 1000
+R1 VDD VSS 1meg m=1
+C1 vb VSS 1f m=1
+.ends
+
+
+* expanding   symbol:  ideal_tg6v0.sym # of pins=4
+** sym_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_tg6v0.sym
+** sch_path: /Users/dalejulson/Desktop/OpenCircuitDesign/ci2406_fgcaptest/xschem/ideal_tg6v0.sch
+.subckt ideal_tg6v0 vin vout en en_b
+*.ipin vin
+*.ipin en_b
+*.opin vout
+*.ipin en
+**** begin user architecture code
+
+
+.model sw_vinj SW vt=3 vh=0.1 ron=14k roff=10gig
+.model sw_1v8 SW vt={1.8/2}  vh=0.1 ron=10k roff=10gig
+
+
+**** end user architecture code
+S1 vin vout en en_b sw_vinj
+.ends
+
+.GLOBAL GND
+.end

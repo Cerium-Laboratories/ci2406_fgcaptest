@@ -1,0 +1,17 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1716993302
+<< error_p >>
+rect 385 -281 624 308
+rect 385 -355 509 -281
+rect 385 -391 480 -355
+rect 918 -420 935 196
+rect 972 -469 989 147
+rect 1439 -515 1456 101
+rect 1493 -564 1510 52
+use fgcell  x1
+timestamp 1716993302
+transform 1 0 106 0 1 3338
+box -212 -4014 2037 200
+<< end >>
