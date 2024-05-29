@@ -69,8 +69,6 @@ N 350 -550 350 -440 {
 lab=vinj}
 N 350 -550 750 -550 {
 lab=vinj}
-C {ideal_fgcell.sym} 530 -390 0 0 {name=x1}
-C {ideal_diffamp_nmos.sym} 940 -390 0 0 {name=x2}
 C {devices/ipin.sym} 220 -440 0 0 {name=p2 lab=vinj}
 C {devices/ipin.sym} 220 -420 0 0 {name=p3 lab=row_en_6v0_b}
 C {devices/ipin.sym} 220 -400 0 0 {name=p4 lab=vtun}
@@ -86,3 +84,5 @@ C {devices/lab_wire.sym} 230 -500 0 1 {name=p12 sig_type=std_logic lab=row_en_6v
 C {devices/lab_wire.sym} 230 -420 0 1 {name=p13 sig_type=std_logic lab=row_en_6v0_b}
 C {devices/lab_wire.sym} 1190 -380 2 0 {name=p14 sig_type=std_logic lab=row_en_6v0}
 C {devices/lab_wire.sym} 1190 -480 0 1 {name=p15 sig_type=std_logic lab=row_en_6v0_b}
+C {fgcell.sym} 530 -390 0 0 {name=x1}
+C {diffamp_nmos.sym} 940 -390 0 0 {name=x2}

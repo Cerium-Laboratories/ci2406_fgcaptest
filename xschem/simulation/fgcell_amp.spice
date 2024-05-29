@@ -1,0 +1,25 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sch
+.subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
+*.PININFO vinj:I row_en_6v0_b:I vtun:I vctrl:I vsrc:I vb:I VGND:I vout:O vfg:B row_en_6v0:I
+x3 net1 vout row_en_6v0 row_en_6v0_b ideal_tg6v0
+x1 vctrl vtun vinj row_en_6v0_b vsrc vfg VGND fgcell
+x2 vinj vb net1 vfg net1 VGND diffamp_nmos
+.ends
+
+* expanding   symbol:  ideal_tg6v0.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/ideal_tg6v0.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/ideal_tg6v0.sch
+.subckt ideal_tg6v0 vin vout en en_b
+*.PININFO vin:I en_b:I vout:O en:I
+**** begin user architecture code
+
+
+.model sw_vinj SW vt=3 vh=0.1 ron=14k roff=10gig
+.model sw_1v8 SW vt={1.8/2}  vh=0.1 ron=10k roff=10gig
+
+
+**** end user architecture code
+S1 vin vout en en_b sw_vinj
+.ends
+
+.end
