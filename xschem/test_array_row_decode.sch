@@ -211,33 +211,37 @@ N 340 -130 340 -60 {
 lab=GND}
 N 290 -100 290 -60 {
 lab=GND}
-N 240 -320 590 -320 {
+N 240 -400 640 -400 {
 lab=a[4:0]
 bus=true}
-N 230 -310 230 -130 {
+N 230 -390 230 -130 {
 lab=a[0]}
-N 290 -310 290 -160 {
+N 290 -390 290 -160 {
 lab=a[1]}
-N 340 -310 340 -190 {
+N 340 -390 340 -190 {
 lab=a[2]}
-N 390 -310 390 -220 {
+N 390 -390 390 -220 {
 lab=a[3]}
-N 440 -310 440 -250 {
+N 440 -390 440 -250 {
 lab=a[4]}
-N 50 -360 590 -360 {
-lab=VPWR}
-N 50 -360 50 -130 {
-lab=VPWR}
-N 150 -340 150 -130 {
-lab=VGND}
-N 150 -340 590 -340 {
-lab=VGND}
-N 890 -360 1060 -360 {
+N 820 -400 990 -400 {
 lab=w[31:0]
 bus=true}
-N 950 -360 950 -340 {
+N 880 -400 880 -380 {
 lab=w[31:0]}
-C {array_row_decode.sym} 740 -340 0 0 {name=x1}
+N 720 -350 720 -340 {
+lab=VPWR}
+N 50 -340 720 -340 {
+lab=VPWR}
+N 740 -350 740 -320 {
+lab=VGND}
+N 150 -320 740 -320 {
+lab=VGND}
+N 150 -320 150 -130 {
+lab=VGND}
+N 50 -340 50 -130 {
+lab=VPWR}
+C {array_row_decode.sym} 730 -400 0 0 {name=x1}
 C {devices/vsource.sym} 50 -100 0 1 {name=vpwr value=1.8}
 C {devices/gnd.sym} 50 -50 0 0 {name=l1 lab=GND}
 C {devices/lab_wire.sym} 50 -60 2 1 {name=p25 sig_type=std_logic lab=GND}
@@ -254,13 +258,13 @@ C {devices/lab_wire.sym} 290 -170 0 0 {name=p4 sig_type=std_logic lab=a[1]}
 C {devices/lab_wire.sym} 340 -200 0 0 {name=p5 sig_type=std_logic lab=a[2]}
 C {devices/lab_wire.sym} 390 -230 0 0 {name=p6 sig_type=std_logic lab=a[3]}
 C {devices/lab_wire.sym} 440 -260 0 0 {name=p7 sig_type=std_logic lab=a[4]}
-C {devices/bus_connect.sym} 240 -320 3 1 {name=l2 lab=a[0]}
-C {devices/bus_connect.sym} 300 -320 3 1 {name=l3 lab=a[1]}
-C {devices/bus_connect.sym} 350 -320 3 1 {name=l4 lab=a[2]}
-C {devices/bus_connect.sym} 400 -320 3 1 {name=l5 lab=a[3]}
-C {devices/bus_connect.sym} 450 -320 3 1 {name=l6 lab=a[4]}
-C {devices/lab_wire.sym} 570 -320 0 0 {name=p8 sig_type=std_logic lab=a[4:0]}
-C {devices/lab_wire.sym} 1060 -360 0 1 {name=p9 sig_type=std_logic lab=w[31:0]}
+C {devices/bus_connect.sym} 240 -400 3 1 {name=l2 lab=a[0]}
+C {devices/bus_connect.sym} 300 -400 3 1 {name=l3 lab=a[1]}
+C {devices/bus_connect.sym} 350 -400 3 1 {name=l4 lab=a[2]}
+C {devices/bus_connect.sym} 400 -400 3 1 {name=l5 lab=a[3]}
+C {devices/bus_connect.sym} 450 -400 3 1 {name=l6 lab=a[4]}
+C {devices/lab_wire.sym} 570 -400 0 0 {name=p8 sig_type=std_logic lab=a[4:0]}
+C {devices/lab_wire.sym} 990 -400 0 1 {name=p9 sig_type=std_logic lab=w[31:0]}
 C {devices/launcher.sym} 880 -160 0 0 {name=h3
 descr="Netlist & sim" 
 tclcommand="xschem netlist; xschem simulate"}
@@ -290,4 +294,4 @@ value="
   write test_array_row_decode.raw
 .endc
 "}
-C {devices/parax_cap.sym} 950 -330 0 0 {name=C1[31:0] gnd=0 value=10f m=1}
+C {devices/parax_cap.sym} 880 -370 0 0 {name=C1[31:0] gnd=0 value=10f m=1}
