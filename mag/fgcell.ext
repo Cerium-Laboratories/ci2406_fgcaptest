@@ -1,0 +1,44 @@
+timestamp 1717032084
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__pfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
+parameters sky130_fd_pr__pfet_g5v0d16v0 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__cap_var_hvt l=l w=w
+port "vsrc" 5 748 -96 848 4 m2
+port "vinj_en_b" 2 556 168 656 268 m2
+port "vinj" 1 798 304 898 404 m2
+port "vctrl" 4 -452 -296 -352 -196 m2
+port "vtun" 3 -1460 -28 -1310 244 m2
+port "vfg" 0 0 0 200 200 m1
+port "VGND" 6 -1810 426 -1710 526 m2
+node "vsrc" 738 74.9035 748 -96 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7072 484 14600 600 10000 400 0 0 0 0 0 0 0 0
+node "a_697_110#" 659 1.19516 697 110 mvpdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "fg" 1260 1283.3 -1573 58 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 261500 5430 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vinj_en_b" 228 167.615 556 168 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 39400 988 0 0 3400 268 10000 400 10000 400 0 0 0 0 0 0 0 0
+node "vinj" 5584 2686.51 798 304 m2 0 0 0 0 614556 3136 0 0 0 0 0 0 107300 3816 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 134308 3764 139576 3868 10000 400 0 0 0 0 0 0 0 0
+node "vctrl" 5559 1959.48 -452 -296 m2 0 0 0 0 385616 2484 0 0 0 0 0 0 57304 2208 23200 1032 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 47736 3080 107240 3360 10000 400 0 0 0 0 0 0 0 0
+node "vtun" 1994 863.353 -1460 -28 m2 0 0 0 0 139812 1496 0 0 38800 1188 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12512 872 45072 964 40800 844 0 0 0 0 0 0 0 0
+substrate "vfg" 0 0 0 0 m1 0 0 0 0 0 0 0 0 0 0 255040 6856 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 219168 6520 370804 9696 10000 400 0 0 0 0 0 0 0 0
+equiv "vfg" "VGND"
+cap "a_697_110#" "vsrc" 6.51347
+cap "fg" "vsrc" 19.4137
+cap "vinj_en_b" "vsrc" 10.4872
+cap "vinj" "vsrc" 256.486
+cap "vctrl" "vsrc" 2.94256
+cap "vinj" "a_697_110#" 9.34442
+cap "vinj_en_b" "fg" 65.4256
+cap "vinj" "fg" 361.391
+cap "vctrl" "fg" 393.326
+cap "vinj" "vinj_en_b" 357.378
+cap "vctrl" "vinj_en_b" 5.55653
+cap "vctrl" "vinj" 7.52912
+cap "vtun" "fg" 179.456
+cap "vtun" "vctrl" 26.9988
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 697 10 698 11 l=100 w=200 "vinj" "fg" 200 0 "vsrc" 200 11600,516 "a_697_110#" 200 5800,258
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 -497 58 -496 59 l=100 w=200 "vctrl" "fg" 200 0 "vctrl" 0 0 "vctrl" 400 11600,516
+device subckt sky130_fd_pr__cap_var_hvt -1485 58 -1484 59 l=100 w=200 "vfg" "fg" 200 0 "vtun" 400 19400,594
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 697 168 698 169 l=100 w=200 "vinj" "vinj_en_b" 200 0 "a_697_110#" 200 5800,258 "vinj" 200 11600,516

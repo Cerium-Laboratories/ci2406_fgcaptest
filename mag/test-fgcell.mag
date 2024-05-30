@@ -1,0 +1,10 @@
+magic
+tech sky130A
+timestamp 1717011862
+<< checkpaint >>
+rect -530 -530 2232 1148
+use fgcell  x1
+timestamp 1716676693
+transform 1 0 1005 0 1 255
+box -905 -155 597 263
+<< end >>

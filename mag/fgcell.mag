@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1716676693
+timestamp 1717032084
 << nwell >>
 rect -1576 -75 -1194 291
 rect -710 -200 -84 416
@@ -254,6 +254,7 @@ rect -1316 192 -1309 203
 rect -1461 24 -1309 192
 rect -497 170 -485 204
 rect -309 170 -297 204
+rect 164 200 236 252
 rect -497 164 -297 170
 rect -452 52 -352 164
 rect -1461 13 -1454 24
@@ -274,13 +275,14 @@ rect -1036 -36 -964 -30
 rect -1036 -176 -1020 -36
 rect -980 -176 -964 -36
 rect -452 -82 -352 6
-rect 164 -36 236 252
+rect 0 0 236 200
 rect 556 260 656 268
 rect 556 176 564 260
 rect 648 252 656 260
 rect 650 184 656 252
 rect 648 176 656 184
 rect 556 168 656 176
+rect 164 -36 236 0
 rect -632 -88 -162 -82
 rect -632 -122 -620 -88
 rect -174 -122 -162 -88
@@ -360,6 +362,22 @@ rect -452 -204 -352 -196
 rect -452 -288 -444 -204
 rect -360 -288 -352 -204
 rect -452 -296 -352 -288
+use sky130_fd_pr__cap_var_hvt_FT7WKT  XC1
+timestamp 1717032084
+transform 1 0 -1570 0 1 -62
+box 0 0 1 1
+use sky130_fd_pr__pfet_g5v0d10v5_KLAZY6  XM1
+timestamp 1717032084
+transform 1 0 -1064 0 1 -61
+box 0 0 1 1
+use sky130_fd_pr__pfet_g5v0d10v5_KLAZY6  XM2
+timestamp 1717032084
+transform 1 0 -543 0 1 -156
+box 0 0 1 1
+use sky130_fd_pr__pfet_g5v0d10v5_FGUWVM  XM3
+timestamp 1717032084
+transform 1 0 28 0 1 -251
+box 0 0 1 1
 << labels >>
 flabel poly -1154 58 -1054 158 0 FreeSans 480 0 0 0 fg
 flabel metal2 -1810 426 -1710 526 0 FreeSans 480 0 0 0 VGND
@@ -374,6 +392,8 @@ flabel metal2 798 304 898 404 0 FreeSans 480 0 0 0 vinj
 port 1 nsew power default
 flabel metal2 556 168 656 268 0 FreeSans 480 0 0 0 vinj_en_b
 port 2 nsew signal input
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 vfg
+port 0 nsew
 << properties >>
 string FIXED_BBOX -2010 -510 1394 726
 << end >>
