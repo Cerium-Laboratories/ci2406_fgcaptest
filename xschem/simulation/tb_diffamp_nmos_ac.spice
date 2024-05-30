@@ -1,11 +1,11 @@
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_diffamp_nmos.sch
-**.subckt test_diffamp_nmos
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/tb_diffamp_nmos_ac.sch
+**.subckt tb_diffamp_nmos_ac
+x1 v1 vout GND VDD vb vout diffamp_nmos
 VDD VDD GND {VDD}
 vb vb GND {VBIAS}
-v1 v1 GND 3 pwl(0 3 1u 3 1.1u 4.7 1.5u 4 1.7u 0.5 2u 0.1 2.1u 3)
-v2 v2 GND 2
-R1 vout GND 1T m=1
-x1 v1 vout GND VDD vb vout diffamp_nmos
+v1 v1 GND dc 3 ac 1 sin(3 1 1meg)
+R1 vout GND 1g m=1
+v2 net1 GND 3
 C1 vout GND 26f m=1
 **** begin user architecture code
 .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
@@ -23,20 +23,16 @@ C1 vout GND 26f m=1
   save all
   op
   remzerovec
-  write test_diffamp_nmos.raw
+  write tb_diffamp_nmos_ac.raw
   set appendwrite
-  * vb sweep
-  dc v1 0 6 0.2 vb 0 5 1
+  * ac sweep
+  ac dec 20 1 1gig
   remzerovec
-  write test_diffamp_nmos.raw
-  * dc sweep
-  dc v1 0 5 0.1
-  remzerovec
-  write test_diffamp_nmos.raw
+  write tb_diffamp_nmos_ac.raw
   * tran
-  tran 1n 3u
+  tran 1n 5u
   remzerovec
-  write test_diffamp_nmos.raw
+  write tb_diffamp_nmos_ac.raw
 .endc
 
 

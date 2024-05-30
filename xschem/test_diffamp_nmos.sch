@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 1480 -730 2280 -330 {flags=graph
-y1=-0.59898564
-y2=4.9324202
+y1=1.6135767
+y2=7.1449826
 ypos1=0
 ypos2=2
 divy=5
@@ -21,13 +21,14 @@ xlabmag=1.0
 ylabmag=1.0
 node=vout
 color=4
-dataset=7
+
 unitx=1
 logx=0
 logy=0
 sim_type=dc
 rainbow=1
-hilight_wave=-1}
+hilight_wave=-1
+dataset=6}
 B 2 2280 -730 3080 -330 {flags=graph
 y1=-0.39070054
 y2=6.6370323
@@ -108,10 +109,10 @@ logy=0
 sim_type=tran
 rainbow=1
 hilight_wave=-1
-dataset=7}
+dataset=6}
 B 2 2280 -1240 3080 -840 {flags=graph
-y1=-1.8483622e-05
-y2=7.0957743e-06
+y1=-9.1125558e-06
+y2=2.0110388e-06
 ypos1=0
 ypos2=2
 divy=5
@@ -125,7 +126,7 @@ xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=7
+
 unitx=1
 logx=0
 logy=0
@@ -133,7 +134,8 @@ sim_type=dc
 rainbow=1
 hilight_wave=-1
 color=4
-node=i(vdd)}
+node=i(vdd)
+dataset=6}
 B 2 1480 -1640 2280 -1240 {flags=graph
 y1=-1.2648022
 y2=5.9973184
@@ -173,7 +175,7 @@ xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=7
+dataset=6
 unitx=1
 logx=0
 logy=0
@@ -198,7 +200,7 @@ xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=7
+
 unitx=1
 logx=0
 logy=0
@@ -207,7 +209,8 @@ rainbow=1
 hilight_wave=-1
 color=4
 node=vout
-sweep=v(v1)}
+sweep=v(v1)
+dataset=6}
 B 2 3880 -840 4680 -440 {flags=graph
 y1=0.53060148
 y2=1.2730141
@@ -224,7 +227,7 @@ xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=7
+dataset=6
 unitx=1
 logx=0
 logy=0
@@ -267,7 +270,7 @@ N 900 -540 1000 -540 {
 lab=vout}
 N 920 -540 920 -530 {
 lab=vout}
-N 920 -470 920 -460 {
+N 920 -460 920 -450 {
 lab=GND}
 N 580 -480 600 -480 {
 lab=vout}
@@ -281,8 +284,14 @@ N 340 -250 340 -140 {
 lab=GND}
 N 340 -500 340 -310 {
 lab=v1}
-N 740 -210 750 -220 {
-lab=#net1}
+N 920 -470 920 -460 {
+lab=GND}
+N 920 -460 1010 -460 {
+lab=GND}
+N 1010 -470 1010 -460 {
+lab=GND}
+N 1010 -540 1010 -530 {
+lab=vout}
 C {devices/launcher.sym} 770 -220 0 0 {name=h3
 descr="Netlist & sim" 
 tclcommand="xschem netlist; xschem simulate"}
@@ -298,8 +307,8 @@ simulator=ngspice
 only_toplevel=true 
 value="
 .options reltol=0.0001 abstol=10e-15
-*.include "diffamp_nmos.spice"
-.param VDD=6
+.include "diffamp_nmos.spice"
+.param VDD=5
 .param VSS=0
 .param VBIAS=1
 .options savecurrents
@@ -311,11 +320,11 @@ value="
   write test_diffamp_nmos.raw
   set appendwrite
   * vb sweep
-  dc v1 0 6 0.2 vb 0 6 1
+  dc v1 0 6 0.2 vb 0 5 1
   remzerovec
   write test_diffamp_nmos.raw
   * dc sweep
-  dc v1 0 6 0.1
+  dc v1 0 5 0.1
   remzerovec
   write test_diffamp_nmos.raw
   * tran
@@ -336,7 +345,7 @@ C {devices/lab_wire.sym} 160 -130 2 1 {name=p25 sig_type=std_logic lab=GND}
 C {devices/vsource.sym} 260 -170 0 0 {name=vb value=\{VBIAS\}}
 C {devices/lab_wire.sym} 160 -210 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 260 -210 0 0 {name=p2 sig_type=std_logic lab=vb}
-C {devices/vsource.sym} 340 -280 0 0 {name=v1 value="3 pwl(0 3 1u 3 1.1u 5.4 1.5u 5 1.7u 0.5 2u 0.1 2.1u 3)"}
+C {devices/vsource.sym} 340 -280 0 0 {name=v1 value="3 pwl(0 3 1u 3 1.1u 4.7 1.5u 4 1.7u 0.5 2u 0.1 2.1u 3)"}
 C {devices/vsource.sym} 420 -170 0 0 {name=v2 value=2 savecurrent=false}
 C {devices/lab_wire.sym} 340 -320 0 0 {name=p3 sig_type=std_logic lab=v1}
 C {devices/lab_wire.sym} 420 -210 0 0 {name=p4 sig_type=std_logic lab=v2}
@@ -346,7 +355,7 @@ value=1T
 footprint=1206
 device=resistor
 m=1}
-C {devices/gnd.sym} 920 -460 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} 920 -450 0 0 {name=l2 lab=GND}
 C {devices/launcher.sym} 770 -60 0 0 {name=h4 
 descr="Load DC" 
 tclcommand="
@@ -354,3 +363,8 @@ xschem raw_read $netlist_dir/test_diffamp_nmos.raw dc
 "
 }
 C {diffamp_nmos.sym} 750 -500 0 0 {name=x1}
+C {devices/capa.sym} 1010 -500 0 0 {name=C1
+m=1
+value=26f
+footprint=1206
+device="ceramic capacitor"}

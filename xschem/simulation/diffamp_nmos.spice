@@ -1,19 +1,15 @@
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/diffamp_nmos.sch
-.subckt diffamp_nmos VDD vb vout v1 v2 VSS
+.subckt diffamp_nmos v1 v2 VSS VDD vb vout
 *.PININFO v1:I v2:I VSS:I VDD:I vb:I vout:O
-XM1 int4 v1 int1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM2 int3 v2 int1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM3a int1 vb int5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM4 int4 int4 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM5 vout int4 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM6 int3 int3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM7 int2 int3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM8 int2 int2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM9 vout int2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-XM3b int5 vb VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=1 nf=1 m=1
-.save v(int1)
-.save v(int2)
-.save v(int3)
-.save v(int4)
+XM1 int4 v1 int1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM2 int3 v2 int1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM3a int1 vb int5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM4 int4 int4 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM5 vout int4 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM6 int3 int3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM7 int2 int3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM8 int2 int2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM9 vout int2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM3b int5 vb VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
 .ends
 .end

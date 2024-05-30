@@ -355,8 +355,8 @@ simulator=ngspice
 only_toplevel=true 
 value="
 .options reltol=0.0001 abstol=10e-15
-*.include "diffamp_nmos.spice"
-.param VDD=6
+.include "diffamp_nmos.spice"
+.param VDD=5
 .param VSS=0
 .param VBIAS=1
 .options savecurrents
