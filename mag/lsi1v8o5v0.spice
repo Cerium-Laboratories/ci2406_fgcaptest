@@ -1,0 +1,29 @@
+* NGSPICE file created from lsi1v8o5v0.ext - technology: sky130A
+
+.subckt lsi1v8o5v0 in out_b out vdd_l vdd_h vss
+X0 vdd_h out out_b vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X1 vdd_l in in_b vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X2 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=1.305 ps=14.22 w=0.5 l=0.5
+X3 out t1 vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X4 vdd_h out out_b vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X5 out_b out vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X6 vdd_h t1 out vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X7 out_b out vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X8 vss in_b t2 vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X9 vss in in_b vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X10 out_b out vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X11 t1 in_bb vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X12 vdd_h t1 out vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X13 in_bb in_b vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X14 vss t1 out vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X15 vdd_h t1 t2 vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X16 out t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X17 out t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X18 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+X19 t1 t2 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X20 in_bb in_b vdd_l vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X21 vss out out_b vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X22 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+X23 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+.ends
+

@@ -1,0 +1,31 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_lsi1v8o5v0.sch
+**.subckt test_lsi1v8o5v0
+x1 vin out_b out vdd_l vdd_h GND lsi1v8o5v0
+vdd_l vdd_l GND 1.8
+vin vin GND 1.8 pulse(0 1.8 10n 1n 1n 1u 2u)
+vdd_h vdd_h GND 5
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.include 'lsi1v8o5v0.spice'
+.options savecurrents
+.control
+  save all
+  op
+  remzerovec
+  write test_lsi1v8o5v0.raw
+  set appendwrite
+  * tran
+  tran 1n 3u
+  remzerovec
+  write test_lsi1v8o5v0.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

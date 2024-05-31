@@ -1,0 +1,36 @@
+| units: 500000 tech: sky130A format: MIT
+x out out_b vdd_h vdd_h s=2900,158 d=5800,316 l=100 w=100 x=2014 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x in in_b vdd_l vdd_h s=5800,316 d=2900,158 l=100 w=100 x=40 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x vss vss vss vss d=2900,158 l=100 w=100 x=1382 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t1 vss out vss s=5800,316 d=2900,158 l=100 w=100 x=908 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x out out_b vdd_h vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1698 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x out vss out_b vss s=2900,158 d=2900,158 l=100 w=100 x=1540 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t1 out vdd_h vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1382 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x out vdd_h out_b vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1856 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x in_b t2 vss vss s=5800,316 d=2900,158 l=100 w=100 x=474 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x in in_b vss vss s=5800,316 d=2900,158 l=100 w=100 x=40 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x out vdd_h out_b vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1540 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x in_bb vss t1 vss s=2900,158 d=5800,316 l=100 w=100 x=632 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t1 out vdd_h vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1066 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x in_b vss in_bb vss s=2900,158 d=5800,316 l=100 w=100 x=198 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t1 out vss vss s=2900,158 d=2900,158 l=100 w=100 x=1066 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t1 t2 vdd_h vdd_h s=5800,316 d=2900,158 l=100 w=100 x=474 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x t1 vdd_h out vdd_h s=2900,158 d=2900,158 l=100 w=100 x=1224 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x t1 vdd_h out vdd_h s=5800,316 d=2900,158 l=100 w=100 x=908 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x vss vss vss vss d=2900,158 l=100 w=100 x=1224 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x t2 vdd_h t1 vdd_h s=2900,158 d=5800,316 l=100 w=100 x=632 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x in_b vdd_l in_bb vdd_h s=2900,158 d=5800,316 l=100 w=100 x=198 y=332 sky130_fd_pr__pfet_g5v0d10v5
+x out out_b vss vss s=2900,158 d=2900,158 l=100 w=100 x=1698 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x vss vss vss vss d=2900,158 l=100 w=100 x=1856 y=0 sky130_fd_pr__nfet_g5v0d10v5
+x vss vss vss vss d=2900,158 l=100 w=100 x=2014 y=0 sky130_fd_pr__nfet_g5v0d10v5
+R out_b 1671
+R vdd_l 373
+R out 2334
+R in 249
+C vdd_h0 3.3
+R vdd_h 19669
+R vss 17752
+R in_bb 853
+R t2 855
+R t1 1631
+R in_b 1257
