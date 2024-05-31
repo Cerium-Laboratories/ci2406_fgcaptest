@@ -1,15 +1,17 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717034485
+timestamp 1717106669
+<< poly >>
+rect 2907 -5477 3426 -5380
 use fgcell  x1
-timestamp 1717032084
+timestamp 1717103053
 transform 1 0 2010 0 1 -5490
 box -1810 -310 1194 526
 use diffamp_nmos  x2
-timestamp 1716525686
-transform 0 1 3234 -1 0 -4758
-box 0 60 1140 2900
+timestamp 1717106669
+transform 0 1 3468 -1 0 -4824
+box 20 -140 1140 2900
 use ideal_tg6v0  x3
 timestamp 1717034485
 transform 1 0 2 0 1 -3600
