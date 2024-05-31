@@ -1,0 +1,64 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_fgcell_amp.sch
+**.subckt test_fgcell_amp
+vinj_en_b vinj_en_b GND pwl(0 {VINJ} 40u {VINJ} 45u 0)
+vctrl vctrl GND 0 pwl(0 0 10u 0 15u {VINJ} 20u {VINJ} 25u 0)
+vsrc vsrc GND pwl(0 {VINJ} 70u {VINJ} 75u 0)
+vtun vtun GND pwl(0 0 30u 0 40u {VTUN} 50u {VTUN} 60u 0)
+vinj vinj GND {VINJ}
+R1 vfg GND 1T m=1
+x1 vb vinj_en vinj vout vinj_en_b vtun vctrl vsrc GND vfg fgcell_amp
+vinj_en vinj_en GND pwl(0 0 40u 0 45u {VINJ})
+vb vb GND 1
+R2 vout GND 1g m=1
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice ss
+
+
+
+.options reltol=0.0001 abstol=10e-15 chgtol=1e-15
+.include fgcell.spice
+.include diffamp_nmos.spice
+.include tg5v0.spice
+.param VTUN=12
+.param VINJ=5
+.param VDD=1.8
+.param VSS=0
+.option savecurrents
+.ic v(vfg)=3
+.control
+  save all
+  op
+  remzerovec
+  write test_fgcell_amp.raw
+  set appendwrite
+  tran 10n 120u uic
+  remzerovec
+  write test_fgcell_amp.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  fgcell_amp.sym # of pins=10
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sch
+.subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
+*.ipin vinj
+*.ipin row_en_6v0_b
+*.ipin vtun
+*.ipin vctrl
+*.ipin vsrc
+*.ipin vb
+*.ipin VGND
+*.opin vout
+*.iopin vfg
+*.ipin row_en_6v0
+x1 vinj row_en_6v0_b vtun vctrl vsrc VGND vfg fgcell
+x2 vfg net1 vb net1 vinj VGND diffamp_nmos
+x3 net1 vout row_en_6v0 row_en_6v0_b vinj VGND tg5v0
+.ends
+
+.GLOBAL GND
+.end

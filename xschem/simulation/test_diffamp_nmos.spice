@@ -5,7 +5,7 @@ vb vb GND {VBIAS}
 v1 v1 GND 3 pwl(0 3 1u 3 1.1u 4.7 1.5u 4 1.7u 0.5 2u 0.1 2.1u 3)
 v2 v2 GND 2
 R1 vout GND 1T m=1
-x1 v1 vout GND VDD vb vout diffamp_nmos
+x1 v1 vout vb vout VDD GND diffamp_nmos
 C1 vout GND 26f m=1
 **** begin user architecture code
 .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt

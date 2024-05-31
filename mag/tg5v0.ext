@@ -1,0 +1,50 @@
+timestamp 1717140935
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
+parameters sky130_fd_pr__nfet_g5v0d16v0 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
+parameters sky130_fd_pr__pfet_g5v0d16v0 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "en" 3 70 126 170 226 m1
+port "vout" 2 1492 258 1592 358 m1
+port "vin" 1 70 492 170 592 m1
+port "en_b" 4 70 634 170 734 m1
+port "vdd" 5 132 772 178 818 m1
+port "vss" 6 132 42 178 88 m1
+node "en" 2136 2107.52 70 126 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 171200 5024 0 0 41004 2480 68144 2928 0 0 0 0 0 0 0 0 0 0
+node "vout" 5219 203.269 1492 258 m1 0 0 0 0 0 0 0 0 0 0 0 0 23200 1264 23200 1264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46512 3008 141600 3032 0 0 0 0 0 0 0 0 0 0
+node "vin" 6692 288.371 70 492 m1 0 0 0 0 0 0 0 0 0 0 0 0 29000 1580 29000 1580 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 58140 3760 141600 3032 0 0 0 0 0 0 0 0 0 0
+node "en_b" 2167 696.652 70 634 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 179200 5184 0 0 41004 2480 68144 2928 0 0 0 0 0 0 0 0 0 0
+node "vdd" 6744 2872.45 132 772 m1 0 0 0 0 745184 4140 0 0 0 0 0 0 85492 3064 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50116 3016 64308 2888 0 0 0 0 0 0 0 0 0 0
+substrate "vss" 0 0 132 42 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 85492 3064 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50116 3016 64308 2888 0 0 0 0 0 0 0 0 0 0
+cap "vout" "en_b" 127.3
+cap "vout" "en" 944.587
+cap "vin" "vout" 986.042
+cap "vdd" "vout" 60.2737
+cap "en" "en_b" 224.372
+cap "vin" "en_b" 903.205
+cap "vin" "en" 136.079
+cap "vdd" "en_b" 1499.96
+cap "vdd" "vin" 110.408
+cap "vdd" "en" 50.7284
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1334 258 1335 259 l=100 w=100 "vss" "en" 200 0 "vout" 100 2900,158 "vin" 100 5800,316
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1176 258 1177 259 l=100 w=100 "vss" "en" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1018 258 1019 259 l=100 w=100 "vss" "en" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 860 258 861 259 l=100 w=100 "vss" "en" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 702 258 703 259 l=100 w=100 "vss" "en" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 544 258 545 259 l=100 w=100 "vss" "en" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 386 258 387 259 l=100 w=100 "vss" "en" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 228 258 229 259 l=100 w=100 "vss" "en" 200 0 "vin" 100 5800,316 "vout" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1334 492 1335 493 l=100 w=100 "vdd" "en_b" 200 0 "vout" 100 2900,158 "vin" 100 5800,316
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1176 492 1177 493 l=100 w=100 "vdd" "en_b" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1018 492 1019 493 l=100 w=100 "vdd" "en_b" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 860 492 861 493 l=100 w=100 "vdd" "en_b" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 702 492 703 493 l=100 w=100 "vdd" "en_b" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 544 492 545 493 l=100 w=100 "vdd" "en_b" 200 0 "vin" 100 2900,158 "vout" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 386 492 387 493 l=100 w=100 "vdd" "en_b" 200 0 "vout" 100 2900,158 "vin" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 228 492 229 493 l=100 w=100 "vdd" "en_b" 200 0 "vin" 100 5800,316 "vout" 100 2900,158

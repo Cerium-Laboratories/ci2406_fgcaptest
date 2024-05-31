@@ -1,0 +1,25 @@
+| units: 500000 tech: sky130A format: MIT
+x en vin vout vss s=2900,158 d=2900,158 l=100 w=100 x=860 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en vin vout vss s=2900,158 d=2900,158 l=100 w=100 x=1176 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en vout vin vss s=2900,158 d=2900,158 l=100 w=100 x=386 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en vout vin vss s=2900,158 d=5800,316 l=100 w=100 x=1334 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en vin vout vss s=2900,158 d=2900,158 l=100 w=100 x=544 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en_b vin vout vdd s=2900,158 d=2900,158 l=100 w=100 x=860 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en_b vin vout vdd s=2900,158 d=2900,158 l=100 w=100 x=1176 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en vout vin vss s=2900,158 d=2900,158 l=100 w=100 x=702 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en vout vin vss s=2900,158 d=2900,158 l=100 w=100 x=1018 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en_b vout vin vdd s=2900,158 d=2900,158 l=100 w=100 x=386 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en_b vout vin vdd s=2900,158 d=5800,316 l=100 w=100 x=1334 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en vin vout vss s=5800,316 d=2900,158 l=100 w=100 x=228 y=258 sky130_fd_pr__nfet_g5v0d10v5
+x en_b vin vout vdd s=2900,158 d=2900,158 l=100 w=100 x=544 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en_b vout vin vdd s=2900,158 d=2900,158 l=100 w=100 x=702 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en_b vout vin vdd s=2900,158 d=2900,158 l=100 w=100 x=1018 y=492 sky130_fd_pr__pfet_g5v0d10v5
+x en_b vin vout vdd s=5800,316 d=2900,158 l=100 w=100 x=228 y=492 sky130_fd_pr__pfet_g5v0d10v5
+C en0 2.1
+R en 2136
+R vout 5219
+R vin 6692
+R en_b 2167
+C vdd0 2.9
+R vdd 6744
+R vss 5413

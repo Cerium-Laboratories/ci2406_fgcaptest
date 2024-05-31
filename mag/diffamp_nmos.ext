@@ -1,4 +1,4 @@
-timestamp 1717099832
+timestamp 1717106669
 version 8.3
 tech sky130A
 style ngspice()
@@ -27,37 +27,37 @@ node "int2" 1449 1440.02 100 1200 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 30000 800 30000
 node "int3" 1445 1578.1 200 2280 p 0 0 0 0 0 0 0 0 0 0 0 0 30000 800 30000 800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 192000 2680 0 0 73200 2160 246000 6080 0 0 0 0 0 0 0 0 0 0
 node "VDD" 3500 4346.03 400 2760 m1 0 0 0 0 1321600 4600 0 0 0 0 0 0 62400 1280 60000 1600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74800 3040 206400 4560 0 0 0 0 0 0 0 0 0 0
 substrate "VSS" 0 0 960 200 m1 0 0 0 0 0 0 0 0 0 0 0 0 60000 1600 93600 1800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 213200 3040 160200 3732 0 0 0 0 0 0 0 0 0 0
-cap "vout" "VDD" 116.344
-cap "int2" "VDD" 239.662
-cap "vb" "v1" 20
-cap "int3" "vb" 51.2553
-cap "vb" "int1" 145.242
-cap "int3" "vout" 353.785
-cap "int3" "int2" 62.4778
-cap "int3" "VDD" 1470.28
-cap "int2" "int1" 20.8394
-cap "VDD" "int1" 0.252321
-cap "int3" "v1" 9.82961
-cap "v1" "int1" 119.918
-cap "int3" "int1" 43.6934
+cap "int1" "int4" 203.829
+cap "VDD" "int4" 539.576
+cap "int5" "int4" 5.46105
+cap "v1" "int3" 9.82961
+cap "v1" "vb" 20
+cap "vb" "int3" 51.2553
 cap "int4" "v2" 9.93236
+cap "vout" "int3" 353.785
+cap "int2" "int3" 62.4778
+cap "int2" "vb" 70.8907
+cap "int2" "vout" 70.2991
+cap "int1" "v1" 119.918
+cap "int1" "int3" 43.6934
+cap "VDD" "int3" 1470.28
+cap "int1" "vb" 145.242
+cap "VDD" "vb" 0.382573
+cap "int1" "int2" 20.8394
+cap "VDD" "vout" 116.344
+cap "VDD" "int2" 239.662
+cap "int5" "int3" 4.79718
+cap "int1" "VDD" 0.252321
+cap "v1" "v2" 44.2144
+cap "v2" "int3" 39.5795
+cap "v2" "vb" 100.105
+cap "int1" "int5" 14.7935
+cap "v1" "int4" 40.0852
+cap "int4" "int3" 125.337
 cap "int4" "vb" 53.9438
-cap "int3" "int5" 4.79718
+cap "int1" "v2" 63.1685
 cap "int4" "vout" 70.5306
 cap "int2" "int4" 742.92
-cap "int5" "int1" 14.7935
-cap "int4" "VDD" 539.576
-cap "int4" "v1" 40.0852
-cap "int3" "int4" 125.337
-cap "int4" "int1" 203.829
-cap "vb" "v2" 100.105
-cap "int4" "int5" 5.46105
-cap "v1" "v2" 44.2144
-cap "int3" "v2" 39.5795
-cap "int2" "vb" 70.8907
-cap "VDD" "vb" 0.382573
-cap "v2" "int1" 63.1685
-cap "int2" "vout" 70.2991
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 500 0 501 1 l=200 w=300 "VSS" "v2" 400 0 "int1" 300 15000,400 "int3" 300 30000,800
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 200 0 201 1 l=200 w=300 "VSS" "v1" 400 0 "int4" 300 30000,800 "int1" 300 15000,400
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 500 600 501 601 l=200 w=300 "VSS" "vb" 400 0 "int5" 300 15000,400 "VSS" 300 30000,800

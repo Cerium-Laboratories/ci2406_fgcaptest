@@ -1,0 +1,41 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_tg5v0.sch
+**.subckt test_tg5v0
+x1 vin vout ven ven_b vdd GND tg5v0
+ven ven GND {VINJ} pwl(0 0 100n 0 101n {VINJ} 200n {VINJ} 201n 0)
+vin vin GND 2 pulse(0 {VINJ} 5n 1n 1n 20n 40n)
+ven_b ven_b GND 0 pwl(0 {VINJ} 100n {VINJ} 101n 0 200n 0 201n {VINJ})
+vdd vdd GND 5
+R1 vout GND 1meg m=1
+C1 vout 0 20f m=1
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.include 'tg5v0.spice'
+* .options reltol=0.0001 abstol=10e-15
+.param VINJ=5
+.param VSS=0
+.options savecurrents
+.control
+  save all
+  op
+  remzerovec
+  write test_tg5v0.raw
+  set appendwrite
+  * dc sweep
+  dc vin 0 5 0.1
+  remzerovec
+  write test_tg5v0.raw
+  * tran
+  tran 100p 300n
+  remzerovec
+  write test_tg5v0.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

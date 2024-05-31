@@ -157,7 +157,7 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options reltol=0.0001 abstol=10e-15 chgtol=1e-15
-* .include fgcell.spice
+.include fgcell.spice
 .param VTUN=12
 .param VINJ=6
 .param VDD=1.8

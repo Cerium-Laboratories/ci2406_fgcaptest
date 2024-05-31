@@ -1,0 +1,7 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/tg5v0.sch
+.subckt tg5v0 vin vout en en_b vdd vss
+*.PININFO vin:I vout:O en:I en_b:I vdd:I vss:I
+XM1 vout en vin vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=8 m=1
+XM2 vout en_b vin vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=8 m=1
+.ends
+.end
