@@ -1,7 +1,9 @@
 v {xschem version=3.4.5 file_version=1.2
 }
 G {}
-K {}
+K {type=primitive
+format="@name @@P_CORE @@VDDIO @@VSSIO @@P_PAD sky130_ef_io__analog_minesd_pad_short"
+template="name=xp1"}
 V {}
 S {type=subcircuit
 format="@name @P_CORE @VDDIO @VSSIO @P_PAD sky130_ef_io__analog_minesd_pad_short"
