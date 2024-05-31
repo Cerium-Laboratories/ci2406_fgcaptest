@@ -1,0 +1,15 @@
+| units: 500000 tech: sky130A format: MIT
+x vfg vsrc a_697_110# vinj s=11600,516 d=5800,258 l=100 w=200 x=697 y=10 sky130_fd_pr__pfet_g5v0d10v5
+x vfg vtun VGND s=31236,1132 l=100 w=200 x=-1484 y=58 sky130_fd_pr__cap_var
+x vinj_en_b a_697_110# vinj vinj s=5800,258 d=11600,516 l=100 w=200 x=697 y=168 sky130_fd_pr__pfet_g5v0d10v5
+x vfg vctrl vctrl vctrl d=11600,516 l=100 w=200 x=-496 y=58 sky130_fd_pr__pfet_g5v0d10v5
+R vsrc 738
+R vfg 1260
+= vfg fg
+R vinj_en_b 228
+C vinj0 2.5
+R vinj 4433
+R vctrl 5559
+R vtun 2888
+R VGND 9323
+R a_697_110# 659

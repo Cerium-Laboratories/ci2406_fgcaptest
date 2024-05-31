@@ -1,0 +1,9 @@
+* NGSPICE file created from fgcell.ext - technology: sky130A
+
+.subckt fgcell vinj vinj_en_b vtun vctrl vsrc VGND vfg
+X0 a_697_110# vfg vsrc vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.5
+X1 vfg vtun VGND sky130_fd_pr__cap_var w=1 l=0.5
+X2 vinj vinj_en_b a_697_110# vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.5
+X3 vctrl vfg vctrl vctrl sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.58 ps=5.16 w=1 l=0.5
+.ends
+
