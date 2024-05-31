@@ -1437,7 +1437,7 @@ rect 1460 6700 1560 6763
 rect 930 6523 933 6597
 rect 1007 6523 1010 6597
 rect 930 6520 1010 6523
-use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
 timestamp 1715205430
 transform -1 0 1203 0 -1 7296
@@ -1451,11 +1451,11 @@ use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_2
 timestamp 1715205430
 transform 1 0 -215 0 1 12924
 box -19 -24 157 296
-use sky130_fd_sc_hd__nand2_2  sky130_fd_sc_hd__nand2_2_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__nand2_2  sky130_fd_sc_hd__nand2_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1715205430
 transform 1 0 383 0 1 12924
 box -19 -24 249 296
-use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
 timestamp 1717176918
 transform -1 0 1387 0 -1 7296
@@ -1465,7 +1465,7 @@ array 0 0 -452 0 7 800
 timestamp 1717176918
 transform -1 0 1388 0 1 6624
 box -19 -24 203 296
-use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
 timestamp 1717176918
 transform -1 0 1433 0 -1 7296
@@ -1501,7 +1501,7 @@ use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_7
 timestamp 1717176918
 transform 0 1 -1876 -1 0 13319
 box -19 -24 65 296
-use sky130_fd_sc_hd__inv_1  x1 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__inv_1  x1 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1717180523
 transform 0 1 -1876 -1 0 14009
 box -19 -24 157 296
