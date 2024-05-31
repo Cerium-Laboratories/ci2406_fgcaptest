@@ -1,10 +1,12 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717163148
-<< nmos >>
+timestamp 1717163634
+<< error_s >>
+rect 838 -5462 1300 -5302
+<< mvnmos >>
 rect 1336 -5964 2938 -5864
-<< ndiff >>
+<< mvndiff >>
 rect 1282 -5864 2938 -5814
 rect 1282 -5964 1336 -5864
 rect 1282 -6014 2938 -5964
@@ -39,15 +41,15 @@ rect 3140 -6806 3240 -6770
 rect 3502 -6806 3602 -6552
 rect 1294 -6906 3602 -6806
 use tg5v0  tg5v0_0
-timestamp 1717158785
+timestamp 1717163634
 transform 0 -1 4094 1 0 -6628
 box 28 0 1634 890
 use fgcell  x1
-timestamp 1717158785
+timestamp 1717163634
 transform 1 0 2010 0 1 -5490
 box -1870 -310 1194 526
 use diffamp_nmos  x2
-timestamp 1717158785
+timestamp 1717163634
 transform 0 -1 3100 -1 0 -6070
 box 20 -140 1140 2900
 << end >>

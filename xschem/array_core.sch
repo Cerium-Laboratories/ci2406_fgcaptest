@@ -58,10 +58,10 @@ C {devices/ipin.sym} 220 -1080 0 0 {name=p2 lab=VGND}
 C {devices/ipin.sym} 220 -1060 0 0 {name=p3 lab=vtun}
 C {devices/ipin.sym} 220 -1040 0 0 {name=p4 lab=vb}
 C {devices/ipin.sym} 220 -1020 0 0 {name=p5 lab=vctrl}
-C {devices/opin.sym} 1760 -380 0 0 {name=p6 lab=vout[19:0]}
+C {devices/opin.sym} 90 -420 0 1 {name=p6 lab=l_vout}
 C {array_row_decode.sym} 840 -1410 3 1 {name=x7}
 C {array_row_decode.sym} 1120 -1410 1 0 {name=x8}
-C {devices/ipin.sym} 220 -940 0 0 {name=p7 lab=addr[9:0]}
+C {devices/ipin.sym} 230 -1600 0 0 {name=p7 lab=addr[9:0]}
 C {devices/ipin.sym} 220 -1000 0 0 {name=p8 lab=VPWR}
 C {lsi1v8o5v0.sym} 840 -1220 1 0 {name=x9[31:0]}
 C {devices/lab_wire.sym} 840 -1310 0 1 {name=p9 sig_type=std_logic lab=l_w[31:0]}
@@ -89,7 +89,7 @@ C {devices/lab_pin.sym} 220 -1060 0 1 {name=p17 sig_type=std_logic lab=vtun}
 C {devices/lab_pin.sym} 220 -1040 0 1 {name=p18 sig_type=std_logic lab=vb}
 C {devices/lab_pin.sym} 220 -1020 0 1 {name=p19 sig_type=std_logic lab=vctrl}
 C {devices/lab_pin.sym} 220 -1000 0 1 {name=p20 sig_type=std_logic lab=VPWR}
-C {devices/lab_pin.sym} 220 -940 0 1 {name=p21 sig_type=std_logic lab=addr[9:0]}
+C {devices/lab_pin.sym} 230 -1600 0 1 {name=p21 sig_type=std_logic lab=addr[9:0]}
 C {devices/lab_pin.sym} 680 -1080 0 1 {name=p22 sig_type=std_logic lab=vinj}
 C {devices/lab_pin.sym} 680 -1060 0 1 {name=p23 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 680 -960 0 1 {name=p24 sig_type=std_logic lab=vb}
@@ -120,3 +120,6 @@ C {devices/lab_pin.sym} 1280 -1060 0 0 {name=p48 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 1280 -960 0 0 {name=p49 sig_type=std_logic lab=vb}
 C {devices/lab_pin.sym} 1280 -980 0 0 {name=p50 sig_type=std_logic lab=vtun}
 C {devices/lab_pin.sym} 1280 -940 0 0 {name=p51 sig_type=std_logic lab=vctrl}
+C {devices/opin.sym} 1770 -330 0 0 {name=p52 lab=r_vout}
+C {tg5v0.sym} 290 -420 2 0 {name=x9}
+C {lsi1v8o5v0.sym} 980 -970 1 0 {name=x11[3:0]}
