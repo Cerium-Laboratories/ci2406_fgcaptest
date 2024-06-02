@@ -1,0 +1,56 @@
+magic
+tech sky130A
+timestamp 1717191951
+<< metal5 >>
+rect 900 0 1500 15000
+rect 1900 0 2500 15000
+rect 2900 0 3500 15000
+rect 3900 0 4500 15000
+rect 4900 0 5500 15000
+rect 5900 0 6500 15000
+rect 6900 0 7500 15000
+rect 7900 0 8500 15000
+rect 8900 0 9500 15000
+rect 9900 0 10500 15000
+rect 10900 0 11500 15000
+rect 11900 0 12500 15000
+rect 12900 0 13500 15000
+rect 13900 0 14500 15000
+rect 14900 0 15500 15000
+rect 15900 0 16500 15000
+rect 16900 0 17500 15000
+rect 17900 0 18500 15000
+rect 18900 0 19500 15000
+rect 19900 0 20500 15000
+<< labels >>
+flabel metal5 900 14800 1500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 2900 14800 3500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 4900 14800 5500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 6900 14800 7500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 8900 14800 9500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 10900 14800 11500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 12900 14800 13500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 14900 14800 15500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 16900 14800 17500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 18900 14800 19500 15000 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 900 0 1500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 2900 0 3500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 4900 0 5500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 6900 0 7500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 8900 0 9500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 10900 0 11500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 12900 0 13500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 14900 0 15500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 16900 0 17500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 18900 0 19500 200 0 FreeSans 800 0 0 0 VTUN
+flabel metal5 1900 0 2500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 3900 0 4500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 5900 0 6500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 7900 0 8500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 9900 0 10500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 11900 0 12500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 13900 0 14500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 15900 0 16500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 17900 0 18500 200 0 FreeSans 800 0 0 0 VGND
+flabel metal5 19900 0 20500 200 0 FreeSans 800 0 0 0 VGND
+<< end >>

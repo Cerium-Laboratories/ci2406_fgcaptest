@@ -1,0 +1,153 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_array_column_decode.sch
+**.subckt test_array_column_decode
+vpwr VPWR GND 1.8
+va0 a[0] GND 0 pulse(0 {VPWR} 10n 1n 1n 10n 20n)
+vgnd VGND GND 0
+va1 a[1] GND 0 pulse(0 {VPWR} 20n 1n 1n 20n 40n)
+va2 a[2] GND 0 pulse(0 {VPWR} 40n 1n 1n 40n 80n)
+va3 a[3] GND 0 pulse(0 {VPWR} 80n 1n 1n 80n 160n)
+C1[15] w[15] 0 10f m=1
+C1[14] w[14] 0 10f m=1
+C1[13] w[13] 0 10f m=1
+C1[12] w[12] 0 10f m=1
+C1[11] w[11] 0 10f m=1
+C1[10] w[10] 0 10f m=1
+C1[9] w[9] 0 10f m=1
+C1[8] w[8] 0 10f m=1
+C1[7] w[7] 0 10f m=1
+C1[6] w[6] 0 10f m=1
+C1[5] w[5] 0 10f m=1
+C1[4] w[4] 0 10f m=1
+C1[3] w[3] 0 10f m=1
+C1[2] w[2] 0 10f m=1
+C1[1] w[1] 0 10f m=1
+C1[0] w[0] 0 10f m=1
+x1 VPWR VGND a[3] a[2] a[1] a[0] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0]
++ array_column_decode
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.param VPWR=1.8
+.param VSS=0
+.options savecurrents
+.control
+  save all
+  op
+  remzerovec
+  write test_array_column_decode.raw
+  set appendwrite
+  * tran
+  tran 1n 1u
+  remzerovec
+  write test_array_column_decode.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  array_column_decode.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sch
+.subckt array_column_decode VPWR VGND a[3] a[2] a[1] a[0] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3]
++ w[2] w[1] w[0]
+*.ipin a[3],a[2],a[1],a[0]
+*.ipin VPWR
+*.ipin VGND
+*.opin w[15],w[14],w[13],w[12],w[11],w[10],w[9],w[8],w[7],w[6],w[5],w[4],w[3],w[2],w[1],w[0]
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
+x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
+x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
+x4 a[1] VGND VGND VPWR VPWR a[1]_b sky130_fd_sc_hd__inv_1
+x5 a[0] VGND VGND VPWR VPWR a[0]_b sky130_fd_sc_hd__inv_1
+x13 a[2] a[3] VGND VGND VPWR VPWR net8 sky130_fd_sc_hd__nand2_2
+x6 a[0]_b a[1]_b VGND VGND VPWR VPWR net1 sky130_fd_sc_hd__nand2_2
+x7 a[0] a[1]_b VGND VGND VPWR VPWR net3 sky130_fd_sc_hd__nand2_2
+x8 a[0]_b a[1] VGND VGND VPWR VPWR net4 sky130_fd_sc_hd__nand2_2
+x9 a[0] a[1] VGND VGND VPWR VPWR net5 sky130_fd_sc_hd__nand2_2
+x10 a[2]_b a[3]_b VGND VGND VPWR VPWR net2 sky130_fd_sc_hd__nand2_2
+x11 a[2] a[3]_b VGND VGND VPWR VPWR net6 sky130_fd_sc_hd__nand2_2
+x12 a[2]_b a[3] VGND VGND VPWR VPWR net7 sky130_fd_sc_hd__nand2_2
+x14 net1 net2 VGND VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+x15 net3 net2 VGND VGND VGND VPWR VPWR w[1] sky130_fd_sc_hd__nor3_1
+x16 net4 net2 VGND VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+x17 net5 net2 VGND VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+x18 net1 net6 VGND VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+x19 net3 net6 VGND VGND VGND VPWR VPWR w[5] sky130_fd_sc_hd__nor3_1
+x20 net4 net6 VGND VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+x21 net5 net6 VGND VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+x22 net1 net7 VGND VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+x23 net3 net7 VGND VGND VGND VPWR VPWR w[9] sky130_fd_sc_hd__nor3_1
+x24 net4 net7 VGND VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+x25 net5 net7 VGND VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+x26 net1 net8 VGND VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+x27 net3 net8 VGND VGND VGND VPWR VPWR w[13] sky130_fd_sc_hd__nor3_1
+x28 net4 net8 VGND VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+x29 net5 net8 VGND VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+x46 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x48 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x49 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x51 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x52 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x54 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x55 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x57 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x58 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x60 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x61 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x63 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x64 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x66 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x67 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x71 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x74 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x80 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x86 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x89 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x92 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+.ends
+
+.GLOBAL GND
+.end

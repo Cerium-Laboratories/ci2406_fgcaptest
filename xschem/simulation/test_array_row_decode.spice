@@ -1,7 +1,89 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_array_row_decode.sch
+**.subckt test_array_row_decode
+x1 VPWR VGND a[4] a[3] a[2] a[1] a[0] w[31] w[30] w[29] w[28] w[27] w[26] w[25] w[24] w[23] w[22] w[21] w[20] w[19] w[18] w[17]
++ w[16] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0] array_row_decode
+vpwr VPWR GND 1.8
+va0 a[0] GND 0 pulse(0 {VPWR} 10n 1n 1n 10n 20n)
+vgnd VGND GND 0
+va1 a[1] GND 0 pulse(0 {VPWR} 20n 1n 1n 20n 40n)
+va2 a[2] GND 0 pulse(0 {VPWR} 40n 1n 1n 40n 80n)
+va3 a[3] GND 0 pulse(0 {VPWR} 80n 1n 1n 80n 160n)
+va4 a[4] GND 0 pulse(0 {VPWR} 160n 1n 1n 160n 320n)
+C1[31] w[31] 0 10f m=1
+C1[30] w[30] 0 10f m=1
+C1[29] w[29] 0 10f m=1
+C1[28] w[28] 0 10f m=1
+C1[27] w[27] 0 10f m=1
+C1[26] w[26] 0 10f m=1
+C1[25] w[25] 0 10f m=1
+C1[24] w[24] 0 10f m=1
+C1[23] w[23] 0 10f m=1
+C1[22] w[22] 0 10f m=1
+C1[21] w[21] 0 10f m=1
+C1[20] w[20] 0 10f m=1
+C1[19] w[19] 0 10f m=1
+C1[18] w[18] 0 10f m=1
+C1[17] w[17] 0 10f m=1
+C1[16] w[16] 0 10f m=1
+C1[15] w[15] 0 10f m=1
+C1[14] w[14] 0 10f m=1
+C1[13] w[13] 0 10f m=1
+C1[12] w[12] 0 10f m=1
+C1[11] w[11] 0 10f m=1
+C1[10] w[10] 0 10f m=1
+C1[9] w[9] 0 10f m=1
+C1[8] w[8] 0 10f m=1
+C1[7] w[7] 0 10f m=1
+C1[6] w[6] 0 10f m=1
+C1[5] w[5] 0 10f m=1
+C1[4] w[4] 0 10f m=1
+C1[3] w[3] 0 10f m=1
+C1[2] w[2] 0 10f m=1
+C1[1] w[1] 0 10f m=1
+C1[0] w[0] 0 10f m=1
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.param VPWR=1.8
+.param VSS=0
+.options savecurrents
+.control
+  save all
+  op
+  remzerovec
+  write test_array_row_decode.raw
+  set appendwrite
+  * tran
+  tran 1n 1u
+  remzerovec
+  write test_array_row_decode.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  array_row_decode.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_row_decode.sym
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_row_decode.sch
 .subckt array_row_decode VPWR VGND a[4] a[3] a[2] a[1] a[0] w[31] w[30] w[29] w[28] w[27] w[26] w[25] w[24] w[23] w[22] w[21]
 + w[20] w[19] w[18] w[17] w[16] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0]
-*.PININFO a[4:0]:I VPWR:I VGND:I w[31:0]:O
+*.ipin a[4],a[3],a[2],a[1],a[0]
+*.ipin VPWR
+*.ipin VGND
+*.opin
+*+ w[31],w[30],w[29],w[28],w[27],w[26],w[25],w[24],w[23],w[22],w[21],w[20],w[19],w[18],w[17],w[16],w[15],w[14],w[13],w[12],w[11],w[10],w[9],w[8],w[7],w[6],w[5],w[4],w[3],w[2],w[1],w[0]
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
 x1 a[4] VGND VGND VPWR VPWR a[4]_b sky130_fd_sc_hd__inv_1
 x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
 x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
@@ -148,13 +230,7 @@ x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
 x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
 x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
 x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
-**** begin user architecture code
- .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-
-.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-
-
-
-**** end user architecture code
 .ends
+
+.GLOBAL GND
 .end
