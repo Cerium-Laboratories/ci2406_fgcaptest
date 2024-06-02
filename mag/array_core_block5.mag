@@ -1,14 +1,14 @@
 magic
 tech sky130A
-timestamp 1717191602
+timestamp 1717304525
 use fgcell_amp_MOS_cap_thick_poly  fgcell_amp_MOS_cap_thick_poly_0
 array 0 9 2000 0 4 1500
-timestamp 1717191602
+timestamp 1717304525
 transform 1 0 -70 0 1 11105
-box 37 -3605 2053 -2482
+box 70 -3605 2053 -2482
 use fgcell_amp_MOS_cap_thin_poly  fgcell_amp_MOS_cap_thin_poly_0
 array 0 9 2000 0 4 1500
-timestamp 1717191602
+timestamp 1717304525
 transform 1 0 -70 0 1 3605
-box 37 -3605 2053 -2482
+box 70 -3605 2053 -2482
 << end >>

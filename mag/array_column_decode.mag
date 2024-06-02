@@ -1,10 +1,6 @@
 magic
 tech sky130A
-<<<<<<< Updated upstream
-timestamp 1717188682
-=======
-timestamp 1717299751
->>>>>>> Stashed changes
+timestamp 1717304525
 << nwell >>
 rect 1000 12515 1452 12605
 rect 1000 11715 1452 11805
@@ -196,10 +192,6 @@ rect 768 13346 771 13372
 rect -1564 13343 771 13346
 rect -1900 12948 -1852 13273
 rect -1628 13220 -1580 13273
-<<<<<<< Updated upstream
-rect -1497 13220 -1379 13221
-=======
->>>>>>> Stashed changes
 rect -1628 13172 -1181 13220
 rect 889 13217 1540 13220
 rect 889 13172 933 13217
@@ -258,15 +250,9 @@ rect 930 13047 1433 13050
 rect 930 12953 933 13047
 rect 1427 12953 1433 13047
 rect 930 12948 1433 12953
-<<<<<<< Updated upstream
-rect -1900 12943 -1181 12948
-rect -1900 12904 -1236 12943
-rect -1204 12904 -1181 12943
-=======
 rect -1900 12945 -1181 12948
 rect -1900 12904 -1237 12945
 rect -1203 12904 -1181 12945
->>>>>>> Stashed changes
 rect -1900 12900 -1181 12904
 rect 889 12920 1433 12948
 rect 889 12899 1019 12920
@@ -834,11 +820,7 @@ rect 807 13000 810 13080
 rect 810 13000 830 13080
 rect 830 13000 833 13080
 rect 933 12953 1427 13047
-<<<<<<< Updated upstream
-rect -1236 12904 -1204 12943
-=======
 rect -1237 12904 -1203 12945
->>>>>>> Stashed changes
 rect 801 12805 839 12831
 rect -1239 12766 -1201 12792
 rect -257 12725 -219 12751
@@ -1052,15 +1034,9 @@ rect -805 13031 -802 13057
 rect -776 13031 -773 13057
 rect -805 13028 -773 13031
 rect -715 13080 -675 13094
-<<<<<<< Updated upstream
-rect -1240 12943 -1200 12948
-rect -1240 12904 -1236 12943
-rect -1204 12904 -1200 12943
-=======
 rect -1240 12945 -1200 12948
 rect -1240 12904 -1237 12945
 rect -1203 12904 -1200 12945
->>>>>>> Stashed changes
 rect -1240 12792 -1200 12904
 rect -1240 12766 -1239 12792
 rect -1201 12766 -1200 12792
@@ -1455,126 +1431,112 @@ rect 1460 6700 1560 6763
 rect 930 6523 933 6597
 rect 1007 6523 1010 6597
 rect 930 6520 1010 6523
-use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717299751
+timestamp 1717304525
 transform -1 0 1203 0 -1 7296
 box -19 -24 157 296
 use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_1
 array 0 0 452 0 7 800
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 1066 0 1 6624
 box -19 -24 157 296
 use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_2
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -215 0 1 12924
 box -19 -24 157 296
-<<<<<<< Updated upstream
-use sky130_fd_sc_hd__nand2_2  sky130_fd_sc_hd__nand2_2_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1715205430
-=======
 use sky130_fd_sc_hd__nand2_2  sky130_fd_sc_hd__nand2_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1717299751
->>>>>>> Stashed changes
+timestamp 1717304525
 transform 1 0 383 0 1 12924
 box -19 -24 249 296
-use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717299751
+timestamp 1717304525
 transform -1 0 1387 0 -1 7296
 box -19 -24 203 296
 use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_1
 array 0 0 -452 0 7 800
-timestamp 1717299751
+timestamp 1717304525
 transform -1 0 1388 0 1 6624
 box -19 -24 203 296
-use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717299751
+timestamp 1717304525
 transform -1 0 1433 0 -1 7296
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_1
 array 0 0 -452 0 7 -800
-timestamp 1717299751
+timestamp 1717304525
 transform -1 0 1065 0 -1 7296
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_2
 array 0 0 452 0 7 800
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 1020 0 1 6624
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_3
 array 0 0 452 0 7 800
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 1388 0 1 6624
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_4
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -1181 0 1 12924
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_5
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 843 0 1 12924
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_6
-timestamp 1717299751
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13917
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_7
-timestamp 1717299751
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13319
 box -19 -24 65 296
-<<<<<<< Updated upstream
-use sky130_fd_sc_hd__inv_1  x1 ~/Desktop/OpenCircuitDesign/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1717180523
-transform 0 1 -1876 -1 0 14009
-box -19 -24 157 296
-use sky130_fd_sc_hd__inv_1  x2
-timestamp 1717180523
-=======
 use sky130_fd_sc_hd__inv_1  x2 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1717299751
->>>>>>> Stashed changes
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13871
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x3
-timestamp 1717299751
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13733
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x4
-timestamp 1717299751
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13595
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x5
-timestamp 1717299751
+timestamp 1717304525
 transform 0 1 -1876 -1 0 13457
 box -19 -24 157 296
 use sky130_fd_sc_hd__nand2_2  x6
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 613 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x8
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 153 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x9
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -77 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x10
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -445 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x11
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -675 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x12
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -905 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x13
-timestamp 1717299751
+timestamp 1717304525
 transform 1 0 -1135 0 1 12924
 box -19 -24 249 296
 << labels >>
