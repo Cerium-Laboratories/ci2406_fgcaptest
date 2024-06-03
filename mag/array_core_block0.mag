@@ -1,9 +1,9 @@
 magic
 tech sky130A
-timestamp 1717304525
+timestamp 1717349067
 use fgcell_amp_MiM_cap_1_1  fgcell_amp_MiM_cap_1_1_0
 array 0 9 2000 0 9 1500
-timestamp 1717304525
+timestamp 1717349067
 transform 1 0 -262 0 1 1403
 box 262 -2099 2245 -785
 << end >>

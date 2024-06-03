@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1717346353
+timestamp 1717353765
 << metal1 >>
 rect 4897 41793 4900 41871
 rect 4980 41793 4983 41871
@@ -1438,28 +1438,42 @@ rect -19199 -1010 8596 -984
 rect 8622 -1010 39029 -984
 rect 39055 -1010 39060 -984
 rect -19228 -1013 39060 -1010
+<< metal3 >>
+rect 5100 44900 5900 45000
+rect 6100 44900 6900 45000
+rect 7300 44900 7500 45000
+rect 7900 44900 8100 45000
+rect 8500 44900 8700 45000
+rect 9100 44900 9300 45000
+rect 9700 44900 9900 45000
+rect 10300 44900 10500 45000
+rect 10900 44900 11100 45000
+rect 11500 44900 11700 45000
+rect 12100 44900 12300 45000
+rect 12700 44900 13500 45000
+rect 13700 44900 14500 45000
 use array_column_decode  array_column_decode_0
 timestamp 1717304525
 transform 0 1 -520 -1 0 3560
 box -2020 6520 1560 13936
 use array_core_block0  array_core_block0_0
-timestamp 1717304525
+timestamp 1717349067
 transform 1 0 -20000 0 1 30696
 box 0 -696 19983 14118
 use array_core_block1  array_core_block1_0
-timestamp 1717304525
+timestamp 1717349067
 transform 1 0 -20000 0 1 15000
 box 0 0 19983 14814
 use array_core_block2  array_core_block2_0
-timestamp 1717304525
+timestamp 1717349067
 transform 1 0 -20000 0 1 0
 box 0 0 19983 14819
 use array_core_block3  array_core_block3_0
-timestamp 1717304525
+timestamp 1717349067
 transform -1 0 39983 0 -1 44411
 box 0 0 19983 14411
 use array_core_block4  array_core_block4_0
-timestamp 1717304525
+timestamp 1717349067
 transform -1 0 39983 0 -1 29411
 box 0 0 19983 14411
 use array_core_block5  array_core_block5_0
@@ -1468,9 +1482,9 @@ transform -1 0 39983 0 -1 14623
 box 0 0 19983 14623
 use array_core_block_routing  array_core_block_routing_0
 array 0 1 40033 0 2 15000
-timestamp 1717304525
+timestamp 1717353765
 transform 1 0 -20800 0 1 0
-box 900 0 20500 15000
+box 900 0 20660 15000
 use array_row_decode  array_row_decode_0
 timestamp 1717304525
 transform 1 0 13020 0 1 28832
@@ -1504,4 +1518,31 @@ array 0 0 -800 0 9 2000
 timestamp 1717304525
 transform 0 1 20700 -1 0 -983
 box 14 0 817 445
+<< labels >>
+flabel metal3 5100 44900 5900 45000 0 FreeSans 400 0 0 0 vccd1
+port 1 nsew power default
+flabel metal3 6100 44900 6900 45000 0 FreeSans 400 0 0 0 vssd1
+port 2 nsew ground default
+flabel metal3 7300 44900 7500 45000 0 FreeSans 400 0 0 0 a[0]
+port 3 nsew
+flabel metal3 7900 44900 8100 45000 0 FreeSans 400 0 0 0 a[1]
+port 4 nsew signal input
+flabel metal3 8500 44900 8700 45000 0 FreeSans 400 0 0 0 a[2]
+port 5 nsew signal input
+flabel metal3 9100 44900 9300 45000 0 FreeSans 400 0 0 0 a[3]
+port 6 nsew signal input
+flabel metal3 9700 44900 9900 45000 0 FreeSans 400 0 0 0 a[4]
+port 7 nsew signal input
+flabel metal3 10300 44900 10500 45000 0 FreeSans 400 0 0 0 a[5]
+port 8 nsew signal input
+flabel metal3 10900 44900 11100 45000 0 FreeSans 400 0 0 0 a[6]
+port 9 nsew signal input
+flabel metal3 11500 44900 11700 45000 0 FreeSans 400 0 0 0 a[7]
+port 10 nsew signal input
+flabel metal3 12100 44900 12300 45000 0 FreeSans 400 0 0 0 a[8]
+port 11 nsew signal input
+flabel metal3 12700 44900 13500 45000 0 FreeSans 400 0 0 0 vccd1
+port 1 nsew power default
+flabel metal3 13700 44900 14500 45000 0 FreeSans 400 0 0 0 vssd1
+port 2 nsew ground default
 << end >>

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717304525
+timestamp 1717349067
 << polycont >>
 rect 1526 -2400 1588 -2338
 << locali >>
@@ -72,7 +72,7 @@ rect 1510 -2414 1511 -2326
 rect 1599 -2414 1600 -2326
 rect 1510 -2420 1600 -2414
 use fgcell_amp  x1
-timestamp 1717304525
+timestamp 1717349067
 transform 1 0 384 0 1 3012
 box 140 -7210 4106 -4964
 << end >>
