@@ -6,7 +6,7 @@ XMN11 t2 in_b vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMN12 t1 in_bb vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMN13a out t1 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMN14a out_b out vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
-XMP2 in_bb in_b vdd_l vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
+XMP2 in_bb in_b vdd_l vdd_l sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMP11 t2 t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMP12 t1 t2 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMP13a out t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
@@ -23,7 +23,7 @@ XMP14d out_b out vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMN14b out_b out vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMND3 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMND4 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
-XMP1 in_b in vdd_l vdd_h sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
+XMP1 in_b in vdd_l vdd_l sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 XMN1 in_b in vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
 .ends
 .end

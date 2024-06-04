@@ -1,0 +1,1191 @@
+* NGSPICE file created from array_core.ext - technology: sky130A
+
+.subckt sky130_fd_sc_hd__inv_1 A VGND VNB VPB VPWR Y
+X0 Y A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_sc_hd__nand2_2 A B VGND VNB VPB VPWR Y
+X0 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3 a_27_47# B VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4 a_27_47# A Y VNB sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X5 Y A a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X6 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X7 VGND B a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+.ends
+
+.subckt sky130_fd_sc_hd__decap_3 VGND VNB VPB VPWR
+X0 VPWR VGND VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.2262 pd=2.26 as=0 ps=0 w=0.87 l=0.59
+X1 VGND VPWR VGND VNB sky130_fd_pr__nfet_01v8 ad=0.143 pd=1.62 as=0 ps=0 w=0.55 l=0.59
+.ends
+
+.subckt sky130_fd_sc_hd__nor3_1 A B C VGND VNB VPB VPWR Y
+X0 VPWR A a_193_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1 a_193_297# B a_109_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2 Y B VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3 VGND A Y VNB sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4 a_109_297# C Y VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X5 VGND C Y VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+.ends
+
+.subckt array_column_decode VGND a[3] a[2] a[1] a[0] w[15] w[14] w[13] w[12] w[11]
++ w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0] VPWR
+Xx3 a[2] VGND VGND VPWR VPWR x3/Y sky130_fd_sc_hd__inv_1
+Xx2 a[3] VGND VGND VPWR VPWR x2/Y sky130_fd_sc_hd__inv_1
+Xx4 a[1] VGND VGND VPWR VPWR x6/B sky130_fd_sc_hd__inv_1
+Xx5 a[0] VGND VGND VPWR VPWR x8/A sky130_fd_sc_hd__inv_1
+Xx6 x8/A x6/B VGND VGND VPWR VPWR x6/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_0[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__nand2_2_0 a[0] x6/B VGND VGND VPWR VPWR sky130_fd_sc_hd__nand2_2_0/Y
++ sky130_fd_sc_hd__nand2_2
+Xx8 x8/A a[1] VGND VGND VPWR VPWR x8/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_1[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xx9 a[0] a[1] VGND VGND VPWR VPWR x9/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_2 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xx10 x3/Y x2/Y VGND VGND VPWR VPWR x10/Y sky130_fd_sc_hd__nand2_2
+Xx11 a[2] x2/Y VGND VGND VPWR VPWR x11/Y sky130_fd_sc_hd__nand2_2
+Xx12 x3/Y a[3] VGND VGND VPWR VPWR x12/Y sky130_fd_sc_hd__nand2_2
+Xx13 a[2] a[3] VGND VGND VPWR VPWR x13/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__nor3_1_0[0] x8/Y x13/Y VGND VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[1] x6/Y x13/Y VGND VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[2] x8/Y x12/Y VGND VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[3] x6/Y x12/Y VGND VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[4] x8/Y x11/Y VGND VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[5] x6/Y x11/Y VGND VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[6] x8/Y x10/Y VGND VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[7] x6/Y x10/Y VGND VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[0] x9/Y x13/Y VGND VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[1] sky130_fd_sc_hd__nand2_2_0/Y x13/Y VGND VGND VGND VPWR
++ VPWR w[13] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[2] x9/Y x12/Y VGND VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[3] sky130_fd_sc_hd__nand2_2_0/Y x12/Y VGND VGND VGND VPWR
++ VPWR w[9] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[4] x9/Y x11/Y VGND VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[5] sky130_fd_sc_hd__nand2_2_0/Y x11/Y VGND VGND VGND VPWR
++ VPWR w[5] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[6] x9/Y x10/Y VGND VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[7] sky130_fd_sc_hd__nand2_2_0/Y x10/Y VGND VGND VGND VPWR
++ VPWR w[1] sky130_fd_sc_hd__nor3_1
+.ends
+
+.subckt fgcell vinj vinj_en_b vtun vctrl vsrc VGND vfg
+X0 a_697_110# vfg vsrc vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.5
+X1 vfg vtun VGND sky130_fd_pr__cap_var w=1 l=0.5
+X2 vinj vinj_en_b a_697_110# vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.5
+X3 vctrl vfg vctrl vctrl sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0 ps=0 w=1 l=0.5
+.ends
+
+.subckt diffamp_nmos v1 v2 VSS VDD vb vout
+X0 int3 int3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X1 int1 v1 int4 VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X2 int5 vb int1 VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X3 VSS int2 int2 VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X4 VSS vb int5 VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X5 VDD int4 int4 VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X6 vout int2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X7 VDD int3 int2 VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X8 int3 v2 int1 VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X9 vout int4 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+.ends
+
+.subckt tg5v0 vin vout en en_b vdd vss
+X0 vout en vin vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X1 vout en vin vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X2 vin en vout vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X3 vin en vout vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X4 vout en vin vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X5 vout en_b vin vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X6 vout en_b vin vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X7 vin en vout vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X8 vin en vout vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X9 vin en_b vout vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X10 vin en_b vout vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X11 vout en vin vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X12 vout en_b vin vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X13 vin en_b vout vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X14 vin en_b vout vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X15 vout en_b vin vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+.ends
+
+.subckt fgcell_amp_MOS_cap_thin_poly x2/v2 VSUBS
+Xx1 x1/vinj x1/vinj_en_b x1/vtun x1/vctrl x1/vsrc VSUBS x2/v1 fgcell
+Xx2 x2/v1 x2/v2 VSUBS x2/VDD x2/vb x2/v2 diffamp_nmos
+Xtg5v0_0 x2/v2 tg5v0_0/vout tg5v0_0/en x1/vinj_en_b x1/vinj VSUBS tg5v0
+X0 a_1282_n6014# x2/v1 a_1282_n6014# VSUBS sky130_fd_pr__nfet_g5v0d10v5 ad=4.275 pd=34.58 as=0 ps=0 w=8.01 l=0.5
+.ends
+
+.subckt fgcell_amp_MOS_cap_thick_poly x2/v2
+Xx1 x1/vinj x1/vinj_en_b x1/vtun x1/vctrl x1/vsrc VSUBS x2/v1 fgcell
+Xx2 x2/v1 x2/v2 VSUBS x2/VDD x2/vb x2/v2 diffamp_nmos
+Xtg5v0_0 x2/v2 tg5v0_0/vout tg5v0_0/en x1/vinj_en_b x1/vinj VSUBS tg5v0
+.ends
+
+.subckt array_core_block5 fgcell_amp_MOS_cap_thin_poly_0[2|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[3|3]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[2|4]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[4|0]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[1|6]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[2|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[2|7]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[2|2]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[0|3]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|8]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[1|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[0|4]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[2|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[3|2]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[3|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[4|4]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|5]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[2|1]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[2|6]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[0|5]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|2]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|4]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[2|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[3|7]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[3|8]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[0|0]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[4|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[4|5]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[2|6]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|1]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|2]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|3]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[4|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|4]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[2|0]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|1]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|6]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|7]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[4|2]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[0|4]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[4|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[2|0]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|8]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|0]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|1]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[1|5]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[4|4]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[0|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[4|7]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[1|2]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[1|3]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[4|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[0|0]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[3|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[4|1]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[4|2]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[2|4]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|7]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[1|8]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[3|0]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|5]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[1|4]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[1|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[4|6]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[1|2]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[4|7]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[2|5]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[3|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[4|0]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[4|1]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[1|7]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[2|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[1|6]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[2|3]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[2|5]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[2|3]/x2/v2
++ fgcell_amp_MOS_cap_thin_poly_0[0|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[1|0]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[1|1]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[4|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly_0[0|5]/x2/v2
++ fgcell_amp_MOS_cap_thick_poly_0[3|4]/x2/v2 fgcell_amp_MOS_cap_thin_poly_0[4|6]/x2/v2
++ VSUBS
+Xfgcell_amp_MOS_cap_thin_poly_0[0|0] fgcell_amp_MOS_cap_thin_poly_0[0|0]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|0] fgcell_amp_MOS_cap_thin_poly_0[1|0]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|0] fgcell_amp_MOS_cap_thin_poly_0[2|0]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|0] fgcell_amp_MOS_cap_thin_poly_0[3|0]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|0] fgcell_amp_MOS_cap_thin_poly_0[4|0]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|1] fgcell_amp_MOS_cap_thin_poly_0[0|1]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|1] fgcell_amp_MOS_cap_thin_poly_0[1|1]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|1] fgcell_amp_MOS_cap_thin_poly_0[2|1]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|1] fgcell_amp_MOS_cap_thin_poly_0[3|1]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|1] fgcell_amp_MOS_cap_thin_poly_0[4|1]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|2] fgcell_amp_MOS_cap_thin_poly_0[0|2]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|2] fgcell_amp_MOS_cap_thin_poly_0[1|2]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|2] fgcell_amp_MOS_cap_thin_poly_0[2|2]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|2] fgcell_amp_MOS_cap_thin_poly_0[3|2]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|2] fgcell_amp_MOS_cap_thin_poly_0[4|2]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|3] fgcell_amp_MOS_cap_thin_poly_0[0|3]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|3] fgcell_amp_MOS_cap_thin_poly_0[1|3]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|3] fgcell_amp_MOS_cap_thin_poly_0[2|3]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|3] fgcell_amp_MOS_cap_thin_poly_0[3|3]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|3] fgcell_amp_MOS_cap_thin_poly_0[4|3]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|4] fgcell_amp_MOS_cap_thin_poly_0[0|4]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|4] fgcell_amp_MOS_cap_thin_poly_0[1|4]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|4] fgcell_amp_MOS_cap_thin_poly_0[2|4]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|4] fgcell_amp_MOS_cap_thin_poly_0[3|4]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|4] fgcell_amp_MOS_cap_thin_poly_0[4|4]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|5] fgcell_amp_MOS_cap_thin_poly_0[0|5]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|5] fgcell_amp_MOS_cap_thin_poly_0[1|5]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|5] fgcell_amp_MOS_cap_thin_poly_0[2|5]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|5] fgcell_amp_MOS_cap_thin_poly_0[3|5]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|5] fgcell_amp_MOS_cap_thin_poly_0[4|5]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|6] fgcell_amp_MOS_cap_thin_poly_0[0|6]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|6] fgcell_amp_MOS_cap_thin_poly_0[1|6]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|6] fgcell_amp_MOS_cap_thin_poly_0[2|6]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|6] fgcell_amp_MOS_cap_thin_poly_0[3|6]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|6] fgcell_amp_MOS_cap_thin_poly_0[4|6]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|7] fgcell_amp_MOS_cap_thin_poly_0[0|7]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|7] fgcell_amp_MOS_cap_thin_poly_0[1|7]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|7] fgcell_amp_MOS_cap_thin_poly_0[2|7]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|7] fgcell_amp_MOS_cap_thin_poly_0[3|7]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|7] fgcell_amp_MOS_cap_thin_poly_0[4|7]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|8] fgcell_amp_MOS_cap_thin_poly_0[0|8]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|8] fgcell_amp_MOS_cap_thin_poly_0[1|8]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|8] fgcell_amp_MOS_cap_thin_poly_0[2|8]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|8] fgcell_amp_MOS_cap_thin_poly_0[3|8]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|8] fgcell_amp_MOS_cap_thin_poly_0[4|8]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[0|9] fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[1|9] fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[2|9] fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[3|9] fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thin_poly_0[4|9] fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 VSUBS
++ fgcell_amp_MOS_cap_thin_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|0] fgcell_amp_MOS_cap_thick_poly_0[0|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|0] fgcell_amp_MOS_cap_thick_poly_0[1|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|0] fgcell_amp_MOS_cap_thick_poly_0[2|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|0] fgcell_amp_MOS_cap_thick_poly_0[3|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|0] fgcell_amp_MOS_cap_thick_poly_0[4|0]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|1] fgcell_amp_MOS_cap_thick_poly_0[0|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|1] fgcell_amp_MOS_cap_thick_poly_0[1|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|1] fgcell_amp_MOS_cap_thick_poly_0[2|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|1] fgcell_amp_MOS_cap_thick_poly_0[3|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|1] fgcell_amp_MOS_cap_thick_poly_0[4|1]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|2] fgcell_amp_MOS_cap_thick_poly_0[0|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|2] fgcell_amp_MOS_cap_thick_poly_0[1|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|2] fgcell_amp_MOS_cap_thick_poly_0[2|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|2] fgcell_amp_MOS_cap_thick_poly_0[3|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|2] fgcell_amp_MOS_cap_thick_poly_0[4|2]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|3] fgcell_amp_MOS_cap_thick_poly_0[0|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|3] fgcell_amp_MOS_cap_thick_poly_0[1|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|3] fgcell_amp_MOS_cap_thick_poly_0[2|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|3] fgcell_amp_MOS_cap_thick_poly_0[3|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|3] fgcell_amp_MOS_cap_thick_poly_0[4|3]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|4] fgcell_amp_MOS_cap_thick_poly_0[0|4]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|4] fgcell_amp_MOS_cap_thick_poly_0[1|4]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|4] fgcell_amp_MOS_cap_thick_poly_0[2|4]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|4] fgcell_amp_MOS_cap_thick_poly_0[3|4]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|4] fgcell_amp_MOS_cap_thick_poly_0[4|4]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|5] fgcell_amp_MOS_cap_thick_poly_0[0|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|5] fgcell_amp_MOS_cap_thick_poly_0[1|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|5] fgcell_amp_MOS_cap_thick_poly_0[2|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|5] fgcell_amp_MOS_cap_thick_poly_0[3|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|5] fgcell_amp_MOS_cap_thick_poly_0[4|5]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|6] fgcell_amp_MOS_cap_thick_poly_0[0|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|6] fgcell_amp_MOS_cap_thick_poly_0[1|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|6] fgcell_amp_MOS_cap_thick_poly_0[2|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|6] fgcell_amp_MOS_cap_thick_poly_0[3|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|6] fgcell_amp_MOS_cap_thick_poly_0[4|6]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|7] fgcell_amp_MOS_cap_thick_poly_0[0|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|7] fgcell_amp_MOS_cap_thick_poly_0[1|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|7] fgcell_amp_MOS_cap_thick_poly_0[2|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|7] fgcell_amp_MOS_cap_thick_poly_0[3|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|7] fgcell_amp_MOS_cap_thick_poly_0[4|7]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|8] fgcell_amp_MOS_cap_thick_poly_0[0|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|8] fgcell_amp_MOS_cap_thick_poly_0[1|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|8] fgcell_amp_MOS_cap_thick_poly_0[2|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|8] fgcell_amp_MOS_cap_thick_poly_0[3|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|8] fgcell_amp_MOS_cap_thick_poly_0[4|8]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[0|9] fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[1|9] fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[2|9] fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[3|9] fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+Xfgcell_amp_MOS_cap_thick_poly_0[4|9] fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 fgcell_amp_MOS_cap_thick_poly
+.ends
+
+.subckt fgcell_amp x2/v1 VSUBS x1/vinj
+Xx1 x1/vinj x1/vinj_en_b x1/vtun x1/vctrl x1/vsrc VSUBS x2/v1 fgcell
+Xx2 x2/v1 x2/v2 VSUBS x2/VDD x2/vb x2/v2 diffamp_nmos
+Xtg5v0_0 x2/v2 tg5v0_0/vout tg5v0_0/en x1/vinj_en_b x1/vinj VSUBS tg5v0
+.ends
+
+.subckt fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_0 fgcell_amp_0/x2/v1 VSUBS fgcell_amp_1/x1/vinj fgcell_amp
+Xfgcell_amp_1 fgcell_amp_1/x2/v1 VSUBS fgcell_amp_1/x1/vinj fgcell_amp
+X0 fgcell_amp_1/x2/v1 fgcell_amp_0/x2/v1 sky130_fd_pr__cap_mim_m3_1 l=1 w=1
+.ends
+
+.subckt array_core_block3
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|0] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|0] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|0] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|0] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|0] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|1] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|1] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|1] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|1] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|1] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|2] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|2] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|2] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|2] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|2] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|3] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|3] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|3] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|3] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|3] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|4] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|4] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|4] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|4] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|4] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|5] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|5] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|5] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|5] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|5] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|6] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|6] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|6] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|6] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|6] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|7] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|7] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|7] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|7] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|7] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|8] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|8] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|8] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|8] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|8] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[0|9] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[1|9] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[2|9] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[3|9] fgcell_amp_FG_MiM_FG_1_1
+Xfgcell_amp_FG_MiM_FG_1_1_0[4|9] fgcell_amp_FG_MiM_FG_1_1
+.ends
+
+.subckt array_row_decode a[4] a[3] a[2] a[1] a[0] w[31] w[30] w[29] w[28] w[27] w[26]
++ w[25] w[24] w[23] w[22] w[21] w[20] w[19] w[18] w[17] w[16] w[15] w[14] w[13] w[12]
++ w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0] VGND VPWR
+Xx1 a[4] VGND VGND VPWR VPWR x1/Y sky130_fd_sc_hd__inv_1
+Xx3 a[2] VGND VGND VPWR VPWR x3/Y sky130_fd_sc_hd__inv_1
+Xx2 a[3] VGND VGND VPWR VPWR x2/Y sky130_fd_sc_hd__inv_1
+Xx4 a[1] VGND VGND VPWR VPWR x6/B sky130_fd_sc_hd__inv_1
+Xx5 a[0] VGND VGND VPWR VPWR x8/A sky130_fd_sc_hd__inv_1
+Xx6 x8/A x6/B VGND VGND VPWR VPWR x6/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_0[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[8] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[9] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[10] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[11] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[12] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[13] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[14] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_0[15] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__nand2_2_0 a[0] x6/B VGND VGND VPWR VPWR sky130_fd_sc_hd__nand2_2_0/Y
++ sky130_fd_sc_hd__nand2_2
+Xx8 x8/A a[1] VGND VGND VPWR VPWR x8/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_1[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[8] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[9] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[10] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[11] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[12] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[13] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[14] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xsky130_fd_sc_hd__decap_3_1[15] VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xx9 a[0] a[1] VGND VGND VPWR VPWR x9/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__decap_3_2 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xx10 x3/Y x2/Y VGND VGND VPWR VPWR x10/Y sky130_fd_sc_hd__nand2_2
+Xx11 a[2] x2/Y VGND VGND VPWR VPWR x11/Y sky130_fd_sc_hd__nand2_2
+Xx12 x3/Y a[3] VGND VGND VPWR VPWR x12/Y sky130_fd_sc_hd__nand2_2
+Xx13 a[2] a[3] VGND VGND VPWR VPWR x13/Y sky130_fd_sc_hd__nand2_2
+Xsky130_fd_sc_hd__nor3_1_0[0] x8/Y x13/Y x1/Y VGND VGND VPWR VPWR w[30] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[1] x6/Y x13/Y x1/Y VGND VGND VPWR VPWR w[28] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[2] x8/Y x12/Y x1/Y VGND VGND VPWR VPWR w[26] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[3] x6/Y x12/Y x1/Y VGND VGND VPWR VPWR w[24] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[4] x8/Y x11/Y x1/Y VGND VGND VPWR VPWR w[22] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[5] x6/Y x11/Y x1/Y VGND VGND VPWR VPWR w[20] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[6] x8/Y x10/Y x1/Y VGND VGND VPWR VPWR w[18] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[7] x6/Y x10/Y x1/Y VGND VGND VPWR VPWR w[16] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[8] x8/Y x13/Y a[4] VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[9] x6/Y x13/Y a[4] VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[10] x8/Y x12/Y a[4] VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[11] x6/Y x12/Y a[4] VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[12] x8/Y x11/Y a[4] VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[13] x6/Y x11/Y a[4] VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[14] x8/Y x10/Y a[4] VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_0[15] x6/Y x10/Y a[4] VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[0] x9/Y x13/Y x1/Y VGND VGND VPWR VPWR w[31] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[1] sky130_fd_sc_hd__nand2_2_0/Y x13/Y x1/Y VGND VGND VPWR
++ VPWR w[29] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[2] x9/Y x12/Y x1/Y VGND VGND VPWR VPWR w[27] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[3] sky130_fd_sc_hd__nand2_2_0/Y x12/Y x1/Y VGND VGND VPWR
++ VPWR w[25] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[4] x9/Y x11/Y x1/Y VGND VGND VPWR VPWR w[23] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[5] sky130_fd_sc_hd__nand2_2_0/Y x11/Y x1/Y VGND VGND VPWR
++ VPWR w[21] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[6] x9/Y x10/Y x1/Y VGND VGND VPWR VPWR w[19] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[7] sky130_fd_sc_hd__nand2_2_0/Y x10/Y x1/Y VGND VGND VPWR
++ VPWR w[17] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[8] x9/Y x13/Y a[4] VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[9] sky130_fd_sc_hd__nand2_2_0/Y x13/Y a[4] VGND VGND VPWR
++ VPWR w[13] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[10] x9/Y x12/Y a[4] VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[11] sky130_fd_sc_hd__nand2_2_0/Y x12/Y a[4] VGND VGND VPWR
++ VPWR w[9] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[12] x9/Y x11/Y a[4] VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[13] sky130_fd_sc_hd__nand2_2_0/Y x11/Y a[4] VGND VGND VPWR
++ VPWR w[5] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[14] x9/Y x10/Y a[4] VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+Xsky130_fd_sc_hd__nor3_1_1[15] sky130_fd_sc_hd__nand2_2_0/Y x10/Y a[4] VGND VGND VPWR
++ VPWR w[1] sky130_fd_sc_hd__nor3_1
+.ends
+
+.subckt fgcell_amp_MiM_cap_1_5
+Xx1 x1/x2/v1 VSUBS x1/x1/vinj fgcell_amp
+X0 x1/x2/v1 VSUBS sky130_fd_pr__cap_mim_m3_1 l=1 w=5
+.ends
+
+.subckt array_core_block1
+Xfgcell_amp_MiM_cap_1_5_0[0|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|0] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|1] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|2] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|3] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|4] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|5] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|6] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|7] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|8] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[0|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[1|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[2|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[3|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[4|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[5|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[6|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[7|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[8|9] fgcell_amp_MiM_cap_1_5
+Xfgcell_amp_MiM_cap_1_5_0[9|9] fgcell_amp_MiM_cap_1_5
+.ends
+
+.subckt lsi1v8o5v0 in out_b out vdd_l vdd_h vss
+X0 vdd_l in in_b vdd_l sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X1 vss t1 out vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X2 vss in in_b vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X3 vdd_h out out_b vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X4 vss out out_b vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X5 in_bb in_b vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X6 vdd_h out out_b vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X7 t1 in_bb vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X8 out_b out vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X9 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+X10 in_bb in_b vdd_l vdd_l sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X11 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+X12 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+X13 out t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X14 out t1 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X15 vdd_h t1 out vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X16 t1 t2 vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X17 out_b out vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X18 vdd_h t1 out vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X19 out_b out vdd_h vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X20 vss in_b t2 vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X21 out t1 vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X22 vdd_h t1 t2 vdd_h sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X23 vss vss vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0 ps=0 w=0.5 l=0.5
+.ends
+
+.subckt fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_0 fgcell_amp_0/x2/v1 VSUBS fgcell_amp_1/x1/vinj fgcell_amp
+Xfgcell_amp_1 fgcell_amp_1/x2/v1 VSUBS fgcell_amp_1/x1/vinj fgcell_amp
+X0 fgcell_amp_1/x2/v1 fgcell_amp_0/x2/v1 sky130_fd_pr__cap_mim_m3_1 l=1 w=5
+.ends
+
+.subckt array_core_block4
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|0] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|0] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|0] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|0] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|0] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|1] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|1] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|1] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|1] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|1] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|2] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|2] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|2] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|2] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|2] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|3] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|3] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|3] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|3] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|3] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|4] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|4] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|4] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|4] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|4] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|5] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|5] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|5] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|5] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|5] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|6] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|6] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|6] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|6] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|6] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|7] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|7] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|7] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|7] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|7] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|8] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|8] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|8] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|8] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|8] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[0|9] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[1|9] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[2|9] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[3|9] fgcell_amp_FG_MiM_FG_1_5
+Xfgcell_amp_FG_MiM_FG_1_5_0[4|9] fgcell_amp_FG_MiM_FG_1_5
+.ends
+
+.subckt fgcell_amp_MiM_cap_1_10
+Xx1 x1/x2/v1 VSUBS x1/x1/vinj fgcell_amp
+X0 x1/x2/v1 VSUBS sky130_fd_pr__cap_mim_m3_1 l=1 w=10
+.ends
+
+.subckt array_core_block2
+Xfgcell_amp_MiM_cap_1_10_0[0|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|0] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|1] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|2] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|3] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|4] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|5] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|6] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|7] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|8] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[0|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[1|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[2|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[3|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[4|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[5|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[6|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[7|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[8|9] fgcell_amp_MiM_cap_1_10
+Xfgcell_amp_MiM_cap_1_10_0[9|9] fgcell_amp_MiM_cap_1_10
+.ends
+
+.subckt fgcell_amp_MiM_cap_1_1
+Xx1 x1/x2/v1 VSUBS x1/x1/vinj fgcell_amp
+X0 x1/x2/v1 VSUBS sky130_fd_pr__cap_mim_m3_1 l=1 w=1
+.ends
+
+.subckt array_core_block0
+Xfgcell_amp_MiM_cap_1_1_0[0|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|0] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|1] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|2] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|3] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|4] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|5] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|6] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|7] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|8] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[0|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[1|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[2|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[3|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[4|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[5|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[6|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[7|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[8|9] fgcell_amp_MiM_cap_1_1
+Xfgcell_amp_MiM_cap_1_1_0[9|9] fgcell_amp_MiM_cap_1_1
+.ends
+
+.subckt array_core vccd2 vssd2 a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8]
+Xarray_column_decode_0 VSUBS a[3] a[2] a[1] a[0] array_column_decode_0/w[15] array_column_decode_0/w[14]
++ array_column_decode_0/w[13] array_column_decode_0/w[12] array_column_decode_0/w[11]
++ array_column_decode_0/w[10] array_column_decode_0/w[9] array_column_decode_0/w[8]
++ array_column_decode_0/w[7] array_column_decode_0/w[6] array_column_decode_0/w[5]
++ array_column_decode_0/w[4] array_column_decode_0/w[3] array_column_decode_0/w[2]
++ array_column_decode_0/w[1] array_column_decode_0/w[0] lsi1v8o5v0_2[9]/vdd_l array_column_decode
+Xarray_core_block5_0 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[2|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[2|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[0|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[1|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[1|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[4|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[0|9]/x2/v2 array_core_block5_0/fgcell_amp_MOS_cap_thick_poly_0[3|9]/x2/v2
++ array_core_block5_0/fgcell_amp_MOS_cap_thin_poly_0[4|9]/x2/v2 VSUBS array_core_block5
+Xarray_core_block3_0 array_core_block3
+Xarray_row_decode_0 a[8] a[7] a[6] a[5] a[4] lsi1v8o5v0_1[0]/in lsi1v8o5v0_1[1]/in
++ lsi1v8o5v0_1[2]/in lsi1v8o5v0_1[3]/in lsi1v8o5v0_1[4]/in lsi1v8o5v0_1[5]/in lsi1v8o5v0_1[6]/in
++ lsi1v8o5v0_1[7]/in lsi1v8o5v0_1[8]/in lsi1v8o5v0_1[9]/in lsi1v8o5v0_1[10]/in lsi1v8o5v0_1[11]/in
++ lsi1v8o5v0_1[12]/in lsi1v8o5v0_1[13]/in lsi1v8o5v0_1[14]/in lsi1v8o5v0_1[15]/in
++ lsi1v8o5v0_1[16]/in lsi1v8o5v0_1[17]/in lsi1v8o5v0_1[18]/in lsi1v8o5v0_1[19]/in
++ lsi1v8o5v0_1[20]/in lsi1v8o5v0_1[21]/in lsi1v8o5v0_1[22]/in lsi1v8o5v0_1[23]/in
++ lsi1v8o5v0_1[24]/in lsi1v8o5v0_1[25]/in lsi1v8o5v0_1[26]/in lsi1v8o5v0_1[27]/in
++ lsi1v8o5v0_1[28]/in lsi1v8o5v0_1[29]/in lsi1v8o5v0_1[30]/in lsi1v8o5v0_1[31]/in
++ VSUBS lsi1v8o5v0_1[9]/vdd_l array_row_decode
+Xarray_row_decode_1 a[8] a[7] a[6] a[5] a[4] lsi1v8o5v0_0[0]/in lsi1v8o5v0_0[1]/in
++ lsi1v8o5v0_0[2]/in lsi1v8o5v0_0[3]/in lsi1v8o5v0_0[4]/in lsi1v8o5v0_0[5]/in lsi1v8o5v0_0[6]/in
++ lsi1v8o5v0_0[7]/in lsi1v8o5v0_0[8]/in lsi1v8o5v0_0[9]/in lsi1v8o5v0_0[10]/in lsi1v8o5v0_0[11]/in
++ lsi1v8o5v0_0[12]/in lsi1v8o5v0_0[13]/in lsi1v8o5v0_0[14]/in lsi1v8o5v0_0[15]/in
++ lsi1v8o5v0_0[16]/in lsi1v8o5v0_0[17]/in lsi1v8o5v0_0[18]/in lsi1v8o5v0_0[19]/in
++ lsi1v8o5v0_0[20]/in lsi1v8o5v0_0[21]/in lsi1v8o5v0_0[22]/in lsi1v8o5v0_0[23]/in
++ lsi1v8o5v0_0[24]/in lsi1v8o5v0_0[25]/in lsi1v8o5v0_0[26]/in lsi1v8o5v0_0[27]/in
++ lsi1v8o5v0_0[28]/in lsi1v8o5v0_0[29]/in lsi1v8o5v0_0[30]/in lsi1v8o5v0_0[31]/in
++ VSUBS lsi1v8o5v0_0[9]/vdd_l array_row_decode
+Xarray_core_block1_0 array_core_block1
+Xlsi1v8o5v0_0[0] lsi1v8o5v0_0[0]/in l_row_en_b[31] l_row_en[31] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[0]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[1] lsi1v8o5v0_0[1]/in l_row_en_b[30] l_row_en[30] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[1]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[2] lsi1v8o5v0_0[2]/in l_row_en_b[29] l_row_en[29] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[2]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[3] lsi1v8o5v0_0[3]/in l_row_en_b[28] l_row_en[28] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[3]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[4] lsi1v8o5v0_0[4]/in l_row_en_b[27] l_row_en[27] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[4]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[5] lsi1v8o5v0_0[5]/in l_row_en_b[26] l_row_en[26] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[5]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[6] lsi1v8o5v0_0[6]/in l_row_en_b[25] l_row_en[25] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[6]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[7] lsi1v8o5v0_0[7]/in l_row_en_b[24] l_row_en[24] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[7]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[8] lsi1v8o5v0_0[8]/in l_row_en_b[23] l_row_en[23] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[8]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[9] lsi1v8o5v0_0[9]/in l_row_en_b[22] l_row_en[22] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[9]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[10] lsi1v8o5v0_0[10]/in l_row_en_b[21] l_row_en[21] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[10]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[11] lsi1v8o5v0_0[11]/in l_row_en_b[20] l_row_en[20] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[11]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[12] lsi1v8o5v0_0[12]/in l_row_en_b[19] l_row_en[19] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[12]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[13] lsi1v8o5v0_0[13]/in l_row_en_b[18] l_row_en[18] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[13]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[14] lsi1v8o5v0_0[14]/in l_row_en_b[17] l_row_en[17] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[14]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[15] lsi1v8o5v0_0[15]/in l_row_en_b[16] l_row_en[16] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[15]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[16] lsi1v8o5v0_0[16]/in l_row_en_b[15] l_row_en[15] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[16]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[17] lsi1v8o5v0_0[17]/in l_row_en_b[14] l_row_en[14] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[17]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[18] lsi1v8o5v0_0[18]/in l_row_en_b[13] l_row_en[13] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[18]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[19] lsi1v8o5v0_0[19]/in l_row_en_b[12] l_row_en[12] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[19]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[20] lsi1v8o5v0_0[20]/in l_row_en_b[11] l_row_en[11] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[20]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[21] lsi1v8o5v0_0[21]/in l_row_en_b[10] l_row_en[10] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[21]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[22] lsi1v8o5v0_0[22]/in l_row_en_b[9] l_row_en[9] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[22]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[23] lsi1v8o5v0_0[23]/in l_row_en_b[8] l_row_en[8] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[23]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[24] lsi1v8o5v0_0[24]/in l_row_en_b[7] l_row_en[7] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[24]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[25] lsi1v8o5v0_0[25]/in l_row_en_b[6] l_row_en[6] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[25]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[26] lsi1v8o5v0_0[26]/in l_row_en_b[5] l_row_en[5] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[26]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[27] lsi1v8o5v0_0[27]/in l_row_en_b[4] l_row_en[4] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[27]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[28] lsi1v8o5v0_0[28]/in l_row_en_b[3] l_row_en[3] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[28]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[29] lsi1v8o5v0_0[29]/in l_row_en_b[2] l_row_en[2] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[29]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[30] lsi1v8o5v0_0[30]/in l_row_en_b[1] l_row_en[1] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[30]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_0[31] lsi1v8o5v0_0[31]/in l_row_en_b[0] l_row_en[0] lsi1v8o5v0_0[9]/vdd_l
++ lsi1v8o5v0_0[31]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[0] lsi1v8o5v0_1[0]/in r_row_en_b[31] r_row_en[31] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[0]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[1] lsi1v8o5v0_1[1]/in r_row_en_b[30] r_row_en[30] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[1]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[2] lsi1v8o5v0_1[2]/in r_row_en_b[29] r_row_en[29] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[2]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[3] lsi1v8o5v0_1[3]/in r_row_en_b[28] r_row_en[28] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[3]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[4] lsi1v8o5v0_1[4]/in r_row_en_b[27] r_row_en[27] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[4]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[5] lsi1v8o5v0_1[5]/in r_row_en_b[26] r_row_en[26] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[5]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[6] lsi1v8o5v0_1[6]/in r_row_en_b[25] r_row_en[25] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[6]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[7] lsi1v8o5v0_1[7]/in r_row_en_b[24] r_row_en[24] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[7]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[8] lsi1v8o5v0_1[8]/in r_row_en_b[23] r_row_en[23] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[8]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[9] lsi1v8o5v0_1[9]/in r_row_en_b[22] r_row_en[22] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[9]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[10] lsi1v8o5v0_1[10]/in r_row_en_b[21] r_row_en[21] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[10]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[11] lsi1v8o5v0_1[11]/in r_row_en_b[20] r_row_en[20] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[11]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[12] lsi1v8o5v0_1[12]/in r_row_en_b[19] r_row_en[19] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[12]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[13] lsi1v8o5v0_1[13]/in r_row_en_b[18] r_row_en[18] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[13]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[14] lsi1v8o5v0_1[14]/in r_row_en_b[17] r_row_en[17] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[14]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[15] lsi1v8o5v0_1[15]/in r_row_en_b[16] r_row_en[16] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[15]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[16] lsi1v8o5v0_1[16]/in r_row_en_b[15] r_row_en[15] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[16]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[17] lsi1v8o5v0_1[17]/in r_row_en_b[14] r_row_en[14] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[17]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[18] lsi1v8o5v0_1[18]/in r_row_en_b[13] r_row_en[13] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[18]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[19] lsi1v8o5v0_1[19]/in r_row_en_b[12] r_row_en[12] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[19]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[20] lsi1v8o5v0_1[20]/in r_row_en_b[11] r_row_en[11] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[20]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[21] lsi1v8o5v0_1[21]/in r_row_en_b[10] r_row_en[10] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[21]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[22] lsi1v8o5v0_1[22]/in r_row_en_b[9] r_row_en[9] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[22]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[23] lsi1v8o5v0_1[23]/in r_row_en_b[8] r_row_en[8] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[23]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[24] lsi1v8o5v0_1[24]/in r_row_en_b[7] r_row_en[7] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[24]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[25] lsi1v8o5v0_1[25]/in r_row_en_b[6] r_row_en[6] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[25]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[26] lsi1v8o5v0_1[26]/in r_row_en_b[5] r_row_en[5] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[26]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[27] lsi1v8o5v0_1[27]/in r_row_en_b[4] r_row_en[4] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[27]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[28] lsi1v8o5v0_1[28]/in r_row_en_b[3] r_row_en[3] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[28]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[29] lsi1v8o5v0_1[29]/in r_row_en_b[2] r_row_en[2] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[29]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[30] lsi1v8o5v0_1[30]/in r_row_en_b[1] r_row_en[1] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[30]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_1[31] lsi1v8o5v0_1[31]/in r_row_en_b[0] r_row_en[0] lsi1v8o5v0_1[9]/vdd_l
++ lsi1v8o5v0_1[31]/vdd_h VSUBS lsi1v8o5v0
+Xtg5v0_0[0] tg5v0_0[0]/vin tg5v0_0[0]/vout tg5v0_1[0]/en tg5v0_1[0]/en_b tg5v0_0[0]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[1] tg5v0_0[1]/vin tg5v0_0[1]/vout tg5v0_1[1]/en tg5v0_1[1]/en_b tg5v0_0[1]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[2] tg5v0_0[2]/vin tg5v0_0[2]/vout tg5v0_1[2]/en tg5v0_1[2]/en_b tg5v0_0[2]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[3] tg5v0_0[3]/vin tg5v0_0[3]/vout tg5v0_1[3]/en tg5v0_1[3]/en_b tg5v0_0[3]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[4] tg5v0_0[4]/vin tg5v0_0[4]/vout tg5v0_1[4]/en tg5v0_1[4]/en_b tg5v0_0[4]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[5] tg5v0_0[5]/vin tg5v0_0[5]/vout tg5v0_1[5]/en tg5v0_1[5]/en_b tg5v0_0[5]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[6] tg5v0_0[6]/vin tg5v0_0[6]/vout tg5v0_1[6]/en tg5v0_1[6]/en_b tg5v0_0[6]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[7] tg5v0_0[7]/vin tg5v0_0[7]/vout tg5v0_1[7]/en tg5v0_1[7]/en_b tg5v0_0[7]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[8] tg5v0_0[8]/vin tg5v0_0[8]/vout tg5v0_1[8]/en tg5v0_1[8]/en_b tg5v0_0[8]/vdd
++ VSUBS tg5v0
+Xtg5v0_0[9] tg5v0_0[9]/vin tg5v0_0[9]/vout tg5v0_1[9]/en tg5v0_1[9]/en_b tg5v0_0[9]/vdd
++ VSUBS tg5v0
+Xlsi1v8o5v0_2[0] lsi1v8o5v0_2[0]/in lsi1v8o5v0_2[0]/out_b lsi1v8o5v0_2[0]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[0]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[1] lsi1v8o5v0_2[1]/in lsi1v8o5v0_2[1]/out_b lsi1v8o5v0_2[1]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[1]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[2] lsi1v8o5v0_2[2]/in lsi1v8o5v0_2[2]/out_b lsi1v8o5v0_2[2]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[2]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[3] lsi1v8o5v0_2[3]/in lsi1v8o5v0_2[3]/out_b lsi1v8o5v0_2[3]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[3]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[4] lsi1v8o5v0_2[4]/in lsi1v8o5v0_2[4]/out_b lsi1v8o5v0_2[4]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[4]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[5] lsi1v8o5v0_2[5]/in lsi1v8o5v0_2[5]/out_b lsi1v8o5v0_2[5]/out lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[5]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[6] lsi1v8o5v0_2[6]/in tg5v0_1[9]/en_b tg5v0_1[9]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[6]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[7] lsi1v8o5v0_2[7]/in tg5v0_1[8]/en_b tg5v0_1[8]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[7]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[8] lsi1v8o5v0_2[8]/in tg5v0_1[7]/en_b tg5v0_1[7]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[8]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[9] lsi1v8o5v0_2[9]/in tg5v0_1[6]/en_b tg5v0_1[6]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[9]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[10] lsi1v8o5v0_2[10]/in tg5v0_1[5]/en_b tg5v0_1[5]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[10]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[11] lsi1v8o5v0_2[11]/in tg5v0_1[4]/en_b tg5v0_1[4]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[11]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[12] lsi1v8o5v0_2[12]/in tg5v0_1[3]/en_b tg5v0_1[3]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[12]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[13] lsi1v8o5v0_2[13]/in tg5v0_1[2]/en_b tg5v0_1[2]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[13]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[14] lsi1v8o5v0_2[14]/in tg5v0_1[1]/en_b tg5v0_1[1]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[14]/vdd_h VSUBS lsi1v8o5v0
+Xlsi1v8o5v0_2[15] lsi1v8o5v0_2[15]/in tg5v0_1[0]/en_b tg5v0_1[0]/en lsi1v8o5v0_2[9]/vdd_l
++ lsi1v8o5v0_2[15]/vdd_h VSUBS lsi1v8o5v0
+Xtg5v0_1[0] tg5v0_1[0]/vin tg5v0_1[0]/vout tg5v0_1[0]/en tg5v0_1[0]/en_b tg5v0_1[0]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[1] tg5v0_1[1]/vin tg5v0_1[1]/vout tg5v0_1[1]/en tg5v0_1[1]/en_b tg5v0_1[1]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[2] tg5v0_1[2]/vin tg5v0_1[2]/vout tg5v0_1[2]/en tg5v0_1[2]/en_b tg5v0_1[2]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[3] tg5v0_1[3]/vin tg5v0_1[3]/vout tg5v0_1[3]/en tg5v0_1[3]/en_b tg5v0_1[3]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[4] tg5v0_1[4]/vin tg5v0_1[4]/vout tg5v0_1[4]/en tg5v0_1[4]/en_b tg5v0_1[4]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[5] tg5v0_1[5]/vin tg5v0_1[5]/vout tg5v0_1[5]/en tg5v0_1[5]/en_b tg5v0_1[5]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[6] tg5v0_1[6]/vin tg5v0_1[6]/vout tg5v0_1[6]/en tg5v0_1[6]/en_b tg5v0_1[6]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[7] tg5v0_1[7]/vin tg5v0_1[7]/vout tg5v0_1[7]/en tg5v0_1[7]/en_b tg5v0_1[7]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[8] tg5v0_1[8]/vin tg5v0_1[8]/vout tg5v0_1[8]/en tg5v0_1[8]/en_b tg5v0_1[8]/vdd
++ VSUBS tg5v0
+Xtg5v0_1[9] tg5v0_1[9]/vin tg5v0_1[9]/vout tg5v0_1[9]/en tg5v0_1[9]/en_b tg5v0_1[9]/vdd
++ VSUBS tg5v0
+Xarray_core_block4_0 array_core_block4
+Xarray_core_block2_0 array_core_block2
+Xarray_core_block0_0 array_core_block0
+.ends
+

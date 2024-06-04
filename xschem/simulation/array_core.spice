@@ -1,0 +1,1091 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core.sch
+.subckt array_core vinj VGND vtun vb vctrl VPWR addr[8] addr[7] addr[6] addr[5] addr[4] addr[3] addr[2] addr[1] addr[0] l_vout
++ r_vout VSRC
+*.PININFO vinj:I VGND:I vtun:I vb:I vctrl:I l_vout:O addr[8:0]:I VPWR:I r_vout:O VSRC:I
+x1 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[9] l_row_en[8] l_row_en[7] l_row_en[6] l_row_en[5]
++ l_row_en[4] l_row_en[3] l_row_en[2] l_row_en[1] l_row_en[0] l_row_en_b[9] l_row_en_b[8] l_row_en_b[7] l_row_en_b[6] l_row_en_b[5]
++ l_row_en_b[4] l_row_en_b[3] l_row_en_b[2] l_row_en_b[1] l_row_en_b[0] vtun vb vctrl net4[9] net4[8] net4[7] net4[6] net4[5] net4[4] net4[3]
++ net4[2] net4[1] net4[0] array_core_block0
+x2 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[19] l_row_en[18] l_row_en[17] l_row_en[16] l_row_en[15]
++ l_row_en[14] l_row_en[13] l_row_en[12] l_row_en[11] l_row_en[10] l_row_en_b[19] l_row_en_b[18] l_row_en_b[17] l_row_en_b[16] l_row_en_b[15]
++ l_row_en_b[14] l_row_en_b[13] l_row_en_b[12] l_row_en_b[11] l_row_en_b[10] vtun vb vctrl net4[9] net4[8] net4[7] net4[6] net4[5] net4[4] net4[3]
++ net4[2] net4[1] net4[0] array_core_block1
+x3 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[29] l_row_en[28] l_row_en[27] l_row_en[26] l_row_en[25]
++ l_row_en[24] l_row_en[23] l_row_en[22] l_row_en[21] l_row_en[20] l_row_en_b[29] l_row_en_b[28] l_row_en_b[27] l_row_en_b[26] l_row_en_b[25]
++ l_row_en_b[24] l_row_en_b[23] l_row_en_b[22] l_row_en_b[21] l_row_en_b[20] vtun vb vctrl net4[9] net4[8] net4[7] net4[6] net4[5] net4[4] net4[3]
++ net4[2] net4[1] net4[0] array_core_block2
+x4 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC r_row_en[9] r_row_en[8] r_row_en[7] r_row_en[6] r_row_en[5]
++ r_row_en[4] r_row_en[3] r_row_en[2] r_row_en[1] r_row_en[0] r_row_en_b[9] r_row_en_b[8] r_row_en_b[7] r_row_en_b[6] r_row_en_b[5]
++ r_row_en_b[4] r_row_en_b[3] r_row_en_b[2] r_row_en_b[1] r_row_en_b[0] vtun vb vctrl net5[9] net5[8] net5[7] net5[6] net5[5] net5[4] net5[3]
++ net5[2] net5[1] net5[0] array_core_block3
+x5 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC r_row_en[19] r_row_en[18] r_row_en[17] r_row_en[16] r_row_en[15]
++ r_row_en[14] r_row_en[13] r_row_en[12] r_row_en[11] r_row_en[10] r_row_en_b[19] r_row_en_b[18] r_row_en_b[17] r_row_en_b[16] r_row_en_b[15]
++ r_row_en_b[14] r_row_en_b[13] r_row_en_b[12] r_row_en_b[11] r_row_en_b[10] vtun vb vctrl net5[9] net5[8] net5[7] net5[6] net5[5] net5[4] net5[3]
++ net5[2] net5[1] net5[0] array_core_block4
+x6 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC r_row_en[29] r_row_en[28] r_row_en[27] r_row_en[26] r_row_en[25]
++ r_row_en[24] r_row_en[23] r_row_en[22] r_row_en[21] r_row_en[20] r_row_en_b[29] r_row_en_b[28] r_row_en_b[27] r_row_en_b[26] r_row_en_b[25]
++ r_row_en_b[24] r_row_en_b[23] r_row_en_b[22] r_row_en_b[21] r_row_en_b[20] vtun vb vctrl net5[9] net5[8] net5[7] net5[6] net5[5] net5[4] net5[3]
++ net5[2] net5[1] net5[0] array_core_block5
+x7 VPWR VGND addr[8] addr[7] addr[6] addr[5] addr[4] l_w[31] l_w[30] l_w[29] l_w[28] l_w[27] l_w[26] l_w[25] l_w[24] l_w[23]
++ l_w[22] l_w[21] l_w[20] l_w[19] l_w[18] l_w[17] l_w[16] l_w[15] l_w[14] l_w[13] l_w[12] l_w[11] l_w[10] l_w[9] l_w[8] l_w[7] l_w[6]
++ l_w[5] l_w[4] l_w[3] l_w[2] l_w[1] l_w[0] array_row_decode
+x8 VPWR VGND addr[8] addr[7] addr[6] addr[5] addr[4] r_w[31] r_w[30] r_w[29] r_w[28] r_w[27] r_w[26] r_w[25] r_w[24] r_w[23]
++ r_w[22] r_w[21] r_w[20] r_w[19] r_w[18] r_w[17] r_w[16] r_w[15] r_w[14] r_w[13] r_w[12] r_w[11] r_w[10] r_w[9] r_w[8] r_w[7] r_w[6]
++ r_w[5] r_w[4] r_w[3] r_w[2] r_w[1] r_w[0] array_row_decode
+x9[31] l_w[31] l_row_en_b[31] l_row_en[31] VPWR vinj VGND lsi1v8o5v0
+x9[30] l_w[30] l_row_en_b[30] l_row_en[30] VPWR vinj VGND lsi1v8o5v0
+x9[29] l_w[29] l_row_en_b[29] l_row_en[29] VPWR vinj VGND lsi1v8o5v0
+x9[28] l_w[28] l_row_en_b[28] l_row_en[28] VPWR vinj VGND lsi1v8o5v0
+x9[27] l_w[27] l_row_en_b[27] l_row_en[27] VPWR vinj VGND lsi1v8o5v0
+x9[26] l_w[26] l_row_en_b[26] l_row_en[26] VPWR vinj VGND lsi1v8o5v0
+x9[25] l_w[25] l_row_en_b[25] l_row_en[25] VPWR vinj VGND lsi1v8o5v0
+x9[24] l_w[24] l_row_en_b[24] l_row_en[24] VPWR vinj VGND lsi1v8o5v0
+x9[23] l_w[23] l_row_en_b[23] l_row_en[23] VPWR vinj VGND lsi1v8o5v0
+x9[22] l_w[22] l_row_en_b[22] l_row_en[22] VPWR vinj VGND lsi1v8o5v0
+x9[21] l_w[21] l_row_en_b[21] l_row_en[21] VPWR vinj VGND lsi1v8o5v0
+x9[20] l_w[20] l_row_en_b[20] l_row_en[20] VPWR vinj VGND lsi1v8o5v0
+x9[19] l_w[19] l_row_en_b[19] l_row_en[19] VPWR vinj VGND lsi1v8o5v0
+x9[18] l_w[18] l_row_en_b[18] l_row_en[18] VPWR vinj VGND lsi1v8o5v0
+x9[17] l_w[17] l_row_en_b[17] l_row_en[17] VPWR vinj VGND lsi1v8o5v0
+x9[16] l_w[16] l_row_en_b[16] l_row_en[16] VPWR vinj VGND lsi1v8o5v0
+x9[15] l_w[15] l_row_en_b[15] l_row_en[15] VPWR vinj VGND lsi1v8o5v0
+x9[14] l_w[14] l_row_en_b[14] l_row_en[14] VPWR vinj VGND lsi1v8o5v0
+x9[13] l_w[13] l_row_en_b[13] l_row_en[13] VPWR vinj VGND lsi1v8o5v0
+x9[12] l_w[12] l_row_en_b[12] l_row_en[12] VPWR vinj VGND lsi1v8o5v0
+x9[11] l_w[11] l_row_en_b[11] l_row_en[11] VPWR vinj VGND lsi1v8o5v0
+x9[10] l_w[10] l_row_en_b[10] l_row_en[10] VPWR vinj VGND lsi1v8o5v0
+x9[9] l_w[9] l_row_en_b[9] l_row_en[9] VPWR vinj VGND lsi1v8o5v0
+x9[8] l_w[8] l_row_en_b[8] l_row_en[8] VPWR vinj VGND lsi1v8o5v0
+x9[7] l_w[7] l_row_en_b[7] l_row_en[7] VPWR vinj VGND lsi1v8o5v0
+x9[6] l_w[6] l_row_en_b[6] l_row_en[6] VPWR vinj VGND lsi1v8o5v0
+x9[5] l_w[5] l_row_en_b[5] l_row_en[5] VPWR vinj VGND lsi1v8o5v0
+x9[4] l_w[4] l_row_en_b[4] l_row_en[4] VPWR vinj VGND lsi1v8o5v0
+x9[3] l_w[3] l_row_en_b[3] l_row_en[3] VPWR vinj VGND lsi1v8o5v0
+x9[2] l_w[2] l_row_en_b[2] l_row_en[2] VPWR vinj VGND lsi1v8o5v0
+x9[1] l_w[1] l_row_en_b[1] l_row_en[1] VPWR vinj VGND lsi1v8o5v0
+x9[0] l_w[0] l_row_en_b[0] l_row_en[0] VPWR vinj VGND lsi1v8o5v0
+x10[31] r_w[31] r_row_en_b[31] r_row_en[31] VPWR vinj VGND lsi1v8o5v0
+x10[30] r_w[30] r_row_en_b[30] r_row_en[30] VPWR vinj VGND lsi1v8o5v0
+x10[29] r_w[29] r_row_en_b[29] r_row_en[29] VPWR vinj VGND lsi1v8o5v0
+x10[28] r_w[28] r_row_en_b[28] r_row_en[28] VPWR vinj VGND lsi1v8o5v0
+x10[27] r_w[27] r_row_en_b[27] r_row_en[27] VPWR vinj VGND lsi1v8o5v0
+x10[26] r_w[26] r_row_en_b[26] r_row_en[26] VPWR vinj VGND lsi1v8o5v0
+x10[25] r_w[25] r_row_en_b[25] r_row_en[25] VPWR vinj VGND lsi1v8o5v0
+x10[24] r_w[24] r_row_en_b[24] r_row_en[24] VPWR vinj VGND lsi1v8o5v0
+x10[23] r_w[23] r_row_en_b[23] r_row_en[23] VPWR vinj VGND lsi1v8o5v0
+x10[22] r_w[22] r_row_en_b[22] r_row_en[22] VPWR vinj VGND lsi1v8o5v0
+x10[21] r_w[21] r_row_en_b[21] r_row_en[21] VPWR vinj VGND lsi1v8o5v0
+x10[20] r_w[20] r_row_en_b[20] r_row_en[20] VPWR vinj VGND lsi1v8o5v0
+x10[19] r_w[19] r_row_en_b[19] r_row_en[19] VPWR vinj VGND lsi1v8o5v0
+x10[18] r_w[18] r_row_en_b[18] r_row_en[18] VPWR vinj VGND lsi1v8o5v0
+x10[17] r_w[17] r_row_en_b[17] r_row_en[17] VPWR vinj VGND lsi1v8o5v0
+x10[16] r_w[16] r_row_en_b[16] r_row_en[16] VPWR vinj VGND lsi1v8o5v0
+x10[15] r_w[15] r_row_en_b[15] r_row_en[15] VPWR vinj VGND lsi1v8o5v0
+x10[14] r_w[14] r_row_en_b[14] r_row_en[14] VPWR vinj VGND lsi1v8o5v0
+x10[13] r_w[13] r_row_en_b[13] r_row_en[13] VPWR vinj VGND lsi1v8o5v0
+x10[12] r_w[12] r_row_en_b[12] r_row_en[12] VPWR vinj VGND lsi1v8o5v0
+x10[11] r_w[11] r_row_en_b[11] r_row_en[11] VPWR vinj VGND lsi1v8o5v0
+x10[10] r_w[10] r_row_en_b[10] r_row_en[10] VPWR vinj VGND lsi1v8o5v0
+x10[9] r_w[9] r_row_en_b[9] r_row_en[9] VPWR vinj VGND lsi1v8o5v0
+x10[8] r_w[8] r_row_en_b[8] r_row_en[8] VPWR vinj VGND lsi1v8o5v0
+x10[7] r_w[7] r_row_en_b[7] r_row_en[7] VPWR vinj VGND lsi1v8o5v0
+x10[6] r_w[6] r_row_en_b[6] r_row_en[6] VPWR vinj VGND lsi1v8o5v0
+x10[5] r_w[5] r_row_en_b[5] r_row_en[5] VPWR vinj VGND lsi1v8o5v0
+x10[4] r_w[4] r_row_en_b[4] r_row_en[4] VPWR vinj VGND lsi1v8o5v0
+x10[3] r_w[3] r_row_en_b[3] r_row_en[3] VPWR vinj VGND lsi1v8o5v0
+x10[2] r_w[2] r_row_en_b[2] r_row_en[2] VPWR vinj VGND lsi1v8o5v0
+x10[1] r_w[1] r_row_en_b[1] r_row_en[1] VPWR vinj VGND lsi1v8o5v0
+x10[0] r_w[0] r_row_en_b[0] r_row_en[0] VPWR vinj VGND lsi1v8o5v0
+* tap: l_row_en[31:0] --> l_row_en[29:20]
+* tap: l_row_en[31:0] --> l_row_en[19:10]
+* tap: l_row_en[31:0] --> l_row_en[9:0]
+* tap: l_row_en_b[31:0] --> l_row_en_b[29:20]
+* tap: l_row_en_b[31:0] --> l_row_en_b[19:10]
+* tap: l_row_en_b[31:0] --> l_row_en_b[9:0]
+* tap: r_row_en[31:0] --> r_row_en[29:20]
+* tap: r_row_en[31:0] --> r_row_en[19:10]
+* tap: r_row_en[31:0] --> r_row_en[9:0]
+* tap: r_row_en_b[31:0] --> r_row_en_b[29:20]
+* tap: r_row_en_b[31:0] --> r_row_en_b[19:10]
+* tap: r_row_en_b[31:0] --> r_row_en_b[9:0]
+x1[9] net4[9] l_vout net2[9] net3[9] vinj VGND tg5v0
+x1[8] net4[8] l_vout net2[8] net3[8] vinj VGND tg5v0
+x1[7] net4[7] l_vout net2[7] net3[7] vinj VGND tg5v0
+x1[6] net4[6] l_vout net2[6] net3[6] vinj VGND tg5v0
+x1[5] net4[5] l_vout net2[5] net3[5] vinj VGND tg5v0
+x1[4] net4[4] l_vout net2[4] net3[4] vinj VGND tg5v0
+x1[3] net4[3] l_vout net2[3] net3[3] vinj VGND tg5v0
+x1[2] net4[2] l_vout net2[2] net3[2] vinj VGND tg5v0
+x1[1] net4[1] l_vout net2[1] net3[1] vinj VGND tg5v0
+x1[0] net4[0] l_vout net2[0] net3[0] vinj VGND tg5v0
+x11[15] net1[15] net3[9] net2[9] VPWR vinj VGND lsi1v8o5v0
+x11[14] net1[14] net3[8] net2[8] VPWR vinj VGND lsi1v8o5v0
+x11[13] net1[13] net3[7] net2[7] VPWR vinj VGND lsi1v8o5v0
+x11[12] net1[12] net3[6] net2[6] VPWR vinj VGND lsi1v8o5v0
+x11[11] net1[11] net3[5] net2[5] VPWR vinj VGND lsi1v8o5v0
+x11[10] net1[10] net3[4] net2[4] VPWR vinj VGND lsi1v8o5v0
+x11[9] net1[9] net3[3] net2[3] VPWR vinj VGND lsi1v8o5v0
+x11[8] net1[8] net3[2] net2[2] VPWR vinj VGND lsi1v8o5v0
+x11[7] net1[7] net3[1] net2[1] VPWR vinj VGND lsi1v8o5v0
+x11[6] net1[6] net3[0] net2[0] VPWR vinj VGND lsi1v8o5v0
+x11[5] net1[5] net3[9] net2[9] VPWR vinj VGND lsi1v8o5v0
+x11[4] net1[4] net3[8] net2[8] VPWR vinj VGND lsi1v8o5v0
+x11[3] net1[3] net3[7] net2[7] VPWR vinj VGND lsi1v8o5v0
+x11[2] net1[2] net3[6] net2[6] VPWR vinj VGND lsi1v8o5v0
+x11[1] net1[1] net3[5] net2[5] VPWR vinj VGND lsi1v8o5v0
+x11[0] net1[0] net3[4] net2[4] VPWR vinj VGND lsi1v8o5v0
+* tap: addr[8:0] --> addr[8:4]
+* tap: addr[8:0] --> addr[3:0]
+* tap: addr[8:0] --> addr[8:4]
+x10 VPWR VGND addr[3] addr[2] addr[1] addr[0] net1[15] net1[14] net1[13] net1[12] net1[11] net1[10] net1[9] net1[8] net1[7]
++ net1[6] net1[5] net1[4] net1[3] net1[2] net1[1] net1[0] array_column_decode
+x2[9] net5[9] r_vout net2[9] net3[9] vinj VGND tg5v0
+x2[8] net5[8] r_vout net2[8] net3[8] vinj VGND tg5v0
+x2[7] net5[7] r_vout net2[7] net3[7] vinj VGND tg5v0
+x2[6] net5[6] r_vout net2[6] net3[6] vinj VGND tg5v0
+x2[5] net5[5] r_vout net2[5] net3[5] vinj VGND tg5v0
+x2[4] net5[4] r_vout net2[4] net3[4] vinj VGND tg5v0
+x2[3] net5[3] r_vout net2[3] net3[3] vinj VGND tg5v0
+x2[2] net5[2] r_vout net2[2] net3[2] vinj VGND tg5v0
+x2[1] net5[1] r_vout net2[1] net3[1] vinj VGND tg5v0
+x2[0] net5[0] r_vout net2[0] net3[0] vinj VGND tg5v0
+.ends
+
+* expanding   symbol:  array_core_block0.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block0.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block0.sch
+.subckt array_core_block0 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_core_block1.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block1.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block1.sch
+.subckt array_core_block1 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_core_block2.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block2.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block2.sch
+.subckt array_core_block2 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_core_block3.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block3.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block3.sch
+.subckt array_core_block3 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_core_block4.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block4.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block4.sch
+.subckt array_core_block4 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_core_block5.sym # of pins=9
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block5.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block5.sch
+.subckt array_core_block5 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
++ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
++ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
++ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
+*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
+xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
+xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
+xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
+xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
+xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
+xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
+xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
+xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
+xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
+xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
+xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
+xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
+xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
+xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
+xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
+xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
+xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
+xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
+xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
+xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
+xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
+xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
+xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
+xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
+xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
+xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
+xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
+xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
+xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
+xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
+xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
+xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
+xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
+xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
+xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
+xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
+xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
+xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
+xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
+xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
+xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
+xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
+xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
+xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
+xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
+xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
+xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
+xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
+xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
+xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
+xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
+xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
+xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
+xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
+xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
+xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
+xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
+xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
+xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
+xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
+xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
+xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
+xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
+xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
+xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
+xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
+xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
+xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
+xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
+xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
+xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
+xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
+xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
+xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
+xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
+xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
+xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
+xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
+xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
+xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
+xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
+xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
+xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
+xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
+xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
+xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
+xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
+xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
+xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
+xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
+xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
+xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
+xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
+xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
+xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
+xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
+xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
+xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
+xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
+xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+.ends
+
+
+* expanding   symbol:  array_row_decode.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_row_decode.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_row_decode.sch
+.subckt array_row_decode VPWR VGND a[4] a[3] a[2] a[1] a[0] w[31] w[30] w[29] w[28] w[27] w[26] w[25] w[24] w[23] w[22] w[21]
++ w[20] w[19] w[18] w[17] w[16] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0]
+*.PININFO a[4:0]:I VPWR:I VGND:I w[31:0]:O
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
+x1 a[4] VGND VGND VPWR VPWR a[4]_b sky130_fd_sc_hd__inv_1
+x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
+x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
+x4 a[1] VGND VGND VPWR VPWR a[1]_b sky130_fd_sc_hd__inv_1
+x5 a[0] VGND VGND VPWR VPWR a[0]_b sky130_fd_sc_hd__inv_1
+x13 a[2] a[3] VGND VGND VPWR VPWR net8 sky130_fd_sc_hd__nand2_2
+x6 a[0]_b a[1]_b VGND VGND VPWR VPWR net1 sky130_fd_sc_hd__nand2_2
+x7 a[0] a[1]_b VGND VGND VPWR VPWR net3 sky130_fd_sc_hd__nand2_2
+x8 a[0]_b a[1] VGND VGND VPWR VPWR net4 sky130_fd_sc_hd__nand2_2
+x9 a[0] a[1] VGND VGND VPWR VPWR net5 sky130_fd_sc_hd__nand2_2
+x10 a[2]_b a[3]_b VGND VGND VPWR VPWR net2 sky130_fd_sc_hd__nand2_2
+x11 a[2] a[3]_b VGND VGND VPWR VPWR net6 sky130_fd_sc_hd__nand2_2
+x12 a[2]_b a[3] VGND VGND VPWR VPWR net7 sky130_fd_sc_hd__nand2_2
+x14 net1 net2 a[4] VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+x15 net3 net2 a[4] VGND VGND VPWR VPWR w[1] sky130_fd_sc_hd__nor3_1
+x16 net4 net2 a[4] VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+x17 net5 net2 a[4] VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+x18 net1 net6 a[4] VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+x19 net3 net6 a[4] VGND VGND VPWR VPWR w[5] sky130_fd_sc_hd__nor3_1
+x20 net4 net6 a[4] VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+x21 net5 net6 a[4] VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+x22 net1 net7 a[4] VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+x23 net3 net7 a[4] VGND VGND VPWR VPWR w[9] sky130_fd_sc_hd__nor3_1
+x24 net4 net7 a[4] VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+x25 net5 net7 a[4] VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+x26 net1 net8 a[4] VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+x27 net3 net8 a[4] VGND VGND VPWR VPWR w[13] sky130_fd_sc_hd__nor3_1
+x28 net4 net8 a[4] VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+x29 net5 net8 a[4] VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+x30 net1 net2 a[4]_b VGND VGND VPWR VPWR w[16] sky130_fd_sc_hd__nor3_1
+x31 net3 net2 a[4]_b VGND VGND VPWR VPWR w[17] sky130_fd_sc_hd__nor3_1
+x32 net4 net2 a[4]_b VGND VGND VPWR VPWR w[18] sky130_fd_sc_hd__nor3_1
+x33 net5 net2 a[4]_b VGND VGND VPWR VPWR w[19] sky130_fd_sc_hd__nor3_1
+x34 net1 net6 a[4]_b VGND VGND VPWR VPWR w[20] sky130_fd_sc_hd__nor3_1
+x35 net3 net6 a[4]_b VGND VGND VPWR VPWR w[21] sky130_fd_sc_hd__nor3_1
+x36 net4 net6 a[4]_b VGND VGND VPWR VPWR w[22] sky130_fd_sc_hd__nor3_1
+x37 net5 net6 a[4]_b VGND VGND VPWR VPWR w[23] sky130_fd_sc_hd__nor3_1
+x38 net1 net7 a[4]_b VGND VGND VPWR VPWR w[24] sky130_fd_sc_hd__nor3_1
+x39 net3 net7 a[4]_b VGND VGND VPWR VPWR w[25] sky130_fd_sc_hd__nor3_1
+x40 net4 net7 a[4]_b VGND VGND VPWR VPWR w[26] sky130_fd_sc_hd__nor3_1
+x41 net5 net7 a[4]_b VGND VGND VPWR VPWR w[27] sky130_fd_sc_hd__nor3_1
+x42 net1 net8 a[4]_b VGND VGND VPWR VPWR w[28] sky130_fd_sc_hd__nor3_1
+x43 net3 net8 a[4]_b VGND VGND VPWR VPWR w[29] sky130_fd_sc_hd__nor3_1
+x44 net4 net8 a[4]_b VGND VGND VPWR VPWR w[30] sky130_fd_sc_hd__nor3_1
+x45 net5 net8 a[4]_b VGND VGND VPWR VPWR w[31] sky130_fd_sc_hd__nor3_1
+x46 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x48 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x49 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x51 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x52 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x54 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x55 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x57 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x58 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x60 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x61 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x63 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x64 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x66 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x67 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x71 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x74 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x80 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x86 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x89 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x92 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x94 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x95 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x96 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x97 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x98 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x99 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x100 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x101 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x102 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x103 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x104 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x105 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x106 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x107 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x108 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x109 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x110 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x111 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x112 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x113 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x114 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x115 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x116 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x117 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x118 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x119 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x120 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x121 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x122 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x123 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x124 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x125 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x126 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x127 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x128 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x129 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x130 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x131 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x132 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x133 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x134 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x135 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x136 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x137 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x138 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x139 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x140 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x141 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+.ends
+
+
+* expanding   symbol:  array_column_decode.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sch
+.subckt array_column_decode VPWR VGND a[3] a[2] a[1] a[0] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3]
++ w[2] w[1] w[0]
+*.PININFO a[3:0]:I VPWR:I VGND:I w[15:0]:O
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
+x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
+x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
+x4 a[1] VGND VGND VPWR VPWR a[1]_b sky130_fd_sc_hd__inv_1
+x5 a[0] VGND VGND VPWR VPWR a[0]_b sky130_fd_sc_hd__inv_1
+x13 a[2] a[3] VGND VGND VPWR VPWR net8 sky130_fd_sc_hd__nand2_2
+x6 a[0]_b a[1]_b VGND VGND VPWR VPWR net1 sky130_fd_sc_hd__nand2_2
+x7 a[0] a[1]_b VGND VGND VPWR VPWR net3 sky130_fd_sc_hd__nand2_2
+x8 a[0]_b a[1] VGND VGND VPWR VPWR net4 sky130_fd_sc_hd__nand2_2
+x9 a[0] a[1] VGND VGND VPWR VPWR net5 sky130_fd_sc_hd__nand2_2
+x10 a[2]_b a[3]_b VGND VGND VPWR VPWR net2 sky130_fd_sc_hd__nand2_2
+x11 a[2] a[3]_b VGND VGND VPWR VPWR net6 sky130_fd_sc_hd__nand2_2
+x12 a[2]_b a[3] VGND VGND VPWR VPWR net7 sky130_fd_sc_hd__nand2_2
+x14 net1 net2 VGND VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+x15 net3 net2 VGND VGND VGND VPWR VPWR w[1] sky130_fd_sc_hd__nor3_1
+x16 net4 net2 VGND VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+x17 net5 net2 VGND VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+x18 net1 net6 VGND VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+x19 net3 net6 VGND VGND VGND VPWR VPWR w[5] sky130_fd_sc_hd__nor3_1
+x20 net4 net6 VGND VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+x21 net5 net6 VGND VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+x22 net1 net7 VGND VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+x23 net3 net7 VGND VGND VGND VPWR VPWR w[9] sky130_fd_sc_hd__nor3_1
+x24 net4 net7 VGND VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+x25 net5 net7 VGND VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+x26 net1 net8 VGND VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+x27 net3 net8 VGND VGND VGND VPWR VPWR w[13] sky130_fd_sc_hd__nor3_1
+x28 net4 net8 VGND VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+x29 net5 net8 VGND VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+x46 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x48 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x49 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x51 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x52 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x54 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x55 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x57 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x58 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x60 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x61 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x63 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x64 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x66 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x67 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x71 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x74 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x80 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x86 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x89 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x92 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+.ends
+
+
+* expanding   symbol:  fgcell_amp.sym # of pins=10
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sch
+.subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
+*.PININFO vinj:I row_en_6v0_b:I vtun:I vctrl:I vsrc:I vb:I VGND:I vout:O vfg:B row_en_6v0:I
+x1 vinj row_en_6v0_b vtun vctrl vsrc VGND vfg fgcell
+x2 vfg net1 vb net1 vinj VGND diffamp_nmos
+x3 net1 vout row_en_6v0 row_en_6v0_b vinj VGND tg5v0
+.ends
+
+.end

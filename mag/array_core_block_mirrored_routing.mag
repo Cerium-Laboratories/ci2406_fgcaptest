@@ -1,0 +1,197 @@
+magic
+tech sky130A
+timestamp 1717473404
+<< metal3 >>
+rect 2580 0 2660 15000
+rect 4580 0 4660 15000
+rect 6580 0 6660 15000
+rect 8580 0 8660 15000
+rect 10580 0 10660 15000
+rect 12580 0 12660 15000
+rect 14580 0 14660 15000
+rect 16580 0 16660 15000
+rect 18580 0 18660 15000
+rect 20580 0 20660 15000
+<< metal5 >>
+rect 900 0 1500 15000
+rect 1900 0 2500 15000
+rect 2900 0 3500 15000
+rect 3900 0 4500 15000
+rect 4900 0 5500 15000
+rect 5900 0 6500 15000
+rect 6900 0 7500 15000
+rect 7900 0 8500 15000
+rect 8900 0 9500 15000
+rect 9900 0 10500 15000
+rect 10900 0 11500 15000
+rect 11900 0 12500 15000
+rect 12900 0 13500 15000
+rect 13900 0 14500 15000
+rect 14900 0 15500 15000
+rect 15900 0 16500 15000
+rect 16900 0 17500 15000
+rect 17900 0 18500 15000
+rect 18900 0 19500 15000
+rect 19900 0 20500 15000
+<< labels >>
+flabel metal3 2580 0 2660 80 0 FreeSans 160 0 0 0 vout[9]
+port 3 nsew
+flabel metal3 4580 0 4660 80 0 FreeSans 160 0 0 0 vout[8]
+port 4 nsew
+flabel metal3 6580 0 6660 80 0 FreeSans 160 0 0 0 vout[7]
+port 5 nsew
+flabel metal3 8580 0 8660 80 0 FreeSans 160 0 0 0 vout[6]
+port 6 nsew
+flabel metal3 10580 0 10660 80 0 FreeSans 160 0 0 0 vout[5]
+port 7 nsew
+flabel metal3 12580 0 12660 80 0 FreeSans 160 0 0 0 vout[4]
+port 8 nsew
+flabel metal3 14580 0 14660 80 0 FreeSans 160 0 0 0 vout[3]
+port 9 nsew
+flabel metal3 16580 0 16660 80 0 FreeSans 160 0 0 0 vout[2]
+port 10 nsew
+flabel metal3 18580 0 18660 80 0 FreeSans 160 0 0 0 vout[1]
+port 11 nsew
+flabel metal3 20580 0 20660 80 0 FreeSans 160 0 0 0 vout[0]
+port 12 nsew
+flabel metal1 20790 13960 20840 14010 0 FreeSans 80 0 0 0 row_en[0]
+port 13 nsew
+flabel metal1 20790 12460 20840 12510 0 FreeSans 80 0 0 0 row_en[1]
+port 14 nsew
+flabel metal1 20790 10960 20840 11010 0 FreeSans 80 0 0 0 row_en[2]
+port 15 nsew
+flabel metal1 20790 9460 20840 9510 0 FreeSans 80 0 0 0 row_en[3]
+port 16 nsew
+flabel metal1 20790 7960 20840 8010 0 FreeSans 80 0 0 0 row_en[4]
+port 17 nsew
+flabel metal1 20790 6460 20840 6510 0 FreeSans 80 0 0 0 row_en[5]
+port 18 nsew
+flabel metal1 20790 4960 20840 5010 0 FreeSans 80 0 0 0 row_en[6]
+port 19 nsew
+flabel metal1 20790 3460 20840 3510 0 FreeSans 80 0 0 0 row_en[7]
+port 20 nsew
+flabel metal1 20790 1960 20840 2010 0 FreeSans 80 0 0 0 row_en[8]
+port 21 nsew
+flabel metal1 20790 460 20840 510 0 FreeSans 80 0 0 0 row_en[9]
+port 22 nsew
+flabel metal1 20790 13870 20840 13920 0 FreeSans 80 0 0 0 row_en_b[0]
+port 23 nsew
+flabel metal1 20790 12370 20840 12420 0 FreeSans 80 0 0 0 row_en_b[1]
+port 24 nsew
+flabel metal1 20790 10870 20840 10920 0 FreeSans 80 0 0 0 row_en_b[2]
+port 25 nsew
+flabel metal1 20790 9370 20840 9420 0 FreeSans 80 0 0 0 row_en_b[3]
+port 26 nsew
+flabel metal1 20790 7870 20840 7920 0 FreeSans 80 0 0 0 row_en_b[4]
+port 27 nsew
+flabel metal1 20790 6370 20840 6420 0 FreeSans 80 0 0 0 row_en_b[5]
+port 28 nsew
+flabel metal1 20790 4870 20840 4920 0 FreeSans 80 0 0 0 row_en_b[6]
+port 29 nsew
+flabel metal1 20790 3370 20840 3420 0 FreeSans 80 0 0 0 row_en_b[7]
+port 30 nsew
+flabel metal1 20790 1870 20840 1920 0 FreeSans 80 0 0 0 row_en_b[8]
+port 31 nsew
+flabel metal1 20790 370 20840 420 0 FreeSans 80 0 0 0 row_en_b[9]
+port 32 nsew
+flabel metal5 19900 0 20500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 17900 0 18500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 15900 0 16500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 13900 0 14500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 11900 0 12500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 9900 0 10500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 7900 0 8500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 5900 0 6500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 3900 0 4500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 1900 0 2500 200 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 18900 14800 19500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 16900 14800 17500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 14900 14800 15500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 12900 14800 13500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 10900 14800 11500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 8900 14800 9500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 6900 14800 7500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 4900 14800 5500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 2900 14800 3500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 900 14800 1500 15000 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 18900 0 19500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 16900 0 17500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 14900 0 15500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 12900 0 13500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 10900 0 11500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 8900 0 9500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 6900 0 7500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 4900 0 5500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 2900 0 3500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 900 0 1500 200 0 FreeSans 800 0 0 0 VTUN
+port 1 nsew
+flabel metal5 1900 14800 2500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 3900 14800 4500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 5900 14800 6500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 7900 14800 8500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 9900 14800 10500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 11900 14800 12500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 13900 14800 14500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 15900 14800 16500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 17900 14800 18500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal5 19900 14800 20500 15000 0 FreeSans 800 0 0 0 VGND
+port 2 nsew
+flabel metal3 20580 14920 20660 15000 0 FreeSans 160 0 0 0 vout[0]
+port 12 nsew
+flabel metal3 18580 14920 18660 15000 0 FreeSans 160 0 0 0 vout[1]
+port 11 nsew
+flabel metal3 16580 14920 16660 15000 0 FreeSans 160 0 0 0 vout[2]
+port 10 nsew
+flabel metal3 14580 14920 14660 15000 0 FreeSans 160 0 0 0 vout[3]
+port 9 nsew
+flabel metal3 12580 14920 12660 15000 0 FreeSans 160 0 0 0 vout[4]
+port 8 nsew
+flabel metal3 10580 14920 10660 15000 0 FreeSans 160 0 0 0 vout[5]
+port 7 nsew
+flabel metal3 8580 14920 8660 15000 0 FreeSans 160 0 0 0 vout[6]
+port 6 nsew
+flabel metal3 6580 14920 6660 15000 0 FreeSans 160 0 0 0 vout[7]
+port 5 nsew
+flabel metal3 4580 14920 4660 15000 0 FreeSans 160 0 0 0 vout[8]
+port 4 nsew
+flabel metal3 2580 14920 2660 15000 0 FreeSans 160 0 0 0 vout[9]
+port 3 nsew
+<< end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1717304525
+timestamp 1717473404
 << nwell >>
 rect 10 860 570 1450
 << pwell >>
@@ -291,15 +291,13 @@ rect 510 120 530 480
 rect 480 100 530 120
 rect 360 0 460 10
 rect 250 -30 350 -20
-rect 250 -60 260 -30
-rect 340 -60 350 -30
-rect 250 -70 350 -60
+rect 250 -50 260 -30
+rect 340 -50 350 -30
+rect 250 -70 350 -50
 << via1 >>
 rect 361 750 387 900
 rect 260 280 340 290
 rect 260 260 340 280
-rect 260 -50 340 -30
-rect 260 -60 340 -50
 << metal2 >>
 rect 358 900 390 903
 rect 358 750 361 900
@@ -309,10 +307,6 @@ rect 250 290 350 300
 rect 250 260 260 290
 rect 340 260 350 290
 rect 250 250 350 260
-rect 250 -30 350 -20
-rect 250 -60 260 -30
-rect 340 -60 350 -30
-rect 250 -70 350 -60
 << labels >>
 flabel metal1 480 100 530 150 0 FreeSans 80 0 0 0 VSS
 port 3 nsew ground default
@@ -320,7 +314,7 @@ flabel metal1 200 1380 250 1430 0 FreeSans 80 0 0 0 VDD
 port 4 nsew
 flabel poly 100 -70 200 -20 0 FreeSans 80 0 0 0 v1
 port 1 nsew analog input
-flabel metal2 250 -70 350 -20 0 FreeSans 80 0 0 0 v2
+flabel metal1 250 -70 350 -20 0 FreeSans 80 0 0 0 v2
 port 2 nsew analog input
 flabel metal1 60 1090 90 1120 0 FreeSans 160 0 0 0 int2
 flabel metal1 10 780 40 810 0 FreeSans 160 0 0 0 int4
