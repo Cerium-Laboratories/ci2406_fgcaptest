@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717516447
+timestamp 1717597427
 << error_p >>
 rect 2240 29596 2480 29620
 rect 2240 29536 2264 29596
@@ -4805,7 +4805,7 @@ rect 38456 104 38480 296
 rect 38240 80 38480 104
 use fgcell_amp_MiM_cap_1_5  fgcell_amp_MiM_cap_1_5_0
 array 0 9 4000 0 9 3000
-timestamp 1717516447
+timestamp 1717597427
 transform 1 0 -524 0 1 4198
 box 458 -4198 4490 -1570
 << end >>

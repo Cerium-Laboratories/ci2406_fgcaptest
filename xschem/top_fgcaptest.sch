@@ -5,64 +5,106 @@ K {}
 V {}
 S {}
 E {}
-N 1180 -400 1190 -400 {
-lab=PAD_VINJ}
-N 1180 -260 1190 -260 {
-lab=PAD_VCTRL}
-N 1180 -120 1190 -120 {
-lab=PAD_VOUT}
-N 200 -100 1020 -100 {
-lab=VGND}
-N 1020 -380 1020 -100 {
-lab=VGND}
-N 1020 -380 1040 -380 {
-lab=VGND}
-N 1020 -240 1040 -240 {
-lab=VGND}
-N 1020 -100 1040 -100 {
-lab=VGND}
-N 1000 -140 1040 -140 {
+N 590 -520 590 -450 {
 lab=vinj}
-N 1000 -420 1000 -140 {
+N 590 -450 700 -450 {
 lab=vinj}
-N 1000 -420 1040 -420 {
+N 700 -450 700 -260 {
 lab=vinj}
-N 420 -420 1000 -420 {
+N 720 -280 720 -260 {
 lab=vinj}
-N 420 -620 420 -420 {
+N 700 -280 720 -280 {
 lab=vinj}
-N 420 -620 480 -620 {
+N 720 -280 860 -280 {
 lab=vinj}
-N 460 -600 480 -600 {
-lab=VGND}
-N 460 -600 460 -100 {
-lab=VGND}
-N 440 -540 480 -540 {
+N 860 -280 860 -260 {
+lab=vinj}
+N 310 -280 700 -280 {
+lab=vinj}
+N 310 -280 310 -260 {
+lab=vinj}
+N 440 -280 440 -260 {
+lab=vinj}
+N 580 -280 580 -260 {
+lab=vinj}
+N 270 -300 820 -300 {
 lab=#net1}
-N 1020 -280 1040 -280 {
-lab=VGND}
-N 440 -260 1040 -260 {
+N 820 -300 820 -260 {
 lab=#net1}
-N 440 -540 440 -260 {
+N 680 -300 680 -260 {
 lab=#net1}
-N 980 -120 1040 -120 {
+N 540 -300 540 -260 {
+lab=#net1}
+N 400 -300 400 -260 {
+lab=#net1}
+N 270 -300 270 -260 {
+lab=#net1}
+N 270 -860 270 -300 {
+lab=#net1}
+N 220 -860 270 -860 {
+lab=#net1}
+N 220 -900 440 -900 {
 lab=#net2}
-N 980 -560 980 -120 {
+N 440 -900 440 -510 {
 lab=#net2}
-N 300 -520 480 -520 {
-lab=VPWR}
-N 300 -520 300 -140 {
-lab=VPWR}
-N 200 -140 300 -140 {
-lab=VPWR}
-C {array_core.sym} 630 -560 0 0 {name=x1}
-C {sky130_ef_io__analog_minesd_pad_short.sym} 1110 -400 0 0 {name=xp1}
-C {sky130_ef_io__analog_minesd_pad_short.sym} 1110 -260 0 0 {name=xp2}
-C {sky130_ef_io__analog_minesd_pad_short.sym} 1110 -120 0 0 {name=xp3}
-C {devices/iopin.sym} 1190 -400 0 0 {name=p1 lab=PAD_VINJ}
-C {devices/ipin.sym} 1190 -260 2 0 {name=p2 lab=PAD_VCTRL}
-C {devices/opin.sym} 1190 -120 0 0 {name=p3 lab=PAD_VOUT}
-C {devices/lab_wire.sym} 940 -420 0 0 {name=p4 sig_type=std_logic lab=vinj}
-C {devices/lab_wire.sym} 940 -100 0 0 {name=p5 sig_type=std_logic lab=VGND}
-C {devices/ipin.sym} 200 -140 0 0 {name=p6 lab=VPWR}
-C {devices/ipin.sym} 200 -100 0 0 {name=p7 lab=VGND}
+N 440 -510 670 -510 {
+lab=#net2}
+N 670 -520 670 -510 {
+lab=#net2}
+N 610 -520 610 -500 {
+lab=#net1}
+N 270 -500 610 -500 {
+lab=#net1}
+N 550 -820 590 -820 {
+lab=VOUT0}
+N 550 -820 550 -340 {
+lab=VOUT0}
+N 550 -340 560 -340 {
+lab=VOUT0}
+N 560 -340 560 -260 {
+lab=VOUT0}
+N 610 -820 760 -820 {
+lab=VOUT1}
+N 840 -820 840 -260 {
+lab=VOUT1}
+N 760 -820 840 -820 {
+lab=VOUT1}
+N 420 -360 420 -260 {
+lab=VSRC}
+N 420 -360 710 -360 {
+lab=VSRC}
+N 710 -520 710 -360 {
+lab=VSRC}
+N 650 -520 650 -380 {
+lab=VCTRL}
+N 290 -380 650 -380 {
+lab=VCTRL}
+N 290 -380 290 -260 {
+lab=VCTRL}
+N 210 -480 690 -480 {
+lab=addr[8:0]
+bus=true}
+N 690 -520 690 -480 {
+lab=addr[8:0]
+bus=true}
+N 630 -520 630 -420 {
+lab=vinj}
+N 630 -420 940 -420 {
+lab=vinj}
+N 940 -420 940 -210 {
+lab=vinj}
+C {array_core.sym} 650 -670 3 0 {name=x1}
+C {sky130_ef_io__analog_minesd_pad_short.sym} 700 -190 1 0 {name=xp1}
+C {sky130_ef_io__analog_minesd_pad_short.sym} 560 -190 1 0 {name=xp2}
+C {sky130_ef_io__analog_minesd_pad_short.sym} 420 -190 1 0 {name=xp3}
+C {devices/ipin.sym} 210 -900 0 0 {name=p6 lab=VPWR}
+C {devices/ipin.sym} 210 -860 0 0 {name=p7 lab=VGND}
+C {sky130_ef_io__analog_minesd_pad_short.sym} 840 -190 1 0 {name=xp4}
+C {sky130_ef_io__analog_minesd_pad_short.sym} 290 -190 1 0 {name=xp6}
+C {devices/lab_wire.sym} 700 -320 0 0 {name=p1 sig_type=std_logic lab=vinj}
+C {devices/lab_wire.sym} 940 -210 3 0 {name=p2 sig_type=std_logic lab=vinj}
+C {devices/lab_wire.sym} 560 -310 0 0 {name=p3 sig_type=std_logic lab=VOUT0}
+C {devices/lab_wire.sym} 840 -310 0 0 {name=p4 sig_type=std_logic lab=VOUT1}
+C {devices/ipin.sym} 210 -480 0 0 {name=p5 lab=addr[8:0]}
+C {devices/lab_wire.sym} 420 -310 0 0 {name=p8 sig_type=std_logic lab=VSRC}
+C {devices/lab_wire.sym} 350 -380 0 0 {name=p9 sig_type=std_logic lab=VCTRL}

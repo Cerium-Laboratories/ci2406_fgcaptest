@@ -1,0 +1,107 @@
+timestamp 1717565524
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_ef_io__bare_pad sky130_ef_io__bare_pad_0 1 0 540 0 1 540
+parameters sky130_fd_pr__res_generic_po l=l w=w
+parameters sky130_fd_pr__res_xhigh_po_5p73 l=l+32
+parameters sky130_fd_pr__res_xhigh_po_2p85 l=l+32
+parameters sky130_fd_pr__res_xhigh_po_1p41 l=l+32
+parameters sky130_fd_pr__res_xhigh_po_0p69 l=l+32
+parameters sky130_fd_pr__res_xhigh_po_0p35 l=l+32
+parameters sky130_fd_pr__res_xhigh_po l=l+32 w=w
+port "pad" 1 4400 15400 8600 16200 m5
+node "pad" 0 1679.45 4400 15400 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3360000 10000 0 0
+node "m4_540_540#" 0 29579.6 540 540 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 168000000 52000 0 0 0 0
+node "GND" 80 17470.4 1866 1766 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 243648 2856 3315600 62128 0 0 0 0 0 0 0 0 0 0
+node "a_1866_2198#" 2000 0 1866 2198 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43008384 305588 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10830_9600#" 302 12551.1 10830 9600 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 602000 3660 0 0 798008 6502 6931200 10640 851200 6640 851200 6640 720000 6480 0 0 0 0
+node "a_6030_9600#" 165 0 6030 9600 mrp1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6720000 12400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_5600_9600#" 205 15764.8 5600 9600 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 602000 3660 0 0 544184 3594 2268000 6040 2268000 6040 13800000 21600 3360000 10000 0 0 0 0
+substrate "a_1736_1636#" 0 0 1736 1636 ppd 0 0 0 0 0 0 0 0 0 0 1147704 67512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1147704 67512 0 0 0 0 0 0 0 0 0 0 0 0
+cap "GND" "m4_540_540#" 4847.47
+cap "a_10830_9600#" "m4_540_540#" 3599.54
+cap "a_10830_9600#" "GND" 12.3581
+cap "a_5600_9600#" "m4_540_540#" 22650.2
+cap "a_5600_9600#" "GND" 140.843
+cap "pad" "m4_540_540#" 85.6343
+cap "pad" "a_5600_9600#" 6061.14
+device rsubckt sky130_fd_pr__res_xhigh_po_1p41 1866 2198 1867 2199 l=145744 "a_1736_1636#" "a_1866_2198#" 0 0 "a_10830_9600#" 282 121824,1428 "GND" 282 121824,1428
+device rsubckt sky130_fd_pr__res_generic_po 6030 9600 6031 9601 l=4800 w=1400 "None" "a_6030_9600#" 0 0 "a_5600_9600#" 1400 602000,3660 "a_10830_9600#" 1400 602000,3660
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 17.5135
+cap "sky130_ef_io__bare_pad_0/PAD" "a_1736_1636#" 0.935375
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 12.1785
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 12.1785
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 12.1785
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 12.1785
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 12.1785
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 12.1785
+cap "sky130_ef_io__bare_pad_0/PAD" "a_1736_1636#" 0.942758
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.51047
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 9.26879
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 9.26879
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "a_1736_1636#" 3.55271e-15
+cap "sky130_ef_io__bare_pad_0/PAD" "GND" 4.50198
+cap "GND" "sky130_ef_io__bare_pad_0/PAD" 3.99882
+cap "a_1736_1636#" "sky130_ef_io__bare_pad_0/PAD" 0.402812
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "a_1736_1636#" "sky130_ef_io__bare_pad_0/PAD" -5.68434e-14
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "m4_540_540#" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "m4_540_540#" "sky130_ef_io__bare_pad_0/PAD" 3348.17
+cap "sky130_ef_io__bare_pad_0/PAD" "pad" 221.429
+cap "a_5600_9600#" "sky130_ef_io__bare_pad_0/PAD" 1600.16
+cap "sky130_ef_io__bare_pad_0/PAD" "a_5600_9600#" 902.953
+cap "sky130_ef_io__bare_pad_0/PAD" "pad" 258.333
+cap "pad" "sky130_ef_io__bare_pad_0/PAD" 258.333
+cap "a_5600_9600#" "sky130_ef_io__bare_pad_0/PAD" 84.0564
+cap "sky130_ef_io__bare_pad_0/PAD" "pad" 36.9048
+cap "a_5600_9600#" "sky130_ef_io__bare_pad_0/PAD" 12.0081
+merge "sky130_ef_io__bare_pad_0/PAD" "a_10830_9600#" -50130.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -83040000 -110720 0 0 0 0
+merge "a_10830_9600#" "m4_540_540#"
+merge "sky130_ef_io__bare_pad_0/VSUBS" "a_1736_1636#" -12451.4 0 0 0 0 0 0 0 0 0 0 -977908 -57524 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -977908 -57524 0 0 0 0 0 0 0 0 0 0 0 0

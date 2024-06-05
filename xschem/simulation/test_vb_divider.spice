@@ -1,0 +1,34 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/test_vb_divider.sch
+**.subckt test_vb_divider
+x1 VDD GND out vb_divider
+VDD VDD GND 5
+**** begin user architecture code
+.lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+
+.include 'vb_divider.spice'
+* .options reltol=0.0001 abstol=10e-15
+.options savecurrents
+.control
+  save all
+  op
+  remzerovec
+  write test_vb_divider.raw
+  set appendwrite
+  * dc sweep
+  dc VDD 4.5 5.5 0.1
+  remzerovec
+  write test_vb_divider.raw
+  * tran
+  tran 100p 300n
+  remzerovec
+  write test_vb_divider.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

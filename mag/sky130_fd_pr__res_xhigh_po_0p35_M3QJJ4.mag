@@ -1,0 +1,73 @@
+magic
+tech sky130A
+timestamp 1717562480
+<< pwell >>
+rect -806 -717 806 717
+<< psubdiff >>
+rect -788 682 -740 699
+rect 740 682 788 699
+rect -788 651 -771 682
+rect 771 651 788 682
+rect -788 -682 -771 -651
+rect 771 -682 788 -651
+rect -788 -699 -740 -682
+rect 740 -699 788 -682
+<< psubdiffcont >>
+rect -740 682 740 699
+rect -788 -651 -771 651
+rect 771 -651 788 651
+rect -740 -699 740 -682
+<< xpolycontact >>
+rect -723 -634 -688 -418
+rect 688 -634 723 -418
+<< xpolyres >>
+rect -723 599 -605 634
+rect -723 -418 -688 599
+rect -640 -331 -605 599
+rect -557 599 -439 634
+rect -557 -331 -522 599
+rect -640 -366 -522 -331
+rect -474 -331 -439 599
+rect -391 599 -273 634
+rect -391 -331 -356 599
+rect -474 -366 -356 -331
+rect -308 -331 -273 599
+rect -225 599 -107 634
+rect -225 -331 -190 599
+rect -308 -366 -190 -331
+rect -142 -331 -107 599
+rect -59 599 59 634
+rect -59 -331 -24 599
+rect -142 -366 -24 -331
+rect 24 -331 59 599
+rect 107 599 225 634
+rect 107 -331 142 599
+rect 24 -366 142 -331
+rect 190 -331 225 599
+rect 273 599 391 634
+rect 273 -331 308 599
+rect 190 -366 308 -331
+rect 356 -331 391 599
+rect 439 599 557 634
+rect 439 -331 474 599
+rect 356 -366 474 -331
+rect 522 -331 557 599
+rect 605 599 723 634
+rect 605 -331 640 599
+rect 522 -366 640 -331
+rect 688 -418 723 599
+<< locali >>
+rect -788 682 -740 699
+rect 740 682 788 699
+rect -788 651 -771 682
+rect 771 651 788 682
+rect -788 -682 -771 -651
+rect 771 -682 788 -651
+rect -788 -699 -740 -682
+rect 740 -699 788 -682
+<< properties >>
+string FIXED_BBOX -779 -690 779 690
+string gencell sky130_fd_pr__res_xhigh_po_0p35
+string library sky130
+string parameters w 0.35 l 10 m 1 nx 18 wmin 0.350 lmin 0.50 rho 2000 val 1.063meg dummy 0 dw 0.0 term 188.2 sterm 0.0 caplen 0 wmax 0.350 guard 1 glc 1 grc 1 gtc 1 gbc 1 compatible {sky130_fd_pr__res_xhigh_po_0p35  sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41  sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} snake 1 full_metal 1 n_guard 0 hv_guard 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
+<< end >>

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717516356
+timestamp 1717597427
 << error_s >>
 rect 2764 -1602 3004 -1578
 rect 2764 -1664 2788 -1602
@@ -250,7 +250,7 @@ rect 2458 -2278 2484 -2038
 rect 2724 -2278 2730 -2038
 rect 2458 -2304 2730 -2278
 use fgcell_amp  x1
-timestamp 1717473404
+timestamp 1717597427
 transform 1 0 384 0 1 3012
 box 74 -7210 4106 -4964
 << labels >>

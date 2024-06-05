@@ -1,0 +1,1518 @@
+timestamp 1717589101
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use vtun_pad vtun_pad_0 1 0 104460 0 1 -29420
+use pad_minesd_short pad_minesd_short_4 -1 0 82500 0 -1 5200
+use pad_minesd_short pad_minesd_short_3 -1 0 52500 0 -1 5200
+use pad_minesd_short pad_minesd_short_2 -1 0 67500 0 -1 5200
+use pad_minesd_short pad_minesd_short_1 -1 0 22500 0 -1 5200
+use pad_minesd_short pad_minesd_short_0 -1 0 37500 0 -1 5200
+use bare_pad_gnd bare_pad_gnd_0 1 0 83460 0 1 -29420
+use array_core array_core_0 1 0 40000 0 1 0
+port "vssd2" 2 69400 91000 71000 91200 m3
+port "vccd2" 1 65400 91000 67000 91200 m3
+port "addr[8]" 11 64200 91000 64600 91200 m3
+port "addr[7]" 10 63000 91000 63400 91200 m3
+port "addr[6]" 9 61800 91000 62200 91200 m3
+port "addr[5]" 8 60600 91000 61000 91200 m3
+port "addr[4]" 7 59400 91000 59800 91200 m3
+port "addr[3]" 6 58200 91000 58600 91200 m3
+port "addr[2]" 5 57000 91000 57400 91200 m3
+port "addr[1]" 4 55800 91000 56200 91200 m3
+port "addr[0]" 3 54600 91000 55000 91200 m3
+port "vssd2" 2 52200 91000 53800 91200 m3
+port "vccd2" 1 48200 91000 49800 91200 m3
+node "m5_82500_n34800#" 0 56889.8 82500 -34800 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 195576800 145200 0 0
+node "VTUN" 0 36235.4 104720 -29160 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 182873600 54240 0 0
+node "VOUT1" 0 8931.58 69510 -28396 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143111780 48024 0 0
+node "VINJ" 0 8931.58 54510 -28396 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143111780 48024 0 0
+node "VOUT0" 0 8931.58 39510 -28396 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143111780 48024 0 0
+node "VCTRL" 0 8931.58 24510 -28396 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143111780 48024 0 0
+node "VSRC" 0 8931.58 9510 -28396 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143111780 48024 0 0
+node "m5_108800_n14020#" 0 10604.1 108800 -14020 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 38808000 26440 0 0
+node "m5_n1000_n34800#" 0 25543.5 -1000 -34800 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62731100 80600 0 0
+node "m4_58000_n9000#" 0 7174.04 58000 -9000 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33046400 25200 0 0 0 0
+node "VGND" 1 50565.1 87800 -5800 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2640000 10000 2640000 10000 224233600 73040 0 0
+node "m3_74400_n8620#" 0 3844.06 74400 -8620 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4104000 9240 1224000 4440 0 0 0 0
+node "m3_44400_n8600#" 1 5655.28 44400 -8600 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6240000 17200 1224000 4440 0 0 0 0
+node "m3_29400_n7400#" 1 13270.1 29400 -7400 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22488000 39680 3132000 7620 0 0 0 0
+node "m3_14400_n6000#" 0 24312.4 14400 -6000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37320000 64600 4812000 10420 0 0 0 0
+node "vssd2" 0 836.78 69400 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 3600 0 0 0 0 0 0
+node "vccd2" 0 816.148 65400 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 3600 0 0 0 0 0 0
+node "addr[8]" 0 229.416 64200 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[7]" 0 229.416 63000 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[6]" 0 229.416 61800 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[5]" 0 229.416 60600 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[4]" 0 229.416 59400 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[3]" 0 229.416 58200 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[2]" 0 229.416 57000 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[1]" 0 229.416 55800 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "addr[0]" 0 229.416 54600 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80000 1200 0 0 0 0 0 0
+node "vssd2" 0 816.148 52200 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 3600 0 0 0 0 0 0
+node "vccd2" 0 836.78 48200 91000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 3600 0 0 0 0 0 0
+node "m1_106000_n27820#" 7 37668.9 106000 -27820 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1929200 15360 1929200 15360 76722800 35520 0 0 0 0 0 0
+node "m1_64360_3598#" 1 183.544 64360 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_63560_3598#" 1 160.148 63560 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_62760_3598#" 1 160.984 62760 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_61960_3598#" 1 160.148 61960 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_61160_3598#" 1 160.984 61160 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_60360_3598#" 1 160.148 60360 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_59560_3598#" 1 160.984 59560 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_58760_3598#" 1 160.148 58760 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_57960_3598#" 1 160.984 57960 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_57160_3598#" 1 160.148 57160 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_56360_3598#" 1 160.984 56360 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_55560_3598#" 1 160.148 55560 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_54760_3598#" 1 160.984 54760 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_53960_3598#" 1 160.148 53960 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_53160_3598#" 1 160.984 53160 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_52360_3598#" 1 198.92 52360 3598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13456 464 46632 1036 0 0 0 0 0 0 0 0
+node "m1_51996_3800#" 20 8721.23 51996 3800 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2282384 32508 464312 9852 0 0 0 0 0 0 0 0
+node "w_69828_n23125#" 65962 0 69828 -23125 pw 7137360 22068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_68436_n30731#" 4400 0 68436 -30731 pw 245221690 118182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_54828_n23125#" 65962 0 54828 -23125 pw 7137360 22068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_53436_n30731#" 4400 0 53436 -30731 pw 245221690 118182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_39828_n23125#" 65962 0 39828 -23125 pw 7137360 22068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_38436_n30731#" 4400 0 38436 -30731 pw 245221690 118182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_24828_n23125#" 65962 0 24828 -23125 pw 7137360 22068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_23436_n30731#" 4400 0 23436 -30731 pw 245221690 118182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_9828_n23125#" 65962 0 9828 -23125 pw 7137360 22068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_8436_n30731#" 4400 0 8436 -30731 pw 245221690 118182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_51996_3800#" "m1_53960_3598#" 249.857
+cap "addr[0]" "vssd2" 16.8182
+cap "VINJ" "w_54828_n23125#" 1127.7
+cap "addr[4]" "addr[5]" 16.8182
+cap "addr[7]" "addr[8]" 16.8182
+cap "m1_54760_3598#" "m1_55560_3598#" 25.422
+cap "m1_58760_3598#" "m1_51996_3800#" 249.857
+cap "m1_55560_3598#" "m1_51996_3800#" 249.857
+cap "VGND" "m1_106000_n27820#" 3834.54
+cap "VOUT0" "w_38436_n30731#" 21881
+cap "VSRC" "w_8436_n30731#" 21881
+cap "m1_51996_3800#" "m1_64360_3598#" 254.006
+cap "addr[7]" "addr[6]" 16.8182
+cap "m1_51996_3800#" "m1_60360_3598#" 249.857
+cap "m5_82500_n34800#" "w_68436_n30731#" 29.6363
+cap "m1_62760_3598#" "m1_61960_3598#" 32.4112
+cap "m3_29400_n7400#" "m3_44400_n8600#" 464.894
+cap "addr[6]" "addr[5]" 16.8182
+cap "addr[1]" "addr[0]" 16.8182
+cap "VGND" "m5_82500_n34800#" 5407.78
+cap "addr[2]" "addr[1]" 16.8182
+cap "m1_63560_3598#" "m1_51996_3800#" 249.862
+cap "m1_51996_3800#" "m1_62760_3598#" 245.754
+cap "vccd2" "addr[8]" 16.8182
+cap "VINJ" "m4_58000_n9000#" 2.30133
+cap "m1_61960_3598#" "m1_61160_3598#" 25.422
+cap "VOUT1" "w_68436_n30731#" 21881
+cap "m1_59560_3598#" "m1_51996_3800#" 245.754
+cap "VSRC" "w_9828_n23125#" 1127.7
+cap "m1_51996_3800#" "m1_57960_3598#" 245.754
+cap "addr[4]" "addr[3]" 16.8182
+cap "m1_57160_3598#" "m1_57960_3598#" 32.4112
+cap "m3_74400_n8620#" "w_68436_n30731#" 53.0425
+cap "m1_51996_3800#" "m1_61160_3598#" 245.754
+cap "addr[2]" "addr[3]" 16.8182
+cap "w_38436_n30731#" "m3_44400_n8600#" 114.47
+cap "VINJ" "w_53436_n30731#" 21877.3
+cap "m1_58760_3598#" "m1_59560_3598#" 32.4112
+cap "m5_108800_n14020#" "VTUN" 1002.94
+cap "m1_63560_3598#" "m1_64360_3598#" 32.4112
+cap "m1_58760_3598#" "m1_57960_3598#" 25.422
+cap "w_39828_n23125#" "VOUT0" 1127.7
+cap "m1_56360_3598#" "m1_51996_3800#" 245.754
+cap "m1_56360_3598#" "m1_57160_3598#" 25.422
+cap "m1_51996_3800#" "m1_61960_3598#" 249.857
+cap "m3_29400_n7400#" "m3_14400_n6000#" 4574.07
+cap "m5_n1000_n34800#" "w_8436_n30731#" 24.5773
+cap "m1_106000_n27820#" "VTUN" 9111.02
+cap "m1_53160_3598#" "m1_52360_3598#" 32.4112
+cap "m4_58000_n9000#" "w_53436_n30731#" 4403.9
+cap "m1_59560_3598#" "m1_60360_3598#" 25.422
+cap "m1_51996_3800#" "m1_52360_3598#" 243.126
+cap "m1_54760_3598#" "m1_51996_3800#" 245.754
+cap "m1_51996_3800#" "m1_53160_3598#" 245.754
+cap "m1_56360_3598#" "m1_55560_3598#" 32.4112
+cap "VCTRL" "w_24828_n23125#" 1127.7
+cap "m1_63560_3598#" "m1_62760_3598#" 25.422
+cap "m1_60360_3598#" "m1_61160_3598#" 32.4112
+cap "VOUT1" "w_69828_n23125#" 1127.7
+cap "VCTRL" "w_23436_n30731#" 21881
+cap "m1_51996_3800#" "m1_57160_3598#" 249.857
+cap "m1_54760_3598#" "m1_53960_3598#" 32.4112
+cap "m3_29400_n7400#" "w_23436_n30731#" 32.3563
+cap "m3_14400_n6000#" "w_8436_n30731#" 32.3563
+cap "m1_53960_3598#" "m1_53160_3598#" 25.422
+cap "w_8436_n30731#" "pad_minesd_short_1/VSSIO" -4.15972
+cap "pad_minesd_short_4/VSSIO" "w_68436_n30731#" -5.03548
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 49.223
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 73.3108
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 73.3108
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 73.3108
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 73.3108
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 73.3108
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 73.3108
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 73.3108
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 73.3108
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 49.223
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VSSIO" -1.13687e-13
+cap "w_8436_n30731#" "pad_minesd_short_1/VSSIO" -20.4176
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 0.0225627
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/VDDIO" -1.13687e-13
+cap "w_23436_n30731#" "pad_minesd_short_0/VSSIO" 7.10543e-15
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 0.0150698
+cap "pad_minesd_short_0/m5_1333_21049#" "w_23436_n30731#" -44.6778
+cap "pad_minesd_short_0/m5_1333_21049#" "w_23436_n30731#" 44.6778
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 0.0150698
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VSSIO" 3.41061e-13
+cap "w_38436_n30731#" "pad_minesd_short_3/VSSIO" -2.84217e-14
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" 44.8585
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -44.8585
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/VSSIO" 0.163594
+cap "w_53436_n30731#" "pad_minesd_short_2/VSSIO" 3.55271e-15
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/VSSIO" -3.41061e-13
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/VDDIO" 5.68434e-14
+cap "pad_minesd_short_2/VSSIO" "w_53436_n30731#" -1.42109e-14
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 0.0150698
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_PAD" 4.21418
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -32.5865
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" 32.5865
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_PAD" -4.21418
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/VSSIO" -1.13687e-13
+cap "w_68436_n30731#" "pad_minesd_short_4/VSSIO" 7.10543e-15
+cap "pad_minesd_short_4/VSSIO" "pad_minesd_short_4/P_CORE" 0.0150698
+cap "w_68436_n30731#" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" -24.6008
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.31671
+cap "pad_minesd_short_4/VDDIO" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.0279
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 51.2528
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 76.334
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 76.334
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 76.334
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 76.334
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 76.334
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 76.334
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "m5_82500_n34800#" 76.334
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 76.334
+cap "m5_82500_n34800#" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 51.2528
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -176.416
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.77
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -143.096
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VSSIO" 0.306523
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 0.103561
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 104.829
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" 1.44642e-17
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 6.82361
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VDDIO" -4.45616e-18
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -253.207
+cap "w_23436_n30731#" "pad_minesd_short_0/m5_1333_21049#" -238.097
+cap "pad_minesd_short_0/m5_1333_21049#" "w_23436_n30731#" -30.6729
+cap "pad_minesd_short_0/m5_1333_21049#" "pad_minesd_short_0/P_CORE" -696.499
+cap "pad_minesd_short_0/m5_1333_21049#" "pad_minesd_short_0/P_CORE" 696.499
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.77
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.77
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.77
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.77
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.77
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.77
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 0.306523
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/VDDIO" -4.88746e-17
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -66.3043
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 11.9712
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 92.9617
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 6.82361
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.05669e-17
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -61.2285
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/P_CORE" -4.45616e-18
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -268.77
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -29.8741
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/P_PAD" 625.438
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -238.896
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/P_PAD" -625.438
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.77
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -268.77
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.77
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.77
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.77
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -258.283
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_3/P_CORE" 1.44642e-17
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 11.9712
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 0.306523
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 99.7853
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VDDIO" -4.45616e-18
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -138.02
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.77
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_PAD" 174.821
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/P_PAD" -625.438
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -95.2292
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_PAD" -174.821
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/P_PAD" 625.438
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -173.541
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.77
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.77
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.77
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.77
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.77
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -181.491
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 0.306523
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" -1.68847e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 58.4521
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 53.3045
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/VDDIO" -4.45616e-18
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -214.811
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.77
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.77
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.77
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.77
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.77
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.77
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.77
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -104.7
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.72225
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/VDDIO" 0.221968
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 41.5101
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 157.707
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 121.707
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -255.867
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -221.253
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 198.52
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/VDDIO" -2.40379e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VDDIO" -4.47758e-18
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 30.4238
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -344.347
+cap "w_23436_n30731#" "pad_minesd_short_0/m5_1333_21049#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -132.773
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" -5.24954e-17
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/VDDIO" -2.43292e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 172.379
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 30.4238
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 7.97418e-18
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -123.147
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/m5_1333_21049#" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -353.973
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -2.40379e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 202.803
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VDDIO" -4.47758e-18
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -211.627
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/m5_1333_21049#" "w_53436_n30731#" -224.96
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/m5_1333_21049#" -226.62
+cap "pad_minesd_short_2/m5_1333_21049#" "w_53436_n30731#" -84.7196
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/m5_1333_21049#" 226.62
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -265.493
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO" -2.40379e-16
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 112.331
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 116.613
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/P_CORE" -4.47758e-18
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -300.107
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -177.013
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.72225
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 30.5222
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 2767.69
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 1926.57
+cap "vtun_pad_0/GND" "vtun_pad_0/a_1736_1636#" 12.1741
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/a_1736_1636#" -3.21347
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -255.867
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -221.253
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 198.52
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -1.5905e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 30.4238
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -344.347
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -132.773
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" -2.90464e-17
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/VDDIO" -1.5905e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 172.379
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -123.147
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VSSIO" 2.66138e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 30.4238
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -353.973
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_3/P_CORE" -1.5905e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 202.803
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -211.627
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -265.493
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 112.331
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO" -1.5905e-16
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 116.613
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -300.107
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -177.013
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.72225
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 30.5222
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 2767.69
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 1926.57
+cap "w_8436_n30731#" "pad_minesd_short_1/VDDIO" -5.41246
+cap "w_8436_n30731#" "pad_minesd_short_1/P_CORE" -0.945954
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -229.271
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VDDIO" 2.37517
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.094
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -268.094
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -268.094
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -268.094
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -268.094
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.094
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -268.094
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -200.438
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 0.700607
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -0.0285064
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 206.438
+cap "w_23436_n30731#" "pad_minesd_short_0/P_CORE" -0.945954
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 37.2687
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VSSIO" -0.906883
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_0/P_CORE" -1.36891e-16
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" 0.31313
+cap "pad_minesd_short_0/VDDIO" "w_23436_n30731#" -5.41246
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -305.87
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.094
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.094
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.094
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.094
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.094
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -268.094
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -268.094
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -123.839
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 26.141
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" -0.0285064
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" -0.766219
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 0.402551
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 1.46683
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 187.142
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 30.4238
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" -1.30943
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/P_CORE" -1.36891e-16
+cap "w_38436_n30731#" "pad_minesd_short_3/P_CORE" 3.32056
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 2.37517
+cap "pad_minesd_short_3/VDDIO" "w_38436_n30731#" 1.57003
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -114.374
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -268.094
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.094
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -268.094
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -268.094
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.094
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.094
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -268.094
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -315.335
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -0.0285064
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" -0.766219
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VSSIO" -0.906883
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 1.46683
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 217.566
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/P_CORE" -1.36891e-16
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -190.972
+cap "pad_minesd_short_2/VDDIO" "w_53436_n30731#" 1.57003
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" 2.37517
+cap "pad_minesd_short_2/P_CORE" "w_53436_n30731#" 3.32056
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.094
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.094
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.094
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.094
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.094
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -268.094
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -268.094
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -238.737
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO" -0.0285064
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 0.700607
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 120.249
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/P_CORE" -1.36891e-16
+cap "pad_minesd_short_4/P_CORE" "w_68436_n30731#" -0.945954
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 123.458
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/P_CORE" -0.906883
+cap "w_68436_n30731#" "pad_minesd_short_4/VDDIO" -5.41246
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -267.57
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/P_CORE" 2.37517
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.094
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.094
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.094
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -268.094
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.094
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.094
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -268.094
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -162.138
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 6.81329
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 30.5222
+cap "pad_minesd_short_4/VDDIO" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" -5.6611e-17
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 2767.69
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 1926.57
+cap "w_8436_n30731#" "pad_minesd_short_1/VDDIO" -17.2261
+cap "w_8436_n30731#" "pad_minesd_short_1/P_CORE" -16.6271
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -0.427342
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VDDIO" -5.28065
+cap "pad_minesd_short_1/VDDIO" "w_8436_n30731#" -19.9015
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -57.8106
+cap "w_8436_n30731#" "pad_minesd_short_1/P_CORE" -11.7845
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/P_PAD" -0.437796
+cap "w_9828_n23125#" "pad_minesd_short_1/P_PAD" -40.5554
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/P_CORE" -27.5077
+cap "pad_minesd_short_1/P_PAD" "w_9828_n23125#" -152.628
+cap "w_9828_n23125#" "pad_minesd_short_1/P_PAD" -152.628
+cap "w_9828_n23125#" "pad_minesd_short_1/P_PAD" -152.628
+cap "w_9828_n23125#" "pad_minesd_short_1/P_PAD" -152.628
+cap "pad_minesd_short_1/P_PAD" "w_9828_n23125#" -152.628
+cap "pad_minesd_short_1/P_PAD" "w_9828_n23125#" -152.628
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -152.628
+cap "w_9828_n23125#" "pad_minesd_short_1/P_PAD" -18.7514
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -66.2462
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 5.29267
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 251.804
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -1.93116e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 81.3967
+cap "pad_minesd_short_0/VDDIO" "w_23436_n30731#" -30.6023
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" -144.429
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -0.427342
+cap "w_23436_n30731#" "pad_minesd_short_0/P_CORE" -26.3134
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_0/P_CORE" 2.99772
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_PAD" -0.437796
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -57.8106
+cap "pad_minesd_short_0/P_PAD" "w_24828_n23125#" -84.1634
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VDDIO" 113.697
+cap "pad_minesd_short_0/P_PAD" "w_24828_n23125#" -152.628
+cap "w_24828_n23125#" "pad_minesd_short_0/P_PAD" -152.628
+cap "pad_minesd_short_0/P_PAD" "w_24828_n23125#" -152.628
+cap "pad_minesd_short_0/P_PAD" "w_24828_n23125#" -152.628
+cap "pad_minesd_short_0/P_PAD" "w_24828_n23125#" -152.628
+cap "w_24828_n23125#" "pad_minesd_short_0/P_PAD" -152.628
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -127.771
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/VDDIO" -1.93116e-16
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -66.2462
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" -1.71474e-17
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 5.29267
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 276.636
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.99772
+cap "pad_minesd_short_3/P_CORE" "w_38436_n30731#" -26.3134
+cap "pad_minesd_short_3/VDDIO" "w_38436_n30731#" -30.6023
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -58.2379
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VSSIO" 2.06165e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 30.4238
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" -30.7315
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_PAD" -0.437796
+cap "pad_minesd_short_3/P_PAD" "w_39828_n23125#" -127.771
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "w_39828_n23125#" "pad_minesd_short_3/P_PAD" -152.628
+cap "pad_minesd_short_3/P_PAD" "w_39828_n23125#" -84.1634
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -66.2462
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -1.93116e-16
+cap "pad_minesd_short_2/VDDIO" "w_53436_n30731#" -7.39737
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 307.06
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VSSIO" 2.99772
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" -3.22372
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 5.29267
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/VDDIO" -27.5077
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" -23.205
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -26.3134
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -18.7514
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_PAD" -0.437796
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -58.2379
+cap "pad_minesd_short_2/P_PAD" "w_54828_n23125#" -152.628
+cap "pad_minesd_short_2/P_PAD" "w_54828_n23125#" -152.628
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -152.628
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -152.628
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -152.628
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -152.628
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -152.628
+cap "w_54828_n23125#" "pad_minesd_short_2/P_PAD" -40.5554
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -66.2462
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 165.615
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 5.29267
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" -1.93116e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 167.586
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_4/VDDIO" -44.2652
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -0.427342
+cap "w_68436_n30731#" "pad_minesd_short_4/VDDIO" -18.605
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/P_CORE" 2.99772
+cap "w_68436_n30731#" "pad_minesd_short_4/P_CORE" -27.2338
+cap "w_68436_n30731#" "pad_minesd_short_4/VDDIO" -11.9974
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -57.8106
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/P_PAD" -0.437796
+cap "w_69828_n23125#" "pad_minesd_short_4/P_PAD" -62.3594
+cap "pad_minesd_short_4/P_CORE" "w_68436_n30731#" 0.920464
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_4/VDDIO" 13.5337
+cap "pad_minesd_short_4/P_PAD" "w_69828_n23125#" -152.628
+cap "w_69828_n23125#" "pad_minesd_short_4/P_PAD" -152.628
+cap "w_69828_n23125#" "pad_minesd_short_4/P_PAD" -152.628
+cap "pad_minesd_short_4/P_PAD" "w_69828_n23125#" -152.628
+cap "pad_minesd_short_4/P_PAD" "w_69828_n23125#" -152.628
+cap "w_69828_n23125#" "pad_minesd_short_4/P_PAD" -152.628
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -149.575
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -66.2462
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 12.2672
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 30.5222
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/VDDIO" -1.5905e-16
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 2767.69
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 1926.57
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -181.328
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -187.135
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -187.135
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -163.617
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -1.5905e-16
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 5.29267
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 251.804
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_0/P_CORE" 2.99772
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 81.3967
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -234.796
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -187.135
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -187.135
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -187.135
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -187.135
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -187.135
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -187.135
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -188.699
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" -1.91137e-17
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 26.141
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -108.586
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" -1.5905e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" 5.29267
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 276.636
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.99772
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 30.4238
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.47908e-16
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -99.3927
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -188.87
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -187.135
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -187.135
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -187.135
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -187.135
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -187.135
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -187.135
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -243.818
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -1.5905e-16
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 307.06
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VSSIO" 2.99772
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 5.29267
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -154.595
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -187.135
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -187.135
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -187.135
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -187.135
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -187.135
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -187.135
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -187.135
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -190.351
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" -1.5905e-16
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 165.615
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/VSSIO" 5.29267
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/P_CORE" 2.99772
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 167.586
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -208.062
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -187.135
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -187.135
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -187.135
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -187.135
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -187.135
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -187.135
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -187.277
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -136.741
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 12.2672
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 30.5222
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 2767.69
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 1926.57
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -220.712
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -171.43
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -203.478
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -1.8132e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 251.804
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VSSIO" 5.29267
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VDDIO" 3.00332e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 81.3967
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VSSIO" 2.99772
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -269.692
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -171.43
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -171.43
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -171.43
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -171.43
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -171.43
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -171.43
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -193.155
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -132.773
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 26.141
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" -1.42239e-17
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" -1.8132e-16
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.99772
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 276.636
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 5.29267
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VDDIO" 3.00332e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VSSIO" 1.17448e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/P_CORE" 30.4238
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -123.147
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -195.525
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -171.43
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -171.43
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -171.43
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -171.43
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -171.43
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -171.43
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -276.948
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -1.8132e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 5.29267
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_2/P_CORE" 2.99772
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 307.06
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/P_CORE" 3.00332e-16
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -196.222
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -171.43
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -227.968
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 5.29267
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" -1.8132e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 165.615
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/P_CORE" 3.00332e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 167.586
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/P_CORE" 2.99772
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -245.202
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -171.43
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -171.43
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -171.43
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -171.43
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -171.43
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -171.43
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -173.405
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -177.013
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 12.2672
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 30.5222
+cap "vtun_pad_0/GND" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" 905.619
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/GND" 641.153
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/a_1736_1636#" -3.25194
+cap "vtun_pad_0/a_1736_1636#" "vtun_pad_0/GND" 13.2049
+cap "vtun_pad_0/GND" "vtun_pad_0/m4_540_540#" -2.84217e-14
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -255.867
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -221.253
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 201.985
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VSSIO" 0.190494
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/VDDIO" -0.0446187
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_0/P_CORE" -4.49564e-17
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_0/P_CORE" -1.33532
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 33.0088
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -344.347
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" -0.834016
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -132.773
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" -0.0446187
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 178.429
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 0.152027
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 1.02451
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 30.4238
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" -1.48735
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -123.147
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VDDIO" -4.49564e-17
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -353.973
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" -0.834016
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_3/P_CORE" -0.0446187
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 1.02451
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 208.853
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VSSIO" -1.33532
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VDDIO" -4.49564e-17
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -211.627
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -265.493
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 115.796
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/VSSIO" 0.190494
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO" -0.0446187
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 119.198
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/VDDIO" -4.49564e-17
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/P_CORE" -1.33532
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -300.107
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -177.013
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 6.18274
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 30.5222
+cap "pad_minesd_short_4/VDDIO" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 2.06658e-18
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -255.867
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -309.68
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -309.68
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -221.253
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 198.52
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" -1.5905e-16
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 30.4238
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/VDDIO" -6.85563e-18
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -344.347
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -309.68
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -132.773
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" -1.5905e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 26.141
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 7.37993e-17
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 172.379
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 30.4238
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -123.147
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_0/VSSIO" 1.49439e-16
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/P_CORE" -6.85563e-18
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -309.68
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -353.973
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 26.141
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/VDDIO" -1.5905e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 202.803
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/P_CORE" -6.85563e-18
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -211.627
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -309.68
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -309.68
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -265.493
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 112.331
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" -1.5905e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 116.613
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/VDDIO" -6.85563e-18
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -300.107
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -309.68
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -177.013
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 4.72225
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 30.5222
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -291.556
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -408.126
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -408.126
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -408.126
+cap "pad_minesd_short_1/P_PAD" "w_8436_n30731#" -408.126
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -408.126
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -408.126
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -408.126
+cap "w_8436_n30731#" "pad_minesd_short_1/P_PAD" -242.66
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 0.191861
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 0.351382
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/P_CORE" 1.39554e-16
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_0/P_CORE" 187.91
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_0/P_CORE" 1.2941e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_1/P_CORE" 20.7316
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -408.163
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -408.126
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -408.126
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -408.126
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -408.126
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -408.126
+cap "pad_minesd_short_0/P_PAD" "w_23436_n30731#" -408.126
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -408.126
+cap "w_23436_n30731#" "pad_minesd_short_0/P_PAD" -126.052
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 23.3928
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 0.191861
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/P_CORE" 5.10481e-16
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 164.869
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_3/P_CORE" 20.7316
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/P_CORE" 2.01932e-16
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -116.645
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -408.126
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -408.126
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -408.126
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -408.126
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -408.126
+cap "w_38436_n30731#" "pad_minesd_short_3/P_PAD" -408.126
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -408.126
+cap "pad_minesd_short_3/P_PAD" "w_38436_n30731#" -417.571
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/P_CORE" 23.3928
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 0.191861
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_3/P_CORE" 1.39554e-16
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_2/P_CORE" 185.6
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_3/VDDIO" 1.2941e-16
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -233.252
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -408.126
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -408.126
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -407.073
+cap "pad_minesd_short_2/P_PAD" "pad_minesd_short_2/VDDIO" -0.410737
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_PAD" -0.552916
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -406.708
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -406.831
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/P_PAD" -0.504733
+cap "w_53436_n30731#" "pad_minesd_short_2/P_PAD" -408.126
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -408.126
+cap "pad_minesd_short_2/P_PAD" "w_53436_n30731#" -300.963
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/P_CORE" 105.797
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" 1.3845
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO" 1.56089
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 0.203744
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/P_CORE" 1.39554e-16
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_2/P_CORE" 103.166
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/P_CORE" 1.2941e-16
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -349.86
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -408.126
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -408.126
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -408.126
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -408.126
+cap "pad_minesd_short_4/P_PAD" "w_68436_n30731#" -408.126
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -408.126
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -408.126
+cap "w_68436_n30731#" "pad_minesd_short_4/P_PAD" -184.356
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 4.72225
+cap "pad_minesd_short_4/VDDIO" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" -5.25673e-17
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 31.634
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/P_PAD" -47.831
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/P_PAD" 47.831
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/P_CORE" 0.679171
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/P_PAD" 47.831
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/P_PAD" -47.831
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 0.679171
+cap "pad_minesd_short_3/P_PAD" "pad_minesd_short_3/P_CORE" 47.831
+cap "pad_minesd_short_3/P_PAD" "pad_minesd_short_3/P_CORE" -47.831
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 0.679171
+cap "pad_minesd_short_2/P_PAD" "pad_minesd_short_2/VDDIO" -47.831
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_PAD" 47.831
+cap "pad_minesd_short_2/VDDIO" "w_53436_n30731#" -5.68434e-14
+cap "pad_minesd_short_2/P_PAD" "pad_minesd_short_2/VDDIO" -1.13687e-13
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" 57.0183
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/VDDIO" 1.13687e-13
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" -0.382253
+cap "pad_minesd_short_2/P_PAD" "pad_minesd_short_2/VDDIO" 1.42109e-14
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/P_PAD" -1.13687e-13
+cap "pad_minesd_short_2/P_CORE" "w_53436_n30731#" -78.1548
+cap "pad_minesd_short_2/P_PAD" "pad_minesd_short_2/P_CORE" -5.68434e-14
+cap "pad_minesd_short_4/P_CORE" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" 2.89744
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/VDDIO" 1.32522
+cap "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "pad_minesd_short_4/P_CORE" 28.1458
+cap "vtun_pad_0/pad" "vtun_pad_0/a_5600_9600#" 15.0857
+cap "vtun_pad_0/pad" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" -157.18
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/pad" -319.118
+cap "vtun_pad_0/pad" "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" -319.118
+cap "vtun_pad_0/a_5600_9600#" "vtun_pad_0/pad" 30.3375
+cap "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "vtun_pad_0/pad" -123.616
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VSSIO" 65.3752
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 65.3752
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/VDDIO" 65.3752
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" -352.342
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" -349.511
+cap "pad_minesd_short_2/P_CORE" "w_53436_n30731#" -478.302
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 36.0623
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/VSSIO" 29.3129
+cap "vtun_pad_0/pad" "vtun_pad_0/a_5600_9600#" 286.29
+cap "vtun_pad_0/pad" "vtun_pad_0/a_5600_9600#" 466.387
+cap "vtun_pad_0/pad" "vtun_pad_0/a_5600_9600#" 466.387
+cap "vtun_pad_0/pad" "vtun_pad_0/a_5600_9600#" 299.849
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VSSIO" 65.3752
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 65.3752
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/VDDIO" 65.3752
+cap "w_53436_n30731#" "pad_minesd_short_2/VDDIO" -500.623
+cap "pad_minesd_short_2/VDDIO" "w_53436_n30731#" -617.021
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -570.547
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 36.0623
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/VSSIO" 29.3129
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VSSIO" 65.3752
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 65.3752
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VSSIO" 65.3752
+cap "pad_minesd_short_2/P_CORE" "pad_minesd_short_2/VDDIO" 11.1833
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -389.933
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -525.715
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" -62.2417
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -424.627
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" 23.8558
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 36.0623
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 29.3129
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/P_CORE" 0.0814558
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VSSIO" 70.6484
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VDDIO" 0.133242
+cap "pad_minesd_short_1/P_CORE" "w_8436_n30731#" -32.2688
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/VDDIO" -0.122179
+cap "pad_minesd_short_1/P_CORE" "pad_minesd_short_1/VDDIO" 471.027
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VDDIO" 9.64999
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/VDDIO" 0.952672
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/VDDIO" 1.23449
+cap "pad_minesd_short_1/VSSIO" "pad_minesd_short_1/VDDIO" 24.4663
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_0/VDDIO" 0.671147
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_0/VDDIO" 8.38114
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VDDIO" 0.899292
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/VSSIO" 1.18914
+cap "pad_minesd_short_1/VDDIO" "pad_minesd_short_1/VSSIO" 3.5989
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_1/VDDIO" 0.634265
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" 0.0814558
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" 157.075
+cap "w_23436_n30731#" "pad_minesd_short_0/P_CORE" -10.7854
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/VSSIO" -0.0406585
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/P_CORE" 23.5143
+cap "pad_minesd_short_0/P_CORE" "w_23436_n30731#" -21.4834
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VDDIO" 0.133242
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VDDIO" 318.509
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VSSIO" 47.1341
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_0/VDDIO" -0.0815204
+cap "pad_minesd_short_0/P_CORE" "pad_minesd_short_0/VDDIO" 11.0876
+cap "m3_29400_n7400#" "pad_minesd_short_0/VDDIO" 12.6306
+cap "m3_29400_n7400#" "pad_minesd_short_0/VDDIO" 12.6306
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/VDDIO" 0.671147
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/VSSIO" 3.73299
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 12.6306
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/VDDIO" 9.64999
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VDDIO" 0.952672
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/VSSIO" 1.23449
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 20.7333
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 12.6306
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 12.6306
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 3.5989
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_0/VDDIO" 0.634265
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VDDIO" 8.38114
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/VDDIO" 0.899292
+cap "pad_minesd_short_0/VSSIO" "pad_minesd_short_3/VDDIO" 1.18914
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 12.6306
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 12.6306
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 0.0814558
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 11.6292
+cap "pad_minesd_short_3/P_CORE" "w_38436_n30731#" -26.7688
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 302.441
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 61.5733
+cap "pad_minesd_short_3/P_CORE" "m3_29400_n7400#" 0.00899586
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VSSIO" -0.081317
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 9.44455
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 19.0489
+cap "w_38436_n30731#" "pad_minesd_short_3/P_CORE" -19.2159
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 33.4704
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VDDIO" 353.839
+cap "pad_minesd_short_3/P_CORE" "pad_minesd_short_3/VSSIO" 90.4487
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VSSIO" -0.0429021
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 9.44455
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 3.33695
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 354.586
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/P_CORE" 33.3356
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/P_CORE" 83.3719
+cap "w_38436_n30731#" "pad_minesd_short_3/P_CORE" -8.28968
+cap "pad_minesd_short_3/VDDIO" "m3_44400_n8600#" 407.325
+cap "pad_minesd_short_3/VDDIO" "m3_44400_n8600#" 33.3356
+cap "pad_minesd_short_3/VSSIO" "m3_44400_n8600#" 86.3754
+cap "m3_44400_n8600#" "w_38436_n30731#" -8.28968
+cap "m3_44400_n8600#" "w_38436_n30731#" -1.18424
+cap "pad_minesd_short_3/VSSIO" "m3_44400_n8600#" 12.9114
+cap "m3_44400_n8600#" "pad_minesd_short_3/VDDIO" 4.76223
+cap "m3_44400_n8600#" "pad_minesd_short_3/VDDIO" 62.4562
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/VDDIO" 1.23449
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_3/VDDIO" 3.73299
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/VDDIO" 0.671147
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VDDIO" 9.64999
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/VDDIO" 0.952672
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/VDDIO" 0.634265
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VSSIO" 24.3322
+cap "pad_minesd_short_3/VSSIO" "pad_minesd_short_2/VDDIO" 1.18914
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_3/VDDIO" 0.899292
+cap "pad_minesd_short_3/VDDIO" "pad_minesd_short_2/VDDIO" 8.38114
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 91.3425
+cap "w_53436_n30731#" "pad_minesd_short_2/P_CORE" -6.20143
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" -3.31973
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" -29.097
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 43.4874
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/P_CORE" 125.064
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_2/P_CORE" -0.198512
+cap "pad_minesd_short_2/P_CORE" "w_53436_n30731#" -4.72859
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/VDDIO" 9.64999
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/VDDIO" 0.952672
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 15.1699
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/VDDIO" 0.671147
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_2/VDDIO" 1.23449
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 1.18914
+cap "pad_minesd_short_2/VSSIO" "pad_minesd_short_4/VDDIO" 12.8953
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/VDDIO" 8.38114
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/VDDIO" 0.634265
+cap "pad_minesd_short_2/VDDIO" "pad_minesd_short_4/VDDIO" 0.899292
+cap "w_68436_n30731#" "pad_minesd_short_4/P_CORE" -6.71574
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/P_CORE" 81.5928
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/VSSIO" -0.0203292
+cap "pad_minesd_short_4/P_CORE" "pad_minesd_short_4/VDDIO" 4.90782
+cap "pad_minesd_short_4/VSSIO" "pad_minesd_short_4/P_CORE" 16.7337
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/VSSIO" -0.10389
+cap "w_68436_n30731#" "pad_minesd_short_4/P_CORE" -33.489
+cap "pad_minesd_short_4/VSSIO" "pad_minesd_short_4/P_CORE" 83.7794
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/P_CORE" 24.6739
+cap "pad_minesd_short_4/VDDIO" "pad_minesd_short_4/P_CORE" 406.722
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" 2.09465
+cap "pad_minesd_short_0/VDDIO" "pad_minesd_short_0/P_CORE" 2.65136
+cap "pad_minesd_short_0/VDDIO" "m3_29400_n7400#" 1.92643
+cap "m3_29400_n7400#" "pad_minesd_short_0/VDDIO" 1.92643
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 1.92643
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 1.92643
+cap "m3_29400_n7400#" "pad_minesd_short_3/VDDIO" 1.92643
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 1.92643
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 1.92643
+cap "pad_minesd_short_3/VDDIO" "m3_29400_n7400#" 3.12226
+cap "pad_minesd_short_3/P_CORE" "array_core_0/VCTRL" 0.00543936
+cap "pad_minesd_short_3/VDDIO" "array_core_0/VCTRL" 2.0673
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/vdd" 476.778
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/vout" 121.528
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/en_b" 0.56849
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/vin" 0.726154
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/en" 0.0189007
+cap "array_core_0/tg5v0_0[6]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[6]/vin" "m3_14400_n6000#" 0.0287086
+cap "array_core_0/tg5v0_0[6]/en" "m3_14400_n6000#" 0.502338
+cap "array_core_0/tg5v0_0[6]/vout" "m3_14400_n6000#" 124.858
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/vss" 0.549426
+cap "array_core_0/tg5v0_0[5]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[5]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[5]/en_b" "m3_14400_n6000#" 0.56849
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/en" 0.473987
+cap "array_core_0/tg5v0_0[5]/vin" "m3_14400_n6000#" 0.754862
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/vdd" 239.28
+cap "array_core_0/tg5v0_0[5]/vout" "m3_14400_n6000#" 124.967
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/en" 0.0472519
+cap "array_core_0/tg5v0_0[5]/vss" "m3_14400_n6000#" 0.549426
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/vdd" 227.904
+cap "array_core_0/tg5v0_0[5]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[4]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[4]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[4]/vin" "m3_14400_n6000#" 0.754862
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/en_b" 0.56849
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/vdd" 239.28
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/en" 0.521239
+cap "array_core_0/tg5v0_0[4]/vss" "m3_14400_n6000#" 0.549426
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/vout" 124.967
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/vout" 121.418
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/vdd" 227.904
+cap "array_core_0/tg5v0_0[3]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[3]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[3]/vdd" "m3_14400_n6000#" 239.28
+cap "array_core_0/tg5v0_0[3]/en" "m3_14400_n6000#" 0.521239
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[3]/en_b" 0.56849
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[3]/vout" 124.967
+cap "array_core_0/tg5v0_0[3]/vss" "m3_14400_n6000#" 0.549426
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[3]/vin" 0.754862
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[3]/vdd" 227.904
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[3]/vout" 121.418
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[2]/vdd" 230.299
+cap "array_core_0/tg5v0_0[2]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[2]/en" "m3_14400_n6000#" 0.521239
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[2]/vss" 0.549426
+cap "array_core_0/tg5v0_0[2]/en_b" "m3_14400_n6000#" 0.56849
+cap "array_core_0/tg5v0_0[2]/vout" "m3_14400_n6000#" 124.967
+cap "array_core_0/tg5v0_0[2]/vin" "m3_14400_n6000#" 0.754862
+cap "array_core_0/tg5v0_0[2]/vdd" "m3_14400_n6000#" 236.885
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[2]/vout" 121.418
+cap "array_core_0/tg5v0_0[2]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[1]/vdd" "m3_14400_n6000#" 235.444
+cap "array_core_0/tg5v0_0[1]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[1]/vss" "m3_14400_n6000#" 0.549426
+cap "array_core_0/tg5v0_0[1]/vin" "m3_14400_n6000#" 0.754862
+cap "array_core_0/tg5v0_0[1]/en_b" "m3_14400_n6000#" 0.56849
+cap "array_core_0/tg5v0_0[1]/vdd" "m3_14400_n6000#" 231.74
+cap "array_core_0/tg5v0_0[1]/vout" "m3_14400_n6000#" 124.967
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[1]/en" 0.521239
+cap "array_core_0/tg5v0_0[1]/vout" "m3_14400_n6000#" 121.418
+cap "array_core_0/tg5v0_0[1]/vdd" "m3_14400_n6000#" 227.904
+cap "array_core_0/tg5v0_0[0]/vin" "m3_14400_n6000#" 0.0757111
+cap "array_core_0/tg5v0_0[0]/vdd" "m3_14400_n6000#" 237.931
+cap "array_core_0/tg5v0_0[0]/vout" "m3_14400_n6000#" 121.422
+cap "array_core_0/tg5v0_0[0]/en_b" "m3_14400_n6000#" 0.445636
+cap "array_core_0/tg5v0_0[0]/vdd" "m3_14400_n6000#" 229.253
+cap "array_core_0/tg5v0_0[0]/vout" "m3_14400_n6000#" 124.964
+cap "array_core_0/tg5v0_0[0]/vss" "m3_14400_n6000#" 0.549426
+cap "array_core_0/tg5v0_0[0]/en_b" "m3_14400_n6000#" 0.122855
+cap "array_core_0/tg5v0_0[0]/en" "m3_14400_n6000#" 0.521239
+cap "array_core_0/tg5v0_0[0]/vin" "m3_14400_n6000#" 0.679151
+cap "m3_14400_n6000#" "array_core_0/tg5v0_3/vin" 0.737673
+cap "m3_14400_n6000#" "array_core_0/tg5v0_3/en_b" 0.56849
+cap "array_core_0/tg5v0_3/vdd" "m3_14400_n6000#" 239.28
+cap "m3_14400_n6000#" "array_core_0/tg5v0_3/en" 0.0661526
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[0]/vout" 121.538
+cap "array_core_0/tg5v0_3/vdd" "array_core_0/VSRC" 227.904
+cap "array_core_0/VSRC" "array_core_0/tg5v0_3/vout" 124.848
+cap "array_core_0/tg5v0_3/vss" "array_core_0/VSRC" 0.549426
+cap "array_core_0/VSRC" "array_core_0/tg5v0_3/en" 0.455086
+cap "array_core_0/VSRC" "array_core_0/tg5v0_3/vin" 0.0171891
+cap "array_core_0/VSRC" "array_core_0/VINJ" 87.2738
+cap "array_core_0/tg5v0_3/vout" "array_core_0/VSRC" 47.5281
+cap "array_core_0/VINJ" "array_core_0/VCTRL" 24.0115
+cap "array_core_0/VOUT0" "array_core_0/VSRC" 4.28578
+cap "array_core_0/VSRC" "array_core_0/VCTRL" 3.55271e-14
+cap "array_core_0/VOUT0" "array_core_0/VCTRL" 12.5716
+cap "array_core_0/VSRC" "array_core_0/VINJ" 7.47475
+cap "array_core_0/VOUT0" "array_core_0/VCTRL" 6.28581
+cap "array_core_0/VINJ" "array_core_0/VCTRL" 12.0058
+cap "array_core_0/VINJ" "array_core_0/VOUT0" 16.3715
+cap "array_core_0/VINJ" "array_core_0/VOUT0" 5.45716
+cap "array_core_0/VOUT1" "array_core_0/VINJ" 5.45716
+cap "array_core_0/VINJ" "array_core_0/VOUT1" 27.2858
+cap "array_core_0/VINJ" "array_core_0/VGND" 136.54
+cap "array_core_0/r_vout" "array_core_0/VGND" 11.6597
+cap "array_core_0/VINJ" "array_core_0/VGND" 238.946
+cap "array_core_0/r_vout" "array_core_0/VGND" 20.4045
+cap "array_core_0/VINJ" "array_core_0/VGND" 238.946
+cap "array_core_0/r_vout" "array_core_0/VGND" 20.4045
+cap "array_core_0/r_vout" "array_core_0/VGND" 11.6597
+cap "array_core_0/VINJ" "array_core_0/VGND" 136.54
+cap "array_core_0/VINJ" "array_core_0/VTUN" 17.7087
+cap "array_core_0/r_vout" "array_core_0/VTUN" 10.3781
+cap "array_core_0/VINJ" "array_core_0/VTUN" 30.9902
+cap "array_core_0/VTUN" "array_core_0/r_vout" 18.1617
+cap "array_core_0/VTUN" "array_core_0/r_vout" 18.1617
+cap "array_core_0/VINJ" "array_core_0/VTUN" 30.9902
+cap "array_core_0/VTUN" "array_core_0/VINJ" 17.7087
+cap "array_core_0/VTUN" "array_core_0/r_vout" 10.3781
+cap "array_core_0/tg5v0_0[6]/vin" "m3_14400_n6000#" 0.331351
+cap "array_core_0/tg5v0_0[6]/en" "m3_14400_n6000#" 0.00553505
+cap "array_core_0/tg5v0_0[6]/en_b" "m3_14400_n6000#" 0.235081
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[6]/vdd" 9.16685
+cap "array_core_0/tg5v0_0[6]/vin" "m3_14400_n6000#" 0.11834
+cap "array_core_0/tg5v0_0[6]/en" "m3_14400_n6000#" 0.215708
+cap "array_core_0/tg5v0_0[6]/vss" "m3_14400_n6000#" 0.115972
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/en_b" 0.235081
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/en" 0.207406
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/vin" 0.449691
+cap "array_core_0/tg5v0_0[5]/vdd" "m3_14400_n6000#" 9.16685
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/en" 0.0138376
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[5]/vss" 0.115972
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/en_b" 0.235081
+cap "array_core_0/tg5v0_0[4]/vss" "m3_14400_n6000#" 0.115972
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/en" 0.221243
+cap "array_core_0/tg5v0_0[4]/vdd" "m3_14400_n6000#" 9.16685
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[4]/vin" 0.449691
+cap "array_core_0/tg5v0_0[3]/vss" "m3_14400_n6000#" 0.115972
+cap "array_core_0/tg5v0_0[3]/en" "m3_14400_n6000#" 0.221243
+cap "array_core_0/tg5v0_0[3]/vdd" "m3_14400_n6000#" 9.16685
+cap "array_core_0/tg5v0_0[3]/vin" "m3_14400_n6000#" 0.449691
+cap "array_core_0/tg5v0_0[3]/en_b" "m3_14400_n6000#" 0.235081
+cap "array_core_0/tg5v0_0[2]/vdd" "m3_14400_n6000#" 2.99375
+cap "array_core_0/tg5v0_0[2]/en_b" "m3_14400_n6000#" 0.235081
+cap "array_core_0/tg5v0_0[2]/vss" "m3_14400_n6000#" 0.115972
+cap "array_core_0/tg5v0_0[2]/en" "m3_14400_n6000#" 0.221243
+cap "array_core_0/tg5v0_0[2]/vdd" "m3_14400_n6000#" 6.1731
+cap "array_core_0/tg5v0_0[2]/vin" "m3_14400_n6000#" 0.449691
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[1]/vdd" 9.16003
+cap "array_core_0/tg5v0_0[1]/en" "m3_14400_n6000#" 0.221243
+cap "array_core_0/tg5v0_0[1]/vdd" "m3_14400_n6000#" 0.00682188
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[1]/en_b" 0.235081
+cap "array_core_0/tg5v0_0[1]/vss" "m3_14400_n6000#" 0.115972
+cap "array_core_0/tg5v0_0[1]/vin" "m3_14400_n6000#" 0.449691
+cap "array_core_0/tg5v0_0[0]/vdd" "m3_14400_n6000#" 9.16685
+cap "array_core_0/tg5v0_0[0]/en_b" "m3_14400_n6000#" 0.199103
+cap "array_core_0/tg5v0_0[0]/vin" "m3_14400_n6000#" 0.0378687
+cap "array_core_0/tg5v0_0[0]/vss" "m3_14400_n6000#" 0.115972
+cap "array_core_0/tg5v0_0[0]/vin" "m3_14400_n6000#" 0.411822
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[0]/en" 0.221243
+cap "m3_14400_n6000#" "array_core_0/tg5v0_0[0]/en_b" 0.0359778
+cap "m3_14400_n6000#" "array_core_0/tg5v0_3/vdd" 9.16685
+cap "array_core_0/tg5v0_3/vin" "m3_14400_n6000#" 0.355019
+cap "array_core_0/tg5v0_3/en_b" "m3_14400_n6000#" 0.235081
+cap "array_core_0/tg5v0_3/en" "m3_14400_n6000#" 0.0193727
+cap "array_core_0/tg5v0_3/vss" "array_core_0/VSRC" 0.115972
+cap "array_core_0/VSRC" "array_core_0/tg5v0_3/en" 0.201871
+cap "array_core_0/VSRC" "array_core_0/tg5v0_3/vin" 0.0946718
+cap "array_core_0/VINJ" "array_core_0/VGND" 0.0419954
+cap "array_core_0/VINJ" "array_core_0/VGND" 0.0793247
+cap "array_core_0/VTUN" "array_core_0/VINJ" 0.551888
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[0]/in" 6.52117
+cap "array_core_0/lsi1v8o5v0_2[0]/vdd_l" "array_core_0/VGND" -4.25677
+cap "array_core_0/lsi1v8o5v0_2[0]/vdd_h" "array_core_0/lsi1v8o5v0_2[0]/vss" 0.272327
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[0]/vdd_l" 137.315
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/VGND" 16.835
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[0]/vdd_l" -6.95997
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[1]/in" -238.971
+cap "array_core_0/lsi1v8o5v0_2[2]/in" "array_core_0/lsi1v8o5v0_2[1]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[0]/in" -220.6
+cap "array_core_0/lsi1v8o5v0_2[0]/in" "array_core_0/VGND" -2.25275
+cap "array_core_0/lsi1v8o5v0_2[2]/in" "array_core_0/lsi1v8o5v0_2[0]/vss" -0.390463
+cap "array_core_0/lsi1v8o5v0_2[1]/in" "array_core_0/lsi1v8o5v0_2[0]/in" -32.4112
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[1]/in" -6.40394
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[2]/in" -249.087
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[0]/vdd_l" 19.9828
+cap "array_core_0/lsi1v8o5v0_2[2]/in" "array_core_0/lsi1v8o5v0_2[3]/in" -32.4112
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[3]/in_b" 1.42109e-14
+cap "array_core_0/lsi1v8o5v0_2[1]/in" "array_core_0/lsi1v8o5v0_2[2]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[4]/in" "array_core_0/lsi1v8o5v0_2[3]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/lsi1v8o5v0_2[3]/in" -236.144
+cap "array_core_0/lsi1v8o5v0_2[3]/in" "array_core_0/lsi1v8o5v0_2[4]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[5]/in" "array_core_0/lsi1v8o5v0_2[1]/vss" -97.2812
+cap "array_core_0/lsi1v8o5v0_2[1]/vss" "array_core_0/lsi1v8o5v0_2[2]/vdd_l" 8.59336
+cap "array_core_0/lsi1v8o5v0_2[4]/in" "array_core_0/lsi1v8o5v0_2[5]/in" -32.4112
+cap "array_core_0/lsi1v8o5v0_2[3]/in" "array_core_0/lsi1v8o5v0_2[1]/vss" -9.23039
+cap "array_core_0/lsi1v8o5v0_2[4]/in" "array_core_0/lsi1v8o5v0_2[1]/vss" -249.477
+cap "array_core_0/lsi1v8o5v0_2[5]/in" "array_core_0/lsi1v8o5v0_2[6]/in" -25.422
+cap "array_core_0/lsi1v8o5v0_2[3]/vss" "array_core_0/lsi1v8o5v0_2[5]/in" -148.093
+cap "array_core_0/lsi1v8o5v0_2[3]/vss" "array_core_0/lsi1v8o5v0_2[6]/in" -249.477
+cap "array_core_0/lsi1v8o5v0_2[7]/in" "array_core_0/lsi1v8o5v0_2[6]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[4]/vdd_l" "array_core_0/lsi1v8o5v0_2[3]/vss" 8.59336
+cap "array_core_0/lsi1v8o5v0_2[7]/in" "array_core_0/lsi1v8o5v0_2[3]/vss" -2.17387
+cap "array_core_0/lsi1v8o5v0_2[5]/vss" "array_core_0/lsi1v8o5v0_2[9]/in" -0.390463
+cap "array_core_0/lsi1v8o5v0_2[5]/vss" "array_core_0/lsi1v8o5v0_2[7]/in" -243.201
+cap "array_core_0/lsi1v8o5v0_2[5]/vss" "array_core_0/lsi1v8o5v0_2[5]/vdd_l" -7.09273
+cap "array_core_0/lsi1v8o5v0_2[7]/in" "array_core_0/lsi1v8o5v0_2[8]/in" -25.422
+cap "array_core_0/lsi1v8o5v0_2[8]/in" "array_core_0/lsi1v8o5v0_2[9]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[5]/vss" "array_core_0/lsi1v8o5v0_2[8]/in" -249.477
+cap "array_core_0/lsi1v8o5v0_2[6]/in" "array_core_0/lsi1v8o5v0_2[7]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[7]/vss" "array_core_0/lsi1v8o5v0_2[10]/in" -246.651
+cap "array_core_0/lsi1v8o5v0_2[8]/in" "array_core_0/lsi1v8o5v0_2[9]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[7]/vss" "array_core_0/lsi1v8o5v0_2[7]/vdd_l" 19.9828
+cap "array_core_0/lsi1v8o5v0_2[9]/in" "array_core_0/lsi1v8o5v0_2[7]/vss" -244.984
+cap "array_core_0/lsi1v8o5v0_2[9]/in" "array_core_0/lsi1v8o5v0_2[10]/in" -25.422
+cap "array_core_0/lsi1v8o5v0_2[10]/in" "array_core_0/lsi1v8o5v0_2[11]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[10]/in_b" "array_core_0/lsi1v8o5v0_2[7]/vss" -1.42109e-14
+cap "array_core_0/lsi1v8o5v0_2[8]/vss" "array_core_0/lsi1v8o5v0_2[11]/in" -245.375
+cap "array_core_0/lsi1v8o5v0_2[8]/vss" "array_core_0/lsi1v8o5v0_2[9]/vdd_l" 8.59336
+cap "array_core_0/lsi1v8o5v0_2[12]/in" "array_core_0/lsi1v8o5v0_2[8]/vss" -112.773
+cap "array_core_0/lsi1v8o5v0_2[8]/vss" "array_core_0/lsi1v8o5v0_2[10]/in" -2.82645
+cap "array_core_0/lsi1v8o5v0_2[12]/in" "array_core_0/lsi1v8o5v0_2[11]/in" -25.422
+cap "array_core_0/lsi1v8o5v0_2[10]/in" "array_core_0/lsi1v8o5v0_2[11]/in" -16.2056
+cap "array_core_0/lsi1v8o5v0_2[13]/in" "array_core_0/lsi1v8o5v0_2[14]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[10]/vss" "array_core_0/lsi1v8o5v0_2[14]/in" -11.3937
+cap "array_core_0/lsi1v8o5v0_2[13]/in" "array_core_0/lsi1v8o5v0_2[12]/in" -32.4112
+cap "array_core_0/lsi1v8o5v0_2[10]/vss" "array_core_0/lsi1v8o5v0_2[11]/vdd_l" 8.59336
+cap "array_core_0/lsi1v8o5v0_2[10]/vss" "array_core_0/lsi1v8o5v0_2[12]/in" -136.704
+cap "array_core_0/lsi1v8o5v0_2[13]/in" "array_core_0/lsi1v8o5v0_2[10]/vss" -245.375
+cap "array_core_0/lsi1v8o5v0_2[14]/in" "array_core_0/lsi1v8o5v0_2[15]/in" -32.4112
+cap "array_core_0/lsi1v8o5v0_2[13]/in" "array_core_0/lsi1v8o5v0_2[14]/in" -12.711
+cap "array_core_0/lsi1v8o5v0_2[15]/in" "array_core_0/lsi1v8o5v0_2[12]/vss" -242.538
+cap "array_core_0/lsi1v8o5v0_2[12]/vss" "array_core_0/lsi1v8o5v0_2[12]/vdd_l" 4.29668
+cap "array_core_0/lsi1v8o5v0_2[14]/in" "array_core_0/lsi1v8o5v0_2[12]/vss" -238.083
+cap "array_core_0/lsi1v8o5v0_2[14]/vdd_l" "array_core_0/lsi1v8o5v0_2[14]/vss" 1.64479
+cap "array_core_0/lsi1v8o5v0_2[15]/in" "array_core_0/lsi1v8o5v0_2[14]/vss" -11.0515
+cap "array_core_0/lsi1v8o5v0_2[0]/vdd_l" "array_core_0/lsi1v8o5v0_2[0]/vss" -0.119662
+cap "array_core_0/array_column_decode_0/sky130_fd_sc_hd__nor3_1_1[6]/C" "array_core_0/lsi1v8o5v0_2[10]/vss" -2.84217e-14
+cap "array_core_0/lsi1v8o5v0_2[14]/vss" "array_core_0/array_column_decode_0/x6/Y" -0.00151354
+cap "array_core_0/lsi1v8o5v0_2[14]/vss" "array_core_0/array_column_decode_0/x6/A" -0.000254474
+cap "array_core_0/VGND" "array_core_0/a[0]" -16.8182
+cap "array_core_0/a[0]" "array_core_0/a[1]" -8.40909
+cap "array_core_0/a[1]" "array_core_0/a[2]" -8.40909
+cap "array_core_0/a[1]" "array_core_0/a[2]" -8.40909
+cap "array_core_0/a[2]" "array_core_0/a[3]" -8.40909
+cap "array_core_0/a[2]" "array_core_0/a[3]" -8.40909
+cap "array_core_0/a[3]" "array_core_0/a[4]" -8.40909
+cap "array_core_0/a[5]" "array_core_0/a[4]" -8.40909
+cap "array_core_0/a[3]" "array_core_0/a[4]" -8.40909
+cap "array_core_0/a[5]" "array_core_0/a[6]" -16.8182
+cap "array_core_0/a[6]" "array_core_0/a[7]" -16.8182
+cap "array_core_0/VPWR" "array_core_0/a[8]" -8.40909
+cap "array_core_0/a[7]" "array_core_0/a[8]" -8.40909
+cap "array_core_0/VPWR" "array_core_0/a[8]" -8.40909
+merge "array_core_0/a[3]" "addr[3]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "array_core_0/array_column_decode_0/VGND" "vssd2" -226720 1812756216 -1350055 0 0 0 0 0 0 0 0 0 0 0 0 -95255190 -1017340 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -124494075 -1004670 -153672756 -1190409 -72539550 -127236 -22449260 -42975 0 -38744 -196460322 -195238 0 0
+merge "vssd2" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[4]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[4]/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[3]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[3]/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[2]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[2]/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[1]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[1]/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[0]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_0[0]/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_1[0]/VGND"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__decap_3_1[0]/VGND" "array_core_0/lsi1v8o5v0_2[15]/vss"
+merge "array_core_0/lsi1v8o5v0_2[15]/vss" "array_core_0/lsi1v8o5v0_2[14]/vss"
+merge "array_core_0/lsi1v8o5v0_2[14]/vss" "array_core_0/lsi1v8o5v0_2[12]/vss"
+merge "array_core_0/lsi1v8o5v0_2[12]/vss" "array_core_0/lsi1v8o5v0_2[10]/vss"
+merge "array_core_0/lsi1v8o5v0_2[10]/vss" "array_core_0/lsi1v8o5v0_2[8]/vss"
+merge "array_core_0/lsi1v8o5v0_2[8]/vss" "array_core_0/lsi1v8o5v0_2[7]/vss"
+merge "array_core_0/lsi1v8o5v0_2[7]/vss" "array_core_0/lsi1v8o5v0_2[5]/vss"
+merge "array_core_0/lsi1v8o5v0_2[5]/vss" "array_core_0/lsi1v8o5v0_2[3]/vss"
+merge "array_core_0/lsi1v8o5v0_2[3]/vss" "array_core_0/lsi1v8o5v0_2[1]/vss"
+merge "array_core_0/lsi1v8o5v0_2[1]/vss" "array_core_0/lsi1v8o5v0_2[0]/vss"
+merge "array_core_0/lsi1v8o5v0_2[0]/vss" "array_core_0/VGND"
+merge "array_core_0/VGND" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__nor3_1_1[0]/VNB"
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__nor3_1_1[0]/VNB" "m1_51996_3800#"
+merge "m1_51996_3800#" "vtun_pad_0/GND"
+merge "vtun_pad_0/GND" "w_69828_n23125#"
+merge "w_69828_n23125#" "w_54828_n23125#"
+merge "w_54828_n23125#" "w_39828_n23125#"
+merge "w_39828_n23125#" "w_24828_n23125#"
+merge "w_24828_n23125#" "w_9828_n23125#"
+merge "w_9828_n23125#" "vtun_pad_0/a_1736_1636#"
+merge "vtun_pad_0/a_1736_1636#" "m1_106000_n27820#"
+merge "m1_106000_n27820#" "bare_pad_gnd_0/a_600_600#"
+merge "bare_pad_gnd_0/a_600_600#" "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD"
+merge "bare_pad_gnd_0/sky130_ef_io__bare_pad_0/PAD" "VGND"
+merge "VGND" "pad_minesd_short_4/VSSIO"
+merge "pad_minesd_short_4/VSSIO" "w_68436_n30731#"
+merge "w_68436_n30731#" "w_53436_n30731#"
+merge "w_53436_n30731#" "w_38436_n30731#"
+merge "w_38436_n30731#" "w_23436_n30731#"
+merge "w_23436_n30731#" "w_8436_n30731#"
+merge "w_8436_n30731#" "m5_82500_n34800#"
+merge "m5_82500_n34800#" "pad_minesd_short_2/VSSIO"
+merge "pad_minesd_short_2/VSSIO" "pad_minesd_short_3/VSSIO"
+merge "pad_minesd_short_3/VSSIO" "pad_minesd_short_0/VSSIO"
+merge "pad_minesd_short_0/VSSIO" "pad_minesd_short_1/VSSIO"
+merge "pad_minesd_short_1/VSSIO" "VSUBS"
+merge "VSUBS" "m5_n1000_n34800#"
+merge "array_core_0/lsi1v8o5v0_2[3]/in" "m1_54760_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/a[2]" "addr[2]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "array_core_0/VOUT0" "pad_minesd_short_3/P_CORE" -1473.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -640000 -3600 -13156 -2414 0 0 0 0
+merge "pad_minesd_short_3/P_CORE" "m3_44400_n8600#"
+merge "array_core_0/VSRC" "pad_minesd_short_1/P_CORE" -19131 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -30768000 -53840 -1196 -2395 0 0 0 0
+merge "pad_minesd_short_1/P_CORE" "m3_14400_n6000#"
+merge "array_core_0/a[1]" "addr[1]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[15]/in" "m1_64360_3598#" -184.008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[2]/in" "m1_53960_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[6]/in" "m1_57160_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/a[0]" "addr[0]" -291.038 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1400 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[8]/in" "m1_58760_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[10]/in" "m1_60360_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[1]/in" "m1_53160_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/VPWR" "vccd2" -1652.93 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -640000 -7200 0 0 0 0 0 0
+merge "array_core_0/VOUT1" "array_core_0/r_vout" -956.163 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2400 -13156 -2414 0 0 0 0
+merge "array_core_0/r_vout" "pad_minesd_short_4/P_CORE"
+merge "pad_minesd_short_4/P_CORE" "m3_74400_n8620#"
+merge "array_core_0/lsi1v8o5v0_2[9]/in" "m1_59560_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[13]/in" "m1_62760_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "vtun_pad_0/sky130_ef_io__bare_pad_0/PAD" "VTUN" -41839 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -182873600 -54240 0 0
+merge "pad_minesd_short_3/P_PAD" "VOUT0" -8923.67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -139482980 -48024 0 0
+merge "pad_minesd_short_4/P_PAD" "VOUT1" -8929.18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -143111780 -48024 0 0
+merge "array_core_0/a[8]" "addr[8]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "array_core_0/a[7]" "addr[7]" -291.038 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1400 0 0 0 0 0 0
+merge "array_core_0/VINJ" "pad_minesd_short_2/P_CORE" -22452.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7960826 -94076 0 -39920 0 0
+merge "pad_minesd_short_2/P_CORE" "pad_minesd_short_4/VDDIO"
+merge "pad_minesd_short_4/VDDIO" "pad_minesd_short_2/VDDIO"
+merge "pad_minesd_short_2/VDDIO" "m4_58000_n9000#"
+merge "m4_58000_n9000#" "pad_minesd_short_0/VDDIO"
+merge "pad_minesd_short_0/VDDIO" "pad_minesd_short_3/VDDIO"
+merge "pad_minesd_short_3/VDDIO" "pad_minesd_short_1/VDDIO"
+merge "array_core_0/a[6]" "addr[6]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "array_core_0/VCTRL" "pad_minesd_short_0/P_CORE" -8058.92 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14280000 -26440 -1196 -2394 0 0 0 0
+merge "pad_minesd_short_0/P_CORE" "m3_29400_n7400#"
+merge "array_core_0/a[5]" "addr[5]" -291.038 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1400 0 0 0 0 0 0
+merge "array_core_0/a[4]" "addr[4]" -229.416 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80000 -1200 0 0 0 0 0 0
+merge "pad_minesd_short_2/P_PAD" "VINJ" -8924.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -139482980 -48024 0 0
+merge "array_core_0/lsi1v8o5v0_2[5]/in" "m1_56360_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[12]/in" "m1_61960_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/lsi1v8o5v0_2[11]/in" "m1_61160_3598#" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "pad_minesd_short_0/P_PAD" "VCTRL" -8927.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -139482980 -48024 0 0
+merge "array_core_0/lsi1v8o5v0_2[4]/in" "m1_55560_3598#" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "pad_minesd_short_1/P_PAD" "VSRC" -8925.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -143139780 -48024 0 0
+merge "array_core_0/VTUN" "vtun_pad_0/pad" -3553.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3360000 -18800 0 0
+merge "vtun_pad_0/pad" "m5_108800_n14020#"
+merge "array_core_0/lsi1v8o5v0_2[14]/in" "array_core_0/c[1]" -160.612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/c[1]" "m1_63560_3598#"
+merge "array_core_0/lsi1v8o5v0_2[7]/in" "array_core_0/array_column_decode_0/sky130_fd_sc_hd__nor3_1_0[3]/Y" -161.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/array_column_decode_0/sky130_fd_sc_hd__nor3_1_0[3]/Y" "m1_57960_3598#"
+merge "array_core_0/lsi1v8o5v0_2[0]/in" "array_core_0/c[15]" -222.727 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13456 -464 -46632 -1036 0 0 0 0 0 0 0 0
+merge "array_core_0/c[15]" "m1_52360_3598#"

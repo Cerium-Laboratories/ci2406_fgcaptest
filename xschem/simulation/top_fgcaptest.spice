@@ -1,50 +1,162 @@
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/top_fgcaptest.sch
-.subckt top_fgcaptest PAD_VINJ PAD_VCTRL PAD_VOUT VPWR VGND
-*.PININFO PAD_VINJ:B PAD_VCTRL:I PAD_VOUT:O VPWR:I VGND:I
-x1 vinj VGND net3 net4 net1 VPWR net5[9] net5[8] net5[7] net5[6] net5[5] net5[4] net5[3] net5[2] net5[1] net5[0] net6[19] net6[18]
-+ net6[17] net6[16] net6[15] net6[14] net6[13] net6[12] net6[11] net6[10] net6[9] net6[8] net6[7] net6[6] net6[5] net6[4] net6[3] net6[2]
-+ net6[1] net6[0] array_core
-xp1 net7 vinj VGND PAD_VINJ sky130_ef_io__analog_minesd_pad_short
-xp2 net1 VGND VGND PAD_VCTRL sky130_ef_io__analog_minesd_pad_short
-xp3 net2 vinj VGND PAD_VOUT sky130_ef_io__analog_minesd_pad_short
+.subckt top_fgcaptest VPWR VGND addr[8] addr[7] addr[6] addr[5] addr[4] addr[3] addr[2] addr[1] addr[0]
+*.PININFO VPWR:I VGND:I addr[8:0]:I
+x1 vinj net1 vinj VCTRL net2 addr[8] addr[7] addr[6] addr[5] addr[4] addr[3] addr[2] addr[1] addr[0] VOUT0 VOUT1 VSRC array_core
+xp1 vinj vinj net1 net3 sky130_ef_io__analog_minesd_pad_short
+xp2 VOUT0 vinj net1 net4 sky130_ef_io__analog_minesd_pad_short
+xp3 VSRC vinj net1 net5 sky130_ef_io__analog_minesd_pad_short
+xp4 VOUT1 vinj net1 net6 sky130_ef_io__analog_minesd_pad_short
+xp6 VCTRL vinj net1 net7 sky130_ef_io__analog_minesd_pad_short
 .ends
 
-* expanding   symbol:  array_core.sym # of pins=8
+* expanding   symbol:  array_core.sym # of pins=9
 ** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core.sym
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core.sch
-.subckt array_core vinj VGND vtun vb vctrl VPWR addr[9] addr[8] addr[7] addr[6] addr[5] addr[4] addr[3] addr[2] addr[1] addr[0]
-+ vout[19] vout[18] vout[17] vout[16] vout[15] vout[14] vout[13] vout[12] vout[11] vout[10] vout[9] vout[8] vout[7] vout[6] vout[5] vout[4]
-+ vout[3] vout[2] vout[1] vout[0]
-*.PININFO vinj:I VGND:I vtun:I vb:I vctrl:I vout[19:0]:O addr[9:0]:I VPWR:I
-x1 net1 net2 net3[9] net3[8] net3[7] net3[6] net3[5] net3[4] net3[3] net3[2] net3[1] net3[0] net4[9] net4[8] net4[7] net4[6]
-+ net4[5] net4[4] net4[3] net4[2] net4[1] net4[0] net5[9] net5[8] net5[7] net5[6] net5[5] net5[4] net5[3] net5[2] net5[1] net5[0] net6 net7
-+ net8 net9[9] net9[8] net9[7] net9[6] net9[5] net9[4] net9[3] net9[2] net9[1] net9[0] array_core_block0
-x2 net10 net11 net12[9] net12[8] net12[7] net12[6] net12[5] net12[4] net12[3] net12[2] net12[1] net12[0] net13[9] net13[8]
-+ net13[7] net13[6] net13[5] net13[4] net13[3] net13[2] net13[1] net13[0] net14[9] net14[8] net14[7] net14[6] net14[5] net14[4] net14[3]
-+ net14[2] net14[1] net14[0] net15 net16 net17 net18[9] net18[8] net18[7] net18[6] net18[5] net18[4] net18[3] net18[2] net18[1] net18[0]
-+ array_core_block1
-x3 net19 net20 net21[9] net21[8] net21[7] net21[6] net21[5] net21[4] net21[3] net21[2] net21[1] net21[0] net22[9] net22[8]
-+ net22[7] net22[6] net22[5] net22[4] net22[3] net22[2] net22[1] net22[0] net23[9] net23[8] net23[7] net23[6] net23[5] net23[4] net23[3]
-+ net23[2] net23[1] net23[0] net24 net25 net26 net27[9] net27[8] net27[7] net27[6] net27[5] net27[4] net27[3] net27[2] net27[1] net27[0]
-+ array_core_block2
-x4 net28 net29 net30[9] net30[8] net30[7] net30[6] net30[5] net30[4] net30[3] net30[2] net30[1] net30[0] net31[9] net31[8]
-+ net31[7] net31[6] net31[5] net31[4] net31[3] net31[2] net31[1] net31[0] net32[9] net32[8] net32[7] net32[6] net32[5] net32[4] net32[3]
-+ net32[2] net32[1] net32[0] net33 net34 net35 net36[9] net36[8] net36[7] net36[6] net36[5] net36[4] net36[3] net36[2] net36[1] net36[0]
-+ array_core_block3
-x5 net37 net38 net39[9] net39[8] net39[7] net39[6] net39[5] net39[4] net39[3] net39[2] net39[1] net39[0] net40[9] net40[8]
-+ net40[7] net40[6] net40[5] net40[4] net40[3] net40[2] net40[1] net40[0] net41[9] net41[8] net41[7] net41[6] net41[5] net41[4] net41[3]
-+ net41[2] net41[1] net41[0] net42 net43 net44 net45[9] net45[8] net45[7] net45[6] net45[5] net45[4] net45[3] net45[2] net45[1] net45[0]
-+ array_core_block4
-x6 net46 net47 net48[9] net48[8] net48[7] net48[6] net48[5] net48[4] net48[3] net48[2] net48[1] net48[0] net49[9] net49[8]
-+ net49[7] net49[6] net49[5] net49[4] net49[3] net49[2] net49[1] net49[0] net50[9] net50[8] net50[7] net50[6] net50[5] net50[4] net50[3]
-+ net50[2] net50[1] net50[0] net51 net52 net53 net54[9] net54[8] net54[7] net54[6] net54[5] net54[4] net54[3] net54[2] net54[1] net54[0]
-+ array_core_block5
-x7 net55 net56 net57[4] net57[3] net57[2] net57[1] net57[0] net58[31] net58[30] net58[29] net58[28] net58[27] net58[26] net58[25]
-+ net58[24] net58[23] net58[22] net58[21] net58[20] net58[19] net58[18] net58[17] net58[16] net58[15] net58[14] net58[13] net58[12] net58[11]
-+ net58[10] net58[9] net58[8] net58[7] net58[6] net58[5] net58[4] net58[3] net58[2] net58[1] net58[0] array_row_decode
-x8 net59 net60 net61[4] net61[3] net61[2] net61[1] net61[0] net62[31] net62[30] net62[29] net62[28] net62[27] net62[26] net62[25]
-+ net62[24] net62[23] net62[22] net62[21] net62[20] net62[19] net62[18] net62[17] net62[16] net62[15] net62[14] net62[13] net62[12] net62[11]
-+ net62[10] net62[9] net62[8] net62[7] net62[6] net62[5] net62[4] net62[3] net62[2] net62[1] net62[0] array_row_decode
+.subckt array_core vinj VGND vtun vctrl VPWR addr[8] addr[7] addr[6] addr[5] addr[4] addr[3] addr[2] addr[1] addr[0] l_vout r_vout
++ VSRC
+*.PININFO vinj:I VGND:I vtun:I vctrl:I l_vout:O addr[8:0]:I VPWR:I r_vout:O VSRC:I
+x1 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[9] l_row_en[8] l_row_en[7] l_row_en[6] l_row_en[5]
++ l_row_en[4] l_row_en[3] l_row_en[2] l_row_en[1] l_row_en[0] l_row_en_b[9] l_row_en_b[8] l_row_en_b[7] l_row_en_b[6] l_row_en_b[5]
++ l_row_en_b[4] l_row_en_b[3] l_row_en_b[2] l_row_en_b[1] l_row_en_b[0] vtun vb vctrl net3[9] net3[8] net3[7] net3[6] net3[5] net3[4] net3[3]
++ net3[2] net3[1] net3[0] array_core_block0
+x2 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[19] l_row_en[18] l_row_en[17] l_row_en[16] l_row_en[15]
++ l_row_en[14] l_row_en[13] l_row_en[12] l_row_en[11] l_row_en[10] l_row_en_b[19] l_row_en_b[18] l_row_en_b[17] l_row_en_b[16] l_row_en_b[15]
++ l_row_en_b[14] l_row_en_b[13] l_row_en_b[12] l_row_en_b[11] l_row_en_b[10] vtun vb vctrl net3[9] net3[8] net3[7] net3[6] net3[5] net3[4] net3[3]
++ net3[2] net3[1] net3[0] array_core_block1
+x3 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC l_row_en[29] l_row_en[28] l_row_en[27] l_row_en[26] l_row_en[25]
++ l_row_en[24] l_row_en[23] l_row_en[22] l_row_en[21] l_row_en[20] l_row_en_b[29] l_row_en_b[28] l_row_en_b[27] l_row_en_b[26] l_row_en_b[25]
++ l_row_en_b[24] l_row_en_b[23] l_row_en_b[22] l_row_en_b[21] l_row_en_b[20] vtun vb vctrl net3[9] net3[8] net3[7] net3[6] net3[5] net3[4] net3[3]
++ net3[2] net3[1] net3[0] array_core_block2
+x6 vinj VGND VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC VSRC r_row_en[29] r_row_en[28] r_row_en[27] r_row_en[26] r_row_en[25]
++ r_row_en[24] r_row_en[23] r_row_en[22] r_row_en[21] r_row_en[20] r_row_en_b[29] r_row_en_b[28] r_row_en_b[27] r_row_en_b[26] r_row_en_b[25]
++ r_row_en_b[24] r_row_en_b[23] r_row_en_b[22] r_row_en_b[21] r_row_en_b[20] vtun vb vctrl net4[9] net4[8] net4[7] net4[6] net4[5] net4[4] net4[3]
++ net4[2] net4[1] net4[0] array_core_block5
+x7 VPWR VGND addr[8] addr[7] addr[6] addr[5] addr[4] l_w[31] l_w[30] l_w[29] l_w[28] l_w[27] l_w[26] l_w[25] l_w[24] l_w[23]
++ l_w[22] l_w[21] l_w[20] l_w[19] l_w[18] l_w[17] l_w[16] l_w[15] l_w[14] l_w[13] l_w[12] l_w[11] l_w[10] l_w[9] l_w[8] l_w[7] l_w[6]
++ l_w[5] l_w[4] l_w[3] l_w[2] l_w[1] l_w[0] array_row_decode
+x8 VPWR VGND addr[8] addr[7] addr[6] addr[5] addr[4] r_w[31] r_w[30] r_w[29] r_w[28] r_w[27] r_w[26] r_w[25] r_w[24] r_w[23]
++ r_w[22] r_w[21] r_w[20] r_w[19] r_w[18] r_w[17] r_w[16] r_w[15] r_w[14] r_w[13] r_w[12] r_w[11] r_w[10] r_w[9] r_w[8] r_w[7] r_w[6]
++ r_w[5] r_w[4] r_w[3] r_w[2] r_w[1] r_w[0] array_row_decode
+x9[31] l_w[31] l_row_en_b[31] l_row_en[31] VPWR vinj VGND lsi1v8o5v0
+x9[30] l_w[30] l_row_en_b[30] l_row_en[30] VPWR vinj VGND lsi1v8o5v0
+x9[29] l_w[29] l_row_en_b[29] l_row_en[29] VPWR vinj VGND lsi1v8o5v0
+x9[28] l_w[28] l_row_en_b[28] l_row_en[28] VPWR vinj VGND lsi1v8o5v0
+x9[27] l_w[27] l_row_en_b[27] l_row_en[27] VPWR vinj VGND lsi1v8o5v0
+x9[26] l_w[26] l_row_en_b[26] l_row_en[26] VPWR vinj VGND lsi1v8o5v0
+x9[25] l_w[25] l_row_en_b[25] l_row_en[25] VPWR vinj VGND lsi1v8o5v0
+x9[24] l_w[24] l_row_en_b[24] l_row_en[24] VPWR vinj VGND lsi1v8o5v0
+x9[23] l_w[23] l_row_en_b[23] l_row_en[23] VPWR vinj VGND lsi1v8o5v0
+x9[22] l_w[22] l_row_en_b[22] l_row_en[22] VPWR vinj VGND lsi1v8o5v0
+x9[21] l_w[21] l_row_en_b[21] l_row_en[21] VPWR vinj VGND lsi1v8o5v0
+x9[20] l_w[20] l_row_en_b[20] l_row_en[20] VPWR vinj VGND lsi1v8o5v0
+x9[19] l_w[19] l_row_en_b[19] l_row_en[19] VPWR vinj VGND lsi1v8o5v0
+x9[18] l_w[18] l_row_en_b[18] l_row_en[18] VPWR vinj VGND lsi1v8o5v0
+x9[17] l_w[17] l_row_en_b[17] l_row_en[17] VPWR vinj VGND lsi1v8o5v0
+x9[16] l_w[16] l_row_en_b[16] l_row_en[16] VPWR vinj VGND lsi1v8o5v0
+x9[15] l_w[15] l_row_en_b[15] l_row_en[15] VPWR vinj VGND lsi1v8o5v0
+x9[14] l_w[14] l_row_en_b[14] l_row_en[14] VPWR vinj VGND lsi1v8o5v0
+x9[13] l_w[13] l_row_en_b[13] l_row_en[13] VPWR vinj VGND lsi1v8o5v0
+x9[12] l_w[12] l_row_en_b[12] l_row_en[12] VPWR vinj VGND lsi1v8o5v0
+x9[11] l_w[11] l_row_en_b[11] l_row_en[11] VPWR vinj VGND lsi1v8o5v0
+x9[10] l_w[10] l_row_en_b[10] l_row_en[10] VPWR vinj VGND lsi1v8o5v0
+x9[9] l_w[9] l_row_en_b[9] l_row_en[9] VPWR vinj VGND lsi1v8o5v0
+x9[8] l_w[8] l_row_en_b[8] l_row_en[8] VPWR vinj VGND lsi1v8o5v0
+x9[7] l_w[7] l_row_en_b[7] l_row_en[7] VPWR vinj VGND lsi1v8o5v0
+x9[6] l_w[6] l_row_en_b[6] l_row_en[6] VPWR vinj VGND lsi1v8o5v0
+x9[5] l_w[5] l_row_en_b[5] l_row_en[5] VPWR vinj VGND lsi1v8o5v0
+x9[4] l_w[4] l_row_en_b[4] l_row_en[4] VPWR vinj VGND lsi1v8o5v0
+x9[3] l_w[3] l_row_en_b[3] l_row_en[3] VPWR vinj VGND lsi1v8o5v0
+x9[2] l_w[2] l_row_en_b[2] l_row_en[2] VPWR vinj VGND lsi1v8o5v0
+x9[1] l_w[1] l_row_en_b[1] l_row_en[1] VPWR vinj VGND lsi1v8o5v0
+x9[0] l_w[0] l_row_en_b[0] l_row_en[0] VPWR vinj VGND lsi1v8o5v0
+x10[31] r_w[31] r_row_en_b[31] r_row_en[31] VPWR vinj VGND lsi1v8o5v0
+x10[30] r_w[30] r_row_en_b[30] r_row_en[30] VPWR vinj VGND lsi1v8o5v0
+x10[29] r_w[29] r_row_en_b[29] r_row_en[29] VPWR vinj VGND lsi1v8o5v0
+x10[28] r_w[28] r_row_en_b[28] r_row_en[28] VPWR vinj VGND lsi1v8o5v0
+x10[27] r_w[27] r_row_en_b[27] r_row_en[27] VPWR vinj VGND lsi1v8o5v0
+x10[26] r_w[26] r_row_en_b[26] r_row_en[26] VPWR vinj VGND lsi1v8o5v0
+x10[25] r_w[25] r_row_en_b[25] r_row_en[25] VPWR vinj VGND lsi1v8o5v0
+x10[24] r_w[24] r_row_en_b[24] r_row_en[24] VPWR vinj VGND lsi1v8o5v0
+x10[23] r_w[23] r_row_en_b[23] r_row_en[23] VPWR vinj VGND lsi1v8o5v0
+x10[22] r_w[22] r_row_en_b[22] r_row_en[22] VPWR vinj VGND lsi1v8o5v0
+x10[21] r_w[21] r_row_en_b[21] r_row_en[21] VPWR vinj VGND lsi1v8o5v0
+x10[20] r_w[20] r_row_en_b[20] r_row_en[20] VPWR vinj VGND lsi1v8o5v0
+x10[19] r_w[19] r_row_en_b[19] r_row_en[19] VPWR vinj VGND lsi1v8o5v0
+x10[18] r_w[18] r_row_en_b[18] r_row_en[18] VPWR vinj VGND lsi1v8o5v0
+x10[17] r_w[17] r_row_en_b[17] r_row_en[17] VPWR vinj VGND lsi1v8o5v0
+x10[16] r_w[16] r_row_en_b[16] r_row_en[16] VPWR vinj VGND lsi1v8o5v0
+x10[15] r_w[15] r_row_en_b[15] r_row_en[15] VPWR vinj VGND lsi1v8o5v0
+x10[14] r_w[14] r_row_en_b[14] r_row_en[14] VPWR vinj VGND lsi1v8o5v0
+x10[13] r_w[13] r_row_en_b[13] r_row_en[13] VPWR vinj VGND lsi1v8o5v0
+x10[12] r_w[12] r_row_en_b[12] r_row_en[12] VPWR vinj VGND lsi1v8o5v0
+x10[11] r_w[11] r_row_en_b[11] r_row_en[11] VPWR vinj VGND lsi1v8o5v0
+x10[10] r_w[10] r_row_en_b[10] r_row_en[10] VPWR vinj VGND lsi1v8o5v0
+x10[9] r_w[9] r_row_en_b[9] r_row_en[9] VPWR vinj VGND lsi1v8o5v0
+x10[8] r_w[8] r_row_en_b[8] r_row_en[8] VPWR vinj VGND lsi1v8o5v0
+x10[7] r_w[7] r_row_en_b[7] r_row_en[7] VPWR vinj VGND lsi1v8o5v0
+x10[6] r_w[6] r_row_en_b[6] r_row_en[6] VPWR vinj VGND lsi1v8o5v0
+x10[5] r_w[5] r_row_en_b[5] r_row_en[5] VPWR vinj VGND lsi1v8o5v0
+x10[4] r_w[4] r_row_en_b[4] r_row_en[4] VPWR vinj VGND lsi1v8o5v0
+x10[3] r_w[3] r_row_en_b[3] r_row_en[3] VPWR vinj VGND lsi1v8o5v0
+x10[2] r_w[2] r_row_en_b[2] r_row_en[2] VPWR vinj VGND lsi1v8o5v0
+x10[1] r_w[1] r_row_en_b[1] r_row_en[1] VPWR vinj VGND lsi1v8o5v0
+x10[0] r_w[0] r_row_en_b[0] r_row_en[0] VPWR vinj VGND lsi1v8o5v0
+* tap: l_row_en[31:0] --> l_row_en[29:20]
+* tap: l_row_en[31:0] --> l_row_en[19:10]
+* tap: l_row_en[31:0] --> l_row_en[9:0]
+* tap: l_row_en_b[31:0] --> l_row_en_b[29:20]
+* tap: l_row_en_b[31:0] --> l_row_en_b[19:10]
+* tap: l_row_en_b[31:0] --> l_row_en_b[9:0]
+* tap: r_row_en[31:0] --> r_row_en[29:20]
+* tap: r_row_en[31:0] --> r_row_en[19:10]
+* tap: r_row_en[31:0] --> r_row_en[9:0]
+* tap: r_row_en_b[31:0] --> r_row_en_b[29:20]
+* tap: r_row_en_b[31:0] --> r_row_en_b[19:10]
+* tap: r_row_en_b[31:0] --> r_row_en_b[9:0]
+x1[9] net3[9] l_vout net1[9] net2[9] vinj VGND tg5v0
+x1[8] net3[8] l_vout net1[8] net2[8] vinj VGND tg5v0
+x1[7] net3[7] l_vout net1[7] net2[7] vinj VGND tg5v0
+x1[6] net3[6] l_vout net1[6] net2[6] vinj VGND tg5v0
+x1[5] net3[5] l_vout net1[5] net2[5] vinj VGND tg5v0
+x1[4] net3[4] l_vout net1[4] net2[4] vinj VGND tg5v0
+x1[3] net3[3] l_vout net1[3] net2[3] vinj VGND tg5v0
+x1[2] net3[2] l_vout net1[2] net2[2] vinj VGND tg5v0
+x1[1] net3[1] l_vout net1[1] net2[1] vinj VGND tg5v0
+x1[0] net3[0] l_vout net1[0] net2[0] vinj VGND tg5v0
+x11[15] c[15] net2[9] net1[9] VPWR vinj VGND lsi1v8o5v0
+x11[14] c[14] net2[8] net1[8] VPWR vinj VGND lsi1v8o5v0
+x11[13] c[13] net2[7] net1[7] VPWR vinj VGND lsi1v8o5v0
+x11[12] c[12] net2[6] net1[6] VPWR vinj VGND lsi1v8o5v0
+x11[11] c[11] net2[5] net1[5] VPWR vinj VGND lsi1v8o5v0
+x11[10] c[10] net2[4] net1[4] VPWR vinj VGND lsi1v8o5v0
+x11[9] c[9] net2[3] net1[3] VPWR vinj VGND lsi1v8o5v0
+x11[8] c[8] net2[2] net1[2] VPWR vinj VGND lsi1v8o5v0
+x11[7] c[7] net2[1] net1[1] VPWR vinj VGND lsi1v8o5v0
+x11[6] c[6] net2[0] net1[0] VPWR vinj VGND lsi1v8o5v0
+x11[5] c[5] net2[9] net1[9] VPWR vinj VGND lsi1v8o5v0
+x11[4] c[4] net2[8] net1[8] VPWR vinj VGND lsi1v8o5v0
+x11[3] c[3] net2[7] net1[7] VPWR vinj VGND lsi1v8o5v0
+x11[2] c[2] net2[6] net1[6] VPWR vinj VGND lsi1v8o5v0
+x11[1] c[1] net2[5] net1[5] VPWR vinj VGND lsi1v8o5v0
+x11[0] c[0] net2[4] net1[4] VPWR vinj VGND lsi1v8o5v0
+* tap: addr[8:0] --> addr[8:4]
+* tap: addr[8:0] --> addr[3:0]
+* tap: addr[8:0] --> addr[8:4]
+x10 VPWR VGND addr[3] addr[2] addr[1] addr[0] c[15] c[14] c[13] c[12] c[11] c[10] c[9] c[8] c[7] c[6] c[5] c[4] c[3] c[2] c[1]
++ c[0] array_column_decode
+x2[9] net4[9] r_vout net1[9] net2[9] vinj VGND tg5v0
+x2[8] net4[8] r_vout net1[8] net2[8] vinj VGND tg5v0
+x2[7] net4[7] r_vout net1[7] net2[7] vinj VGND tg5v0
+x2[6] net4[6] r_vout net1[6] net2[6] vinj VGND tg5v0
+x2[5] net4[5] r_vout net1[5] net2[5] vinj VGND tg5v0
+x2[4] net4[4] r_vout net1[4] net2[4] vinj VGND tg5v0
+x2[3] net4[3] r_vout net1[3] net2[3] vinj VGND tg5v0
+x2[2] net4[2] r_vout net1[2] net2[2] vinj VGND tg5v0
+x2[1] net4[1] r_vout net1[1] net2[1] vinj VGND tg5v0
+x2[0] net4[0] r_vout net1[0] net2[0] vinj VGND tg5v0
+x9 vinj VGND vb vb_divider
+XC1 vb VGND VGND sky130_fd_pr__cap_vpp_11p5x11p7_m1m2_noshield m=1
+XC2 vb VGND VGND sky130_fd_pr__cap_vpp_11p5x11p7_m1m2_noshield m=1
 .ends
 
 
@@ -156,6 +268,106 @@ xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net
 xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
 xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
 xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+XC1[9] net1[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[8] net1[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[7] net1[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[6] net1[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[5] net1[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[4] net1[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[3] net1[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[2] net1[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[1] net1[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC1[0] net1[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[9] net2[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[8] net2[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[7] net2[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[6] net2[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[5] net2[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[4] net2[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[3] net2[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[2] net2[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[1] net2[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC2[0] net2[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[9] net3[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[8] net3[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[7] net3[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[6] net3[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[5] net3[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[4] net3[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[3] net3[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[2] net3[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[1] net3[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC3[0] net3[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[9] net4[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[8] net4[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[7] net4[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[6] net4[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[5] net4[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[4] net4[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[3] net4[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[2] net4[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[1] net4[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC4[0] net4[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[9] net5[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[8] net5[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[7] net5[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[6] net5[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[5] net5[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[4] net5[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[3] net5[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[2] net5[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[1] net5[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC5[0] net5[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[9] net6[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[8] net6[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[7] net6[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[6] net6[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[5] net6[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[4] net6[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[3] net6[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[2] net6[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[1] net6[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC6[0] net6[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[9] net7[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[8] net7[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[7] net7[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[6] net7[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[5] net7[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[4] net7[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[3] net7[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[2] net7[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[1] net7[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC7[0] net7[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[9] net8[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[8] net8[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[7] net8[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[6] net8[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[5] net8[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[4] net8[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[3] net8[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[2] net8[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[1] net8[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC8[0] net8[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[9] net9[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[8] net9[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[7] net9[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[6] net9[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[5] net9[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[4] net9[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[3] net9[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[2] net9[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[1] net9[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC9[0] net9[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[9] net10[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[8] net10[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[7] net10[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[6] net10[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[5] net10[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[4] net10[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[3] net10[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[2] net10[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[1] net10[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
+XC10[0] net10[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=1 m=1
 .ends
 
 
@@ -267,6 +479,106 @@ xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net
 xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
 xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
 xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+XC1[9] net1[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[8] net1[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[7] net1[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[6] net1[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[5] net1[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[4] net1[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[3] net1[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[2] net1[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[1] net1[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC1[0] net1[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[9] net2[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[8] net2[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[7] net2[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[6] net2[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[5] net2[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[4] net2[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[3] net2[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[2] net2[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[1] net2[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC2[0] net2[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[9] net3[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[8] net3[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[7] net3[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[6] net3[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[5] net3[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[4] net3[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[3] net3[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[2] net3[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[1] net3[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC3[0] net3[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[9] net4[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[8] net4[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[7] net4[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[6] net4[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[5] net4[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[4] net4[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[3] net4[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[2] net4[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[1] net4[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC4[0] net4[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[9] net5[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[8] net5[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[7] net5[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[6] net5[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[5] net5[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[4] net5[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[3] net5[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[2] net5[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[1] net5[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC5[0] net5[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[9] net6[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[8] net6[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[7] net6[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[6] net6[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[5] net6[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[4] net6[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[3] net6[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[2] net6[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[1] net6[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC6[0] net6[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[9] net7[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[8] net7[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[7] net7[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[6] net7[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[5] net7[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[4] net7[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[3] net7[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[2] net7[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[1] net7[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC7[0] net7[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[9] net8[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[8] net8[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[7] net8[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[6] net8[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[5] net8[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[4] net8[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[3] net8[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[2] net8[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[1] net8[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC8[0] net8[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[9] net9[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[8] net9[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[7] net9[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[6] net9[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[5] net9[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[4] net9[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[3] net9[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[2] net9[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[1] net9[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC9[0] net9[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[9] net10[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[8] net10[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[7] net10[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[6] net10[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[5] net10[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[4] net10[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[3] net10[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[2] net10[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[1] net10[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
+XC10[0] net10[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=5 m=1
 .ends
 
 
@@ -378,228 +690,106 @@ xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net
 xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
 xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
 xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
-.ends
-
-
-* expanding   symbol:  array_core_block3.sym # of pins=9
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block3.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block3.sch
-.subckt array_core_block3 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
-+ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
-+ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
-+ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
-*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
-xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
-xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
-xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
-xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
-xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
-xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
-xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
-xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
-xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
-xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
-xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
-xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
-xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
-xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
-xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
-xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
-xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
-xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
-xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
-xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
-xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
-xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
-xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
-xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
-xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
-xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
-xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
-xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
-xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
-xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
-xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
-xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
-xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
-xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
-xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
-xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
-xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
-xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
-xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
-xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
-xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
-xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
-xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
-xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
-xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
-xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
-xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
-xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
-xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
-xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
-xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
-xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
-xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
-xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
-xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
-xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
-xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
-xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
-xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
-xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
-xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
-xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
-xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
-xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
-xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
-xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
-xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
-xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
-xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
-xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
-xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
-xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
-xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
-xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
-xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
-xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
-xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
-xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
-xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
-xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
-xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
-xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
-xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
-xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
-xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
-xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
-xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
-xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
-xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
-xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
-xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
-xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
-xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
-xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
-xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
-xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
-xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
-xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
-xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
-xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
-.ends
-
-
-* expanding   symbol:  array_core_block4.sym # of pins=9
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block4.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_core_block4.sch
-.subckt array_core_block4 vinj VGND vsrc[9] vsrc[8] vsrc[7] vsrc[6] vsrc[5] vsrc[4] vsrc[3] vsrc[2] vsrc[1] vsrc[0] row_en_6v0[9]
-+ row_en_6v0[8] row_en_6v0[7] row_en_6v0[6] row_en_6v0[5] row_en_6v0[4] row_en_6v0[3] row_en_6v0[2] row_en_6v0[1] row_en_6v0[0] row_en_6v0_b[9]
-+ row_en_6v0_b[8] row_en_6v0_b[7] row_en_6v0_b[6] row_en_6v0_b[5] row_en_6v0_b[4] row_en_6v0_b[3] row_en_6v0_b[2] row_en_6v0_b[1] row_en_6v0_b[0]
-+ vtun vb vctrl vout[9] vout[8] vout[7] vout[6] vout[5] vout[4] vout[3] vout[2] vout[1] vout[0]
-*.PININFO vtun:I vinj:I VGND:I vb:I row_en_6v0[9:0]:I row_en_6v0_b[9:0]:I vctrl:I vsrc[9:0]:I vout[9:0]:O
-xc0[9] vb row_en_6v0[9] vinj vout[0] row_en_6v0_b[9] vtun vctrl vsrc[0] VGND net1[9] fgcell_amp
-xc0[8] vb row_en_6v0[8] vinj vout[0] row_en_6v0_b[8] vtun vctrl vsrc[0] VGND net1[8] fgcell_amp
-xc0[7] vb row_en_6v0[7] vinj vout[0] row_en_6v0_b[7] vtun vctrl vsrc[0] VGND net1[7] fgcell_amp
-xc0[6] vb row_en_6v0[6] vinj vout[0] row_en_6v0_b[6] vtun vctrl vsrc[0] VGND net1[6] fgcell_amp
-xc0[5] vb row_en_6v0[5] vinj vout[0] row_en_6v0_b[5] vtun vctrl vsrc[0] VGND net1[5] fgcell_amp
-xc0[4] vb row_en_6v0[4] vinj vout[0] row_en_6v0_b[4] vtun vctrl vsrc[0] VGND net1[4] fgcell_amp
-xc0[3] vb row_en_6v0[3] vinj vout[0] row_en_6v0_b[3] vtun vctrl vsrc[0] VGND net1[3] fgcell_amp
-xc0[2] vb row_en_6v0[2] vinj vout[0] row_en_6v0_b[2] vtun vctrl vsrc[0] VGND net1[2] fgcell_amp
-xc0[1] vb row_en_6v0[1] vinj vout[0] row_en_6v0_b[1] vtun vctrl vsrc[0] VGND net1[1] fgcell_amp
-xc0[0] vb row_en_6v0[0] vinj vout[0] row_en_6v0_b[0] vtun vctrl vsrc[0] VGND net1[0] fgcell_amp
-xc1[9] vb row_en_6v0[9] vinj vout[1] row_en_6v0_b[9] vtun vctrl vsrc[1] VGND net2[9] fgcell_amp
-xc1[8] vb row_en_6v0[8] vinj vout[1] row_en_6v0_b[8] vtun vctrl vsrc[1] VGND net2[8] fgcell_amp
-xc1[7] vb row_en_6v0[7] vinj vout[1] row_en_6v0_b[7] vtun vctrl vsrc[1] VGND net2[7] fgcell_amp
-xc1[6] vb row_en_6v0[6] vinj vout[1] row_en_6v0_b[6] vtun vctrl vsrc[1] VGND net2[6] fgcell_amp
-xc1[5] vb row_en_6v0[5] vinj vout[1] row_en_6v0_b[5] vtun vctrl vsrc[1] VGND net2[5] fgcell_amp
-xc1[4] vb row_en_6v0[4] vinj vout[1] row_en_6v0_b[4] vtun vctrl vsrc[1] VGND net2[4] fgcell_amp
-xc1[3] vb row_en_6v0[3] vinj vout[1] row_en_6v0_b[3] vtun vctrl vsrc[1] VGND net2[3] fgcell_amp
-xc1[2] vb row_en_6v0[2] vinj vout[1] row_en_6v0_b[2] vtun vctrl vsrc[1] VGND net2[2] fgcell_amp
-xc1[1] vb row_en_6v0[1] vinj vout[1] row_en_6v0_b[1] vtun vctrl vsrc[1] VGND net2[1] fgcell_amp
-xc1[0] vb row_en_6v0[0] vinj vout[1] row_en_6v0_b[0] vtun vctrl vsrc[1] VGND net2[0] fgcell_amp
-xc2[9] vb row_en_6v0[9] vinj vout[2] row_en_6v0_b[9] vtun vctrl vsrc[2] VGND net3[9] fgcell_amp
-xc2[8] vb row_en_6v0[8] vinj vout[2] row_en_6v0_b[8] vtun vctrl vsrc[2] VGND net3[8] fgcell_amp
-xc2[7] vb row_en_6v0[7] vinj vout[2] row_en_6v0_b[7] vtun vctrl vsrc[2] VGND net3[7] fgcell_amp
-xc2[6] vb row_en_6v0[6] vinj vout[2] row_en_6v0_b[6] vtun vctrl vsrc[2] VGND net3[6] fgcell_amp
-xc2[5] vb row_en_6v0[5] vinj vout[2] row_en_6v0_b[5] vtun vctrl vsrc[2] VGND net3[5] fgcell_amp
-xc2[4] vb row_en_6v0[4] vinj vout[2] row_en_6v0_b[4] vtun vctrl vsrc[2] VGND net3[4] fgcell_amp
-xc2[3] vb row_en_6v0[3] vinj vout[2] row_en_6v0_b[3] vtun vctrl vsrc[2] VGND net3[3] fgcell_amp
-xc2[2] vb row_en_6v0[2] vinj vout[2] row_en_6v0_b[2] vtun vctrl vsrc[2] VGND net3[2] fgcell_amp
-xc2[1] vb row_en_6v0[1] vinj vout[2] row_en_6v0_b[1] vtun vctrl vsrc[2] VGND net3[1] fgcell_amp
-xc2[0] vb row_en_6v0[0] vinj vout[2] row_en_6v0_b[0] vtun vctrl vsrc[2] VGND net3[0] fgcell_amp
-xc3[9] vb row_en_6v0[9] vinj vout[3] row_en_6v0_b[9] vtun vctrl vsrc[3] VGND net4[9] fgcell_amp
-xc3[8] vb row_en_6v0[8] vinj vout[3] row_en_6v0_b[8] vtun vctrl vsrc[3] VGND net4[8] fgcell_amp
-xc3[7] vb row_en_6v0[7] vinj vout[3] row_en_6v0_b[7] vtun vctrl vsrc[3] VGND net4[7] fgcell_amp
-xc3[6] vb row_en_6v0[6] vinj vout[3] row_en_6v0_b[6] vtun vctrl vsrc[3] VGND net4[6] fgcell_amp
-xc3[5] vb row_en_6v0[5] vinj vout[3] row_en_6v0_b[5] vtun vctrl vsrc[3] VGND net4[5] fgcell_amp
-xc3[4] vb row_en_6v0[4] vinj vout[3] row_en_6v0_b[4] vtun vctrl vsrc[3] VGND net4[4] fgcell_amp
-xc3[3] vb row_en_6v0[3] vinj vout[3] row_en_6v0_b[3] vtun vctrl vsrc[3] VGND net4[3] fgcell_amp
-xc3[2] vb row_en_6v0[2] vinj vout[3] row_en_6v0_b[2] vtun vctrl vsrc[3] VGND net4[2] fgcell_amp
-xc3[1] vb row_en_6v0[1] vinj vout[3] row_en_6v0_b[1] vtun vctrl vsrc[3] VGND net4[1] fgcell_amp
-xc3[0] vb row_en_6v0[0] vinj vout[3] row_en_6v0_b[0] vtun vctrl vsrc[3] VGND net4[0] fgcell_amp
-xc4[9] vb row_en_6v0[9] vinj vout[4] row_en_6v0_b[9] vtun vctrl vsrc[4] VGND net5[9] fgcell_amp
-xc4[8] vb row_en_6v0[8] vinj vout[4] row_en_6v0_b[8] vtun vctrl vsrc[4] VGND net5[8] fgcell_amp
-xc4[7] vb row_en_6v0[7] vinj vout[4] row_en_6v0_b[7] vtun vctrl vsrc[4] VGND net5[7] fgcell_amp
-xc4[6] vb row_en_6v0[6] vinj vout[4] row_en_6v0_b[6] vtun vctrl vsrc[4] VGND net5[6] fgcell_amp
-xc4[5] vb row_en_6v0[5] vinj vout[4] row_en_6v0_b[5] vtun vctrl vsrc[4] VGND net5[5] fgcell_amp
-xc4[4] vb row_en_6v0[4] vinj vout[4] row_en_6v0_b[4] vtun vctrl vsrc[4] VGND net5[4] fgcell_amp
-xc4[3] vb row_en_6v0[3] vinj vout[4] row_en_6v0_b[3] vtun vctrl vsrc[4] VGND net5[3] fgcell_amp
-xc4[2] vb row_en_6v0[2] vinj vout[4] row_en_6v0_b[2] vtun vctrl vsrc[4] VGND net5[2] fgcell_amp
-xc4[1] vb row_en_6v0[1] vinj vout[4] row_en_6v0_b[1] vtun vctrl vsrc[4] VGND net5[1] fgcell_amp
-xc4[0] vb row_en_6v0[0] vinj vout[4] row_en_6v0_b[0] vtun vctrl vsrc[4] VGND net5[0] fgcell_amp
-xc5[9] vb row_en_6v0[9] vinj vout[5] row_en_6v0_b[9] vtun vctrl vsrc[5] VGND net6[9] fgcell_amp
-xc5[8] vb row_en_6v0[8] vinj vout[5] row_en_6v0_b[8] vtun vctrl vsrc[5] VGND net6[8] fgcell_amp
-xc5[7] vb row_en_6v0[7] vinj vout[5] row_en_6v0_b[7] vtun vctrl vsrc[5] VGND net6[7] fgcell_amp
-xc5[6] vb row_en_6v0[6] vinj vout[5] row_en_6v0_b[6] vtun vctrl vsrc[5] VGND net6[6] fgcell_amp
-xc5[5] vb row_en_6v0[5] vinj vout[5] row_en_6v0_b[5] vtun vctrl vsrc[5] VGND net6[5] fgcell_amp
-xc5[4] vb row_en_6v0[4] vinj vout[5] row_en_6v0_b[4] vtun vctrl vsrc[5] VGND net6[4] fgcell_amp
-xc5[3] vb row_en_6v0[3] vinj vout[5] row_en_6v0_b[3] vtun vctrl vsrc[5] VGND net6[3] fgcell_amp
-xc5[2] vb row_en_6v0[2] vinj vout[5] row_en_6v0_b[2] vtun vctrl vsrc[5] VGND net6[2] fgcell_amp
-xc5[1] vb row_en_6v0[1] vinj vout[5] row_en_6v0_b[1] vtun vctrl vsrc[5] VGND net6[1] fgcell_amp
-xc5[0] vb row_en_6v0[0] vinj vout[5] row_en_6v0_b[0] vtun vctrl vsrc[5] VGND net6[0] fgcell_amp
-xc6[9] vb row_en_6v0[9] vinj vout[6] row_en_6v0_b[9] vtun vctrl vsrc[6] VGND net7[9] fgcell_amp
-xc6[8] vb row_en_6v0[8] vinj vout[6] row_en_6v0_b[8] vtun vctrl vsrc[6] VGND net7[8] fgcell_amp
-xc6[7] vb row_en_6v0[7] vinj vout[6] row_en_6v0_b[7] vtun vctrl vsrc[6] VGND net7[7] fgcell_amp
-xc6[6] vb row_en_6v0[6] vinj vout[6] row_en_6v0_b[6] vtun vctrl vsrc[6] VGND net7[6] fgcell_amp
-xc6[5] vb row_en_6v0[5] vinj vout[6] row_en_6v0_b[5] vtun vctrl vsrc[6] VGND net7[5] fgcell_amp
-xc6[4] vb row_en_6v0[4] vinj vout[6] row_en_6v0_b[4] vtun vctrl vsrc[6] VGND net7[4] fgcell_amp
-xc6[3] vb row_en_6v0[3] vinj vout[6] row_en_6v0_b[3] vtun vctrl vsrc[6] VGND net7[3] fgcell_amp
-xc6[2] vb row_en_6v0[2] vinj vout[6] row_en_6v0_b[2] vtun vctrl vsrc[6] VGND net7[2] fgcell_amp
-xc6[1] vb row_en_6v0[1] vinj vout[6] row_en_6v0_b[1] vtun vctrl vsrc[6] VGND net7[1] fgcell_amp
-xc6[0] vb row_en_6v0[0] vinj vout[6] row_en_6v0_b[0] vtun vctrl vsrc[6] VGND net7[0] fgcell_amp
-xc7[9] vb row_en_6v0[9] vinj vout[7] row_en_6v0_b[9] vtun vctrl vsrc[7] VGND net8[9] fgcell_amp
-xc7[8] vb row_en_6v0[8] vinj vout[7] row_en_6v0_b[8] vtun vctrl vsrc[7] VGND net8[8] fgcell_amp
-xc7[7] vb row_en_6v0[7] vinj vout[7] row_en_6v0_b[7] vtun vctrl vsrc[7] VGND net8[7] fgcell_amp
-xc7[6] vb row_en_6v0[6] vinj vout[7] row_en_6v0_b[6] vtun vctrl vsrc[7] VGND net8[6] fgcell_amp
-xc7[5] vb row_en_6v0[5] vinj vout[7] row_en_6v0_b[5] vtun vctrl vsrc[7] VGND net8[5] fgcell_amp
-xc7[4] vb row_en_6v0[4] vinj vout[7] row_en_6v0_b[4] vtun vctrl vsrc[7] VGND net8[4] fgcell_amp
-xc7[3] vb row_en_6v0[3] vinj vout[7] row_en_6v0_b[3] vtun vctrl vsrc[7] VGND net8[3] fgcell_amp
-xc7[2] vb row_en_6v0[2] vinj vout[7] row_en_6v0_b[2] vtun vctrl vsrc[7] VGND net8[2] fgcell_amp
-xc7[1] vb row_en_6v0[1] vinj vout[7] row_en_6v0_b[1] vtun vctrl vsrc[7] VGND net8[1] fgcell_amp
-xc7[0] vb row_en_6v0[0] vinj vout[7] row_en_6v0_b[0] vtun vctrl vsrc[7] VGND net8[0] fgcell_amp
-xc8[9] vb row_en_6v0[9] vinj vout[8] row_en_6v0_b[9] vtun vctrl vsrc[8] VGND net9[9] fgcell_amp
-xc8[8] vb row_en_6v0[8] vinj vout[8] row_en_6v0_b[8] vtun vctrl vsrc[8] VGND net9[8] fgcell_amp
-xc8[7] vb row_en_6v0[7] vinj vout[8] row_en_6v0_b[7] vtun vctrl vsrc[8] VGND net9[7] fgcell_amp
-xc8[6] vb row_en_6v0[6] vinj vout[8] row_en_6v0_b[6] vtun vctrl vsrc[8] VGND net9[6] fgcell_amp
-xc8[5] vb row_en_6v0[5] vinj vout[8] row_en_6v0_b[5] vtun vctrl vsrc[8] VGND net9[5] fgcell_amp
-xc8[4] vb row_en_6v0[4] vinj vout[8] row_en_6v0_b[4] vtun vctrl vsrc[8] VGND net9[4] fgcell_amp
-xc8[3] vb row_en_6v0[3] vinj vout[8] row_en_6v0_b[3] vtun vctrl vsrc[8] VGND net9[3] fgcell_amp
-xc8[2] vb row_en_6v0[2] vinj vout[8] row_en_6v0_b[2] vtun vctrl vsrc[8] VGND net9[2] fgcell_amp
-xc8[1] vb row_en_6v0[1] vinj vout[8] row_en_6v0_b[1] vtun vctrl vsrc[8] VGND net9[1] fgcell_amp
-xc8[0] vb row_en_6v0[0] vinj vout[8] row_en_6v0_b[0] vtun vctrl vsrc[8] VGND net9[0] fgcell_amp
-xc9[9] vb row_en_6v0[9] vinj vout[9] row_en_6v0_b[9] vtun vctrl vsrc[9] VGND net10[9] fgcell_amp
-xc9[8] vb row_en_6v0[8] vinj vout[9] row_en_6v0_b[8] vtun vctrl vsrc[9] VGND net10[8] fgcell_amp
-xc9[7] vb row_en_6v0[7] vinj vout[9] row_en_6v0_b[7] vtun vctrl vsrc[9] VGND net10[7] fgcell_amp
-xc9[6] vb row_en_6v0[6] vinj vout[9] row_en_6v0_b[6] vtun vctrl vsrc[9] VGND net10[6] fgcell_amp
-xc9[5] vb row_en_6v0[5] vinj vout[9] row_en_6v0_b[5] vtun vctrl vsrc[9] VGND net10[5] fgcell_amp
-xc9[4] vb row_en_6v0[4] vinj vout[9] row_en_6v0_b[4] vtun vctrl vsrc[9] VGND net10[4] fgcell_amp
-xc9[3] vb row_en_6v0[3] vinj vout[9] row_en_6v0_b[3] vtun vctrl vsrc[9] VGND net10[3] fgcell_amp
-xc9[2] vb row_en_6v0[2] vinj vout[9] row_en_6v0_b[2] vtun vctrl vsrc[9] VGND net10[2] fgcell_amp
-xc9[1] vb row_en_6v0[1] vinj vout[9] row_en_6v0_b[1] vtun vctrl vsrc[9] VGND net10[1] fgcell_amp
-xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net10[0] fgcell_amp
+XC1[9] net1[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[8] net1[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[7] net1[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[6] net1[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[5] net1[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[4] net1[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[3] net1[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[2] net1[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[1] net1[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC1[0] net1[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[9] net2[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[8] net2[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[7] net2[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[6] net2[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[5] net2[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[4] net2[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[3] net2[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[2] net2[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[1] net2[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC2[0] net2[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[9] net3[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[8] net3[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[7] net3[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[6] net3[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[5] net3[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[4] net3[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[3] net3[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[2] net3[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[1] net3[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC3[0] net3[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[9] net4[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[8] net4[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[7] net4[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[6] net4[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[5] net4[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[4] net4[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[3] net4[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[2] net4[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[1] net4[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC4[0] net4[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[9] net5[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[8] net5[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[7] net5[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[6] net5[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[5] net5[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[4] net5[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[3] net5[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[2] net5[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[1] net5[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC5[0] net5[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[9] net6[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[8] net6[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[7] net6[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[6] net6[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[5] net6[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[4] net6[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[3] net6[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[2] net6[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[1] net6[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC6[0] net6[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[9] net7[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[8] net7[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[7] net7[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[6] net7[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[5] net7[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[4] net7[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[3] net7[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[2] net7[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[1] net7[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC7[0] net7[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[9] net8[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[8] net8[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[7] net8[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[6] net8[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[5] net8[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[4] net8[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[3] net8[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[2] net8[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[1] net8[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC8[0] net8[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[9] net9[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[8] net9[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[7] net9[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[6] net9[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[5] net9[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[4] net9[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[3] net9[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[2] net9[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[1] net9[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC9[0] net9[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[9] net10[9] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[8] net10[8] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[7] net10[7] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[6] net10[6] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[5] net10[5] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[4] net10[4] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[3] net10[3] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[2] net10[2] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[1] net10[1] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
+XC10[0] net10[0] VGND sky130_fd_pr__cap_mim_m3_1 W=1 L=10 m=1
 .ends
 
 
@@ -720,51 +910,258 @@ xc9[0] vb row_en_6v0[0] vinj vout[9] row_en_6v0_b[0] vtun vctrl vsrc[9] VGND net
 .subckt array_row_decode VPWR VGND a[4] a[3] a[2] a[1] a[0] w[31] w[30] w[29] w[28] w[27] w[26] w[25] w[24] w[23] w[22] w[21]
 + w[20] w[19] w[18] w[17] w[16] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3] w[2] w[1] w[0]
 *.PININFO a[4:0]:I VPWR:I VGND:I w[31:0]:O
-x1 a[4] VGND VGND VPWR VPWR net1 rowdec_not
-x2 a[3] VGND VGND VPWR VPWR net2 rowdec_not
-x3 a[2] VGND VGND VPWR VPWR net3 rowdec_not
-x4 a[1] VGND VGND VPWR VPWR net4 rowdec_not
-x5 a[0] VGND VGND VPWR VPWR net5 rowdec_not
-x6 net5 net4 VGND VGND VPWR VPWR net6 rowdec_nand2
-x7 a[0] net4 VGND VGND VPWR VPWR net8 rowdec_nand2
-x8 net5 a[1] VGND VGND VPWR VPWR net9 rowdec_nand2
-x9 a[0] a[1] VGND VGND VPWR VPWR net10 rowdec_nand2
-x10 net3 net2 VGND VGND VPWR VPWR net7 rowdec_nand2
-x11 a[2] net2 VGND VGND VPWR VPWR net11 rowdec_nand2
-x12 net3 a[3] VGND VGND VPWR VPWR net12 rowdec_nand2
-x13 a[2] a[3] VGND VGND VPWR VPWR net13 rowdec_nand2
-x14 net6 net7 a[4] VGND VNB VPB VPWR w[0] rowdec_nor3
-x15 net8 net7 a[4] VGND VNB VPB VPWR w[1] rowdec_nor3
-x16 net9 net7 a[4] VGND VNB VPB VPWR w[2] rowdec_nor3
-x17 net10 net7 a[4] VGND VNB VPB VPWR w[3] rowdec_nor3
-x18 net6 net11 a[4] VGND VNB VPB VPWR w[4] rowdec_nor3
-x19 net8 net11 a[4] VGND VNB VPB VPWR w[5] rowdec_nor3
-x20 net9 net11 a[4] VGND VNB VPB VPWR w[6] rowdec_nor3
-x21 net10 net11 a[4] VGND VNB VPB VPWR w[7] rowdec_nor3
-x22 net6 net12 a[4] VGND VNB VPB VPWR w[8] rowdec_nor3
-x23 net8 net12 a[4] VGND VNB VPB VPWR w[9] rowdec_nor3
-x24 net9 net12 a[4] VGND VNB VPB VPWR w[10] rowdec_nor3
-x25 net10 net12 a[4] VGND VNB VPB VPWR w[11] rowdec_nor3
-x26 net6 net13 a[4] VGND VNB VPB VPWR w[12] rowdec_nor3
-x27 net8 net13 a[4] VGND VNB VPB VPWR w[13] rowdec_nor3
-x28 net9 net13 a[4] VGND VNB VPB VPWR w[14] rowdec_nor3
-x29 net10 net13 a[4] VGND VNB VPB VPWR w[15] rowdec_nor3
-x30 net6 net7 net1 VGND VNB VPB VPWR w[16] rowdec_nor3
-x31 net8 net7 net1 VGND VNB VPB VPWR w[17] rowdec_nor3
-x32 net9 net7 net1 VGND VNB VPB VPWR w[18] rowdec_nor3
-x33 net10 net7 net1 VGND VNB VPB VPWR w[19] rowdec_nor3
-x34 net6 net11 net1 VGND VNB VPB VPWR w[20] rowdec_nor3
-x35 net8 net11 net1 VGND VNB VPB VPWR w[21] rowdec_nor3
-x36 net9 net11 net1 VGND VNB VPB VPWR w[22] rowdec_nor3
-x37 net10 net11 net1 VGND VNB VPB VPWR w[23] rowdec_nor3
-x38 net6 net12 net1 VGND VNB VPB VPWR w[24] rowdec_nor3
-x39 net8 net12 net1 VGND VNB VPB VPWR w[25] rowdec_nor3
-x40 net9 net12 net1 VGND VNB VPB VPWR w[26] rowdec_nor3
-x41 net10 net12 net1 VGND VNB VPB VPWR w[27] rowdec_nor3
-x42 net6 net13 net1 VGND VNB VPB VPWR w[28] rowdec_nor3
-x43 net8 net13 net1 VGND VNB VPB VPWR w[29] rowdec_nor3
-x44 net9 net13 net1 VGND VNB VPB VPWR w[30] rowdec_nor3
-x45 net10 net13 net1 VGND VNB VPB VPWR w[31] rowdec_nor3
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
+x1 a[4] VGND VGND VPWR VPWR a[4]_b sky130_fd_sc_hd__inv_1
+x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
+x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
+x4 a[1] VGND VGND VPWR VPWR a[1]_b sky130_fd_sc_hd__inv_1
+x5 a[0] VGND VGND VPWR VPWR a[0]_b sky130_fd_sc_hd__inv_1
+x13 a[2] a[3] VGND VGND VPWR VPWR net8 sky130_fd_sc_hd__nand2_2
+x6 a[0]_b a[1]_b VGND VGND VPWR VPWR net1 sky130_fd_sc_hd__nand2_2
+x7 a[0] a[1]_b VGND VGND VPWR VPWR net3 sky130_fd_sc_hd__nand2_2
+x8 a[0]_b a[1] VGND VGND VPWR VPWR net4 sky130_fd_sc_hd__nand2_2
+x9 a[0] a[1] VGND VGND VPWR VPWR net5 sky130_fd_sc_hd__nand2_2
+x10 a[2]_b a[3]_b VGND VGND VPWR VPWR net2 sky130_fd_sc_hd__nand2_2
+x11 a[2] a[3]_b VGND VGND VPWR VPWR net6 sky130_fd_sc_hd__nand2_2
+x12 a[2]_b a[3] VGND VGND VPWR VPWR net7 sky130_fd_sc_hd__nand2_2
+x14 net1 net2 a[4] VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+x15 net3 net2 a[4] VGND VGND VPWR VPWR w[1] sky130_fd_sc_hd__nor3_1
+x16 net4 net2 a[4] VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+x17 net5 net2 a[4] VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+x18 net1 net6 a[4] VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+x19 net3 net6 a[4] VGND VGND VPWR VPWR w[5] sky130_fd_sc_hd__nor3_1
+x20 net4 net6 a[4] VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+x21 net5 net6 a[4] VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+x22 net1 net7 a[4] VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+x23 net3 net7 a[4] VGND VGND VPWR VPWR w[9] sky130_fd_sc_hd__nor3_1
+x24 net4 net7 a[4] VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+x25 net5 net7 a[4] VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+x26 net1 net8 a[4] VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+x27 net3 net8 a[4] VGND VGND VPWR VPWR w[13] sky130_fd_sc_hd__nor3_1
+x28 net4 net8 a[4] VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+x29 net5 net8 a[4] VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+x30 net1 net2 a[4]_b VGND VGND VPWR VPWR w[16] sky130_fd_sc_hd__nor3_1
+x31 net3 net2 a[4]_b VGND VGND VPWR VPWR w[17] sky130_fd_sc_hd__nor3_1
+x32 net4 net2 a[4]_b VGND VGND VPWR VPWR w[18] sky130_fd_sc_hd__nor3_1
+x33 net5 net2 a[4]_b VGND VGND VPWR VPWR w[19] sky130_fd_sc_hd__nor3_1
+x34 net1 net6 a[4]_b VGND VGND VPWR VPWR w[20] sky130_fd_sc_hd__nor3_1
+x35 net3 net6 a[4]_b VGND VGND VPWR VPWR w[21] sky130_fd_sc_hd__nor3_1
+x36 net4 net6 a[4]_b VGND VGND VPWR VPWR w[22] sky130_fd_sc_hd__nor3_1
+x37 net5 net6 a[4]_b VGND VGND VPWR VPWR w[23] sky130_fd_sc_hd__nor3_1
+x38 net1 net7 a[4]_b VGND VGND VPWR VPWR w[24] sky130_fd_sc_hd__nor3_1
+x39 net3 net7 a[4]_b VGND VGND VPWR VPWR w[25] sky130_fd_sc_hd__nor3_1
+x40 net4 net7 a[4]_b VGND VGND VPWR VPWR w[26] sky130_fd_sc_hd__nor3_1
+x41 net5 net7 a[4]_b VGND VGND VPWR VPWR w[27] sky130_fd_sc_hd__nor3_1
+x42 net1 net8 a[4]_b VGND VGND VPWR VPWR w[28] sky130_fd_sc_hd__nor3_1
+x43 net3 net8 a[4]_b VGND VGND VPWR VPWR w[29] sky130_fd_sc_hd__nor3_1
+x44 net4 net8 a[4]_b VGND VGND VPWR VPWR w[30] sky130_fd_sc_hd__nor3_1
+x45 net5 net8 a[4]_b VGND VGND VPWR VPWR w[31] sky130_fd_sc_hd__nor3_1
+x46 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x48 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x49 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x51 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x52 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x54 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x55 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x57 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x58 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x60 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x61 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x63 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x64 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x66 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x67 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x71 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x74 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x80 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x86 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x89 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x92 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x94 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x95 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x96 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x97 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x98 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x99 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x100 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x101 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x102 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x103 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x104 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x105 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x106 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x107 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x108 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x109 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x110 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x111 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x112 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x113 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x114 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x115 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x116 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x117 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x118 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x119 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x120 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x121 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x122 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x123 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x124 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x125 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x126 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x127 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x128 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x129 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x130 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x131 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x132 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x133 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x134 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x135 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x136 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x137 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x138 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x139 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x140 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x141 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+.ends
+
+
+* expanding   symbol:  array_column_decode.sym # of pins=4
+** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sym
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/array_column_decode.sch
+.subckt array_column_decode VPWR VGND a[3] a[2] a[1] a[0] w[15] w[14] w[13] w[12] w[11] w[10] w[9] w[8] w[7] w[6] w[5] w[4] w[3]
++ w[2] w[1] w[0]
+*.PININFO a[3:0]:I VPWR:I VGND:I w[15:0]:O
+**** begin user architecture code
+ .lib /home/amedcalf/open-asic/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.include /home/amedcalf/open-asic/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+**** end user architecture code
+x2 a[3] VGND VGND VPWR VPWR a[3]_b sky130_fd_sc_hd__inv_1
+x3 a[2] VGND VGND VPWR VPWR a[2]_b sky130_fd_sc_hd__inv_1
+x4 a[1] VGND VGND VPWR VPWR a[1]_b sky130_fd_sc_hd__inv_1
+x5 a[0] VGND VGND VPWR VPWR a[0]_b sky130_fd_sc_hd__inv_1
+x13 a[2] a[3] VGND VGND VPWR VPWR net8 sky130_fd_sc_hd__nand2_2
+x6 a[0]_b a[1]_b VGND VGND VPWR VPWR net1 sky130_fd_sc_hd__nand2_2
+x7 a[0] a[1]_b VGND VGND VPWR VPWR net3 sky130_fd_sc_hd__nand2_2
+x8 a[0]_b a[1] VGND VGND VPWR VPWR net4 sky130_fd_sc_hd__nand2_2
+x9 a[0] a[1] VGND VGND VPWR VPWR net5 sky130_fd_sc_hd__nand2_2
+x10 a[2]_b a[3]_b VGND VGND VPWR VPWR net2 sky130_fd_sc_hd__nand2_2
+x11 a[2] a[3]_b VGND VGND VPWR VPWR net6 sky130_fd_sc_hd__nand2_2
+x12 a[2]_b a[3] VGND VGND VPWR VPWR net7 sky130_fd_sc_hd__nand2_2
+x14 net1 net2 VGND VGND VGND VPWR VPWR w[0] sky130_fd_sc_hd__nor3_1
+x15 net3 net2 VGND VGND VGND VPWR VPWR w[1] sky130_fd_sc_hd__nor3_1
+x16 net4 net2 VGND VGND VGND VPWR VPWR w[2] sky130_fd_sc_hd__nor3_1
+x17 net5 net2 VGND VGND VGND VPWR VPWR w[3] sky130_fd_sc_hd__nor3_1
+x18 net1 net6 VGND VGND VGND VPWR VPWR w[4] sky130_fd_sc_hd__nor3_1
+x19 net3 net6 VGND VGND VGND VPWR VPWR w[5] sky130_fd_sc_hd__nor3_1
+x20 net4 net6 VGND VGND VGND VPWR VPWR w[6] sky130_fd_sc_hd__nor3_1
+x21 net5 net6 VGND VGND VGND VPWR VPWR w[7] sky130_fd_sc_hd__nor3_1
+x22 net1 net7 VGND VGND VGND VPWR VPWR w[8] sky130_fd_sc_hd__nor3_1
+x23 net3 net7 VGND VGND VGND VPWR VPWR w[9] sky130_fd_sc_hd__nor3_1
+x24 net4 net7 VGND VGND VGND VPWR VPWR w[10] sky130_fd_sc_hd__nor3_1
+x25 net5 net7 VGND VGND VGND VPWR VPWR w[11] sky130_fd_sc_hd__nor3_1
+x26 net1 net8 VGND VGND VGND VPWR VPWR w[12] sky130_fd_sc_hd__nor3_1
+x27 net3 net8 VGND VGND VGND VPWR VPWR w[13] sky130_fd_sc_hd__nor3_1
+x28 net4 net8 VGND VGND VGND VPWR VPWR w[14] sky130_fd_sc_hd__nor3_1
+x29 net5 net8 VGND VGND VGND VPWR VPWR w[15] sky130_fd_sc_hd__nor3_1
+x46 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x48 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x49 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x51 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x52 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x54 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x55 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x57 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x58 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x60 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x61 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x63 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x64 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x66 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x67 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x71 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x74 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x80 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x86 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x89 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x92 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x143 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+x144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+x146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
 .ends
 
 
@@ -773,62 +1170,9 @@ x45 net10 net13 net1 VGND VNB VPB VPWR w[31] rowdec_nor3
 ** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sch
 .subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
 *.PININFO vinj:I row_en_6v0_b:I vtun:I vctrl:I vsrc:I vb:I VGND:I vout:O vfg:B row_en_6v0:I
-x3 net1 vout row_en_6v0 row_en_6v0_b ideal_tg6v0
-x1 vctrl vtun vinj row_en_6v0_b vsrc vfg VGND fgcell
-x2 vinj vb net1 vfg net1 VGND diffamp_nmos
-.ends
-
-
-* expanding   symbol:  rowdec_not.sym # of pins=2
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_not.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_not.sch
-.subckt rowdec_not A VGND VNB VPB VPWR Y
-*.PININFO A:I Y:O
-XM1 Y A VGND VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM2 Y A VPWR VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-.ends
-
-
-* expanding   symbol:  rowdec_nand2.sym # of pins=3
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_nand2.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_nand2.sch
-.subckt rowdec_nand2 A B VGND VNB VPB VPWR Y
-*.PININFO A:I Y:O B:I
-XM1 Y A net1 VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM3 Y B VPWR VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-XM2 net1 B VGND VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM4 Y A VPWR VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-.ends
-
-
-* expanding   symbol:  rowdec_nor3.sym # of pins=4
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_nor3.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/rowdec_nor3.sch
-.subckt rowdec_nor3 A B C VGND VNB VPB VPWR Y
-*.PININFO A:I Y:O B:I C:I
-XM1 Y A VGND VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM2 Y B VGND VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM4 net2 A VPWR VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-XM3 Y C VGND VNB sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
-XM5 net1 B net2 VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-XM6 Y C net1 VPB sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-.ends
-
-
-* expanding   symbol:  ideal_tg6v0.sym # of pins=4
-** sym_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/ideal_tg6v0.sym
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/ideal_tg6v0.sch
-.subckt ideal_tg6v0 vin vout en en_b
-*.PININFO vin:I en_b:I vout:O en:I
-**** begin user architecture code
-
-
-.model sw_vinj SW vt=3 vh=0.1 ron=14k roff=10gig
-.model sw_1v8 SW vt={1.8/2}  vh=0.1 ron=10k roff=10gig
-
-
-**** end user architecture code
-S1 vin vout en en_b sw_vinj
+x1 vinj row_en_6v0_b vtun vctrl vsrc VGND vfg fgcell
+x2 vfg net1 vb net1 vinj VGND diffamp_nmos
+x3 net1 vout row_en_6v0 row_en_6v0_b vinj VGND tg5v0
 .ends
 
 .end

@@ -1,0 +1,15 @@
+** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/vb_divider.sch
+.subckt vb_divider VDD VGND vout_1v
+*.PININFO VDD:I VGND:I vout_1v:O
+XR1 net2 VDD VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR2 net2 net3 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR3 net1 VGND VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR4 net4 net3 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR5 net4 net5 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR6 net6 net5 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR7 net6 net7 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR8 net1 vout_1v VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR9 net8 net7 VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+XR10 net8 vout_1v VGND sky130_fd_pr__res_xhigh_po_0p35 L=3.5 mult=1 m=1
+.ends
+.end

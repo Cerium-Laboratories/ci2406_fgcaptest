@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717473404
+timestamp 1717597427
 << poly >>
 rect 2907 -5477 3240 -5380
 rect 3140 -6470 3240 -5477
@@ -37,15 +37,15 @@ rect 1294 -6900 3146 -6812
 rect 3234 -6900 3240 -6812
 rect 1294 -6906 3240 -6900
 use tg5v0  tg5v0_0
-timestamp 1717473404
+timestamp 1717597221
 transform 0 -1 4094 1 0 -6628
 box 28 0 1634 890
 use fgcell  x1
-timestamp 1717473404
+timestamp 1717597221
 transform 1 0 2010 0 1 -5490
 box -1870 -310 1194 526
 use diffamp_nmos  x2
-timestamp 1717473404
+timestamp 1717597221
 transform 0 -1 3100 -1 0 -6070
 box 20 -140 1140 2900
 << end >>

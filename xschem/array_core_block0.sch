@@ -304,9 +304,29 @@ lab=vout[8]}
 N 3200 -790 3220 -790 {
 lab=vout[8]}
 N 3520 -790 3520 -510 {
-lab=vout[1]}
+lab=vout[9]}
 N 3500 -790 3520 -790 {
-lab=vout[1]}
+lab=vout[9]}
+N 740 -610 740 -480 {
+lab=#net1}
+N 1040 -610 1040 -480 {
+lab=#net2}
+N 1340 -610 1340 -480 {
+lab=#net3}
+N 1640 -610 1640 -480 {
+lab=#net4}
+N 1940 -610 1940 -480 {
+lab=#net5}
+N 2240 -610 2240 -480 {
+lab=#net6}
+N 2540 -610 2540 -480 {
+lab=#net7}
+N 2840 -610 2840 -480 {
+lab=#net8}
+N 3140 -610 3140 -480 {
+lab=#net8}
+N 3440 -610 3440 -480 {
+lab=#net8}
 C {fgcell_amp.sym} 700 -710 0 0 {name=xc0[9:0]}
 C {fgcell_amp.sym} 1000 -710 0 0 {name=xc1[9:0]}
 C {devices/ipin.sym} 380 -840 0 0 {name=p1 lab=vtun}
@@ -346,3 +366,23 @@ C {devices/bus_connect.sym} 2630 -500 3 0 {name=l17 lab=vout[6]}
 C {devices/bus_connect.sym} 2930 -500 3 0 {name=l18 lab=vout[7]}
 C {devices/bus_connect.sym} 3230 -500 3 0 {name=l19 lab=vout[8]}
 C {devices/bus_connect.sym} 3530 -500 3 0 {name=l20 lab=vout[9]}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 740 -450 0 0 {name=C1[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 740 -420 3 0 {name=p10 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1040 -450 0 0 {name=C2[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1040 -420 3 0 {name=p11 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1340 -450 0 0 {name=C3[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1340 -420 3 0 {name=p12 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1640 -450 0 0 {name=C4[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1640 -420 3 0 {name=p13 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1940 -450 0 0 {name=C5[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1940 -420 3 0 {name=p14 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2240 -450 0 0 {name=C6[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 2240 -420 3 0 {name=p15 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2540 -450 0 0 {name=C7[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 2540 -420 3 0 {name=p16 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2840 -450 0 0 {name=C8[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 2840 -420 3 0 {name=p17 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 3140 -450 0 0 {name=C9[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 3140 -420 3 0 {name=p18 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 3440 -450 0 0 {name=C10[9:0] model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 3440 -420 3 0 {name=p19 sig_type=std_logic lab=VGND}

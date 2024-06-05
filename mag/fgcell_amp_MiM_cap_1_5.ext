@@ -1,4 +1,4 @@
-timestamp 1717349067
+timestamp 1717569530
 version 8.3
 tech sky130A
 style ngspice()
@@ -6,10 +6,182 @@ scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
 use fgcell_amp x1 1 0 384 0 1 3012
 parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
-node "m1_1660_n2020#" 0 0 1660 -2020 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_1526_n2396#" 0 0 1526 -2396 pc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vsrc" 0 258.967 3142 -2576 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35152 884 11424 440 0 0 0 0 0 0
+node "vtun" 0 682.465 878 -2508 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65520 1024 63504 1008 63504 1008 57600 960 0 0
+node "VGND" 1 743.002 2764 -4112 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15840 536 20000 600 36864 768 63504 1008 57600 960 0 0
+node "vdd" 2 1117.76 780 -4102 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46464 1232 68864 1456 173952 2196 32400 720 0 0 0 0
+node "row_en" 0 90.272 3780 -3446 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3596 240 2704 208 0 0 0 0 0 0 0 0
+node "row_en_b" 0 91.1582 4258 -3260 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3712 244 2704 208 0 0 0 0 0 0 0 0
+node "m1_4126_n2118#" 0 213.611 4126 -2118 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7744 352 11664 432 7744 352 0 0 0 0 0 0
+node "vinj" 0 616.958 2884 -2178 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19600 560 25600 640 150144 1948 32400 720 0 0 0 0
+node "VGND" 0 875.838 2478 -2284 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64512 1016 65520 1024 63504 1008 63504 1008 92160 1216 0 0
+node "VGND" 1 1292.22 1660 -2020 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4200 260 6660 328 414560 4000 63504 1008 57600 960 0 0
+node "a_1526_n2396#" 68 575.341 1526 -2396 pc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3240 228 0 0 8096 360 11000 420 11000 420 9880 400 64800 1620 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 1500 -1800 1501 -1799 w=1000 l=200 "None" "a_1526_n2396#" 280 0 "m1_1660_n2020#" 0 293600,3040
+cap "vtun" "vdd" 50.999
+cap "VGND" "a_1526_n2396#" 27.6671
+cap "m1_4126_n2118#" "VGND" 0.935113
+cap "vinj" "VGND" 18.2069
+cap "vinj" "VGND" 73.8127
+cap "vdd" "VGND" 5.60684
+cap "vinj" "a_1526_n2396#" 6.60733
+cap "VGND" "a_1526_n2396#" 170.463
+cap "VGND" "VGND" 122.593
+cap "vinj" "m1_4126_n2118#" 13.1228
+cap "vinj" "VGND" 212.891
+cap "vtun" "a_1526_n2396#" 63.8281
+cap "vinj" "vsrc" 36.6155
+cap "vtun" "VGND" 8.15179
+device csubckt sky130_fd_pr__cap_mim_m3_1 1500 -1800 1501 -1799 w=1000 l=200 "None" "a_1526_n2396#" 280 0 "VGND" 0 414560,4000
+cap "x1/x2/VDD" "x1/x2/int4" 45.7103
+cap "x1/x1/vtun" "x1/x2/VDD" 2.75578
+cap "x1/x2/VDD" "x1/x2/vout" 10.0856
+cap "x1/x2/VSS" "x1/x2/int4" -1.49997
+cap "x1/x2/VDD" "x1/x2/int1" 0.229598
+cap "x1/x1/vfg" "x1/x2/int4" 4.19992
+cap "x1/x2/VSS" "x1/x2/VDD" 6.57478
+cap "x1/x2/VDD" "x1/x2/vb" 3.94589
+cap "x1/x1/vfg" "x1/x2/vout" -1.11022e-16
+cap "x1/x2/VDD" "x1/x2/int2" 57.9095
+cap "x1/x1/vfg" "x1/x2/VDD" 0.0230608
+cap "x1/x1/vtun" "x1/x2/int3" 0.113497
+cap "x1/x2/VDD" "x1/x2/int3" 361.581
+cap "x1/x2/VDD" "x1/x2/int5" 0.417928
+cap "x1/x2/int1" "x1/x1/vinj" 5.63323
+cap "x1/x2/VSS" "x1/x2/VDD" 9.62499
+cap "x1/x2/v2" "x1/x1/vinj" 0.851677
+cap "x1/x2/v2" "x1/x1/vsrc" 1.56417
+cap "x1/x1/vinj" "x1/x2/int3" 0.265612
+cap "x1/x2/v2" "x1/x1/vinj_en_b" -0.174433
+cap "x1/x2/int4" "x1/x2/VSS" 5.96372
+cap "x1/x2/v2" "x1/x2/v1" -0.213403
+cap "x1/x2/VSS" "x1/x2/vb" 34.3863
+cap "x1/x2/int5" "x1/x2/VSS" 3.03462
+cap "x1/x2/VSS" "x1/x1/vinj" 1.71071
+cap "x1/x2/VSS" "x1/x2/v1" 0.847617
+cap "x1/tg5v0_0/en" "x1/x1/vinj" 0.017548
+cap "x1/x2/int4" "x1/x1/vinj" 7.49188
+cap "x1/x2/int1" "x1/x2/VSS" 5.18561
+cap "x1/x1/vinj" "x1/x2/vb" 9.13705
+cap "x1/x2/v2" "x1/x1/a_697_110#" -0.0732556
+cap "x1/x2/int5" "x1/x1/vinj" 0.269948
+cap "x1/x2/v2" "x1/x2/VSS" 104.503
+cap "x1/x2/VSS" "x1/x2/int3" 69.146
+cap "x1/x2/v2" "x1/x2/int4" -3.55271e-15
+cap "x1/x2/int2" "x1/x2/VSS" 0.387595
+cap "x1/x1/vinj" "x1/x1/vinj_en_b" 0.0409472
+cap "x1/x1/vinj" "x1/x2/v1" 0.155955
+cap "x1/x2/int5" "x1/x2/v2" 8.88178e-16
+cap "x1/x1/vsrc" "x1/x2/v1" 0.00331683
+cap "x1/tg5v0_0/vout" "x1/x1/vinj" 0.0452185
+cap "x1/x2/v2" "x1/x2/VSS" 1.42109e-14
+cap "x1/x2/v2" "x1/x2/int4" 8.88178e-16
+cap "x1/x1/vinj_en_b" "x1/x2/v2" -2.04996
+cap "x1/x1/vinj_en_b" "x1/x1/vinj" 2.97946
+cap "x1/x1/vinj_en_b" "x1/x2/v1" 0.171791
+cap "x1/tg5v0_0/en" "x1/x2/VSS" 2.68442
+cap "x1/x2/v2" "x1/x1/vinj" -0.862291
+cap "x1/x2/v1" "x1/x2/v2" -0.398324
+cap "x1/x2/v1" "x1/x1/vinj" 0.0588443
+cap "x1/x2/int3" "x1/x2/v2" -5.68434e-14
+cap "x1/tg5v0_0/vout" "x1/tg5v0_0/en" 1.13687e-13
+cap "x1/x1/vsrc" "x1/x2/int4" 0.178898
+cap "x1/x2/v1" "x1/tg5v0_0/en" 0.0124016
+cap "x1/x1/vsrc" "x1/x2/v2" 3.05164
+cap "x1/x2/int3" "x1/x1/vtun" 9.94275
+cap "x1/x2/VDD" "x1/x1/vfg" 2.05314
+cap "x1/x2/VSS" "x1/x1/vfg" 55.9077
+cap "x1/x2/int2" "x1/x1/vtun" 3.17599
+cap "x1/x1/vctrl" "x1/x1/vtun" 7.6581
+cap "x1/x1/vinj" "x1/x2/VSS" 3.37357
+cap "x1/x2/vout" "x1/x1/vfg" 0.840628
+cap "x1/x1/vinj" "x1/x1/vfg" 1.48324
+cap "x1/x2/int4" "x1/x2/VSS" 2.22008
+cap "x1/x2/VDD" "x1/x1/vtun" 7.32017
+cap "x1/x2/VSS" "x1/x1/vtun" 43.9123
+cap "x1/x2/int4" "x1/x1/vfg" 16.3562
+cap "x1/x1/vinj_en_b" "x1/x1/vfg" 0.142342
+cap "x1/x1/vtun" "x1/x1/vfg" 25.9335
+cap "x1/x1/vfg" "x1/x1/a_697_110#" 0.410549
+cap "x1/x2/int3" "x1/x1/vfg" 0.345514
+cap "x1/x2/int2" "x1/x2/VSS" 0.650784
+cap "x1/x1/vctrl" "x1/x2/VSS" 14.1976
+cap "x1/x2/int2" "x1/x1/vfg" 1.05587
+cap "x1/x1/vctrl" "x1/x1/vfg" 27.1604
+cap "x1/x2/VDD" "x1/x2/VSS" 0.931647
+cap "x1/x2/int3" "x1/x1/vsrc" 0.07446
+cap "x1/x2/VSS" "x1/x1/vsrc" 0.336075
+cap "x1/x1/vctrl" "x1/x1/vsrc" 0.0713439
+cap "x1/x1/vinj" "x1/x1/vinj_en_b" 18.9844
+cap "x1/x2/v2" "x1/x1/vinj" 3.98037
+cap "x1/x1/vsrc" "x1/x2/v1" 2.0696
+cap "x1/x2/vb" "x1/x1/vinj" 2.7907
+cap "x1/x2/int4" "x1/x1/vinj" 0.00430067
+cap "x1/x2/int1" "x1/x2/VSS" 4.55949
+cap "x1/x1/vinj" "x1/tg5v0_0/en" 1.92691
+cap "x1/x2/VSS" "x1/tg5v0_0/vout" 1.30018
+cap "x1/x1/vinj" "x1/x1/a_697_110#" 2.11599
+cap "x1/x2/int5" "x1/x2/VSS" 2.75551
+cap "x1/x1/vinj" "x1/x1/vtun" 0.00433681
+cap "x1/x2/VSS" "x1/x1/vctrl" 91.383
+cap "x1/x2/VSS" "x1/x2/v1" 44.9373
+cap "x1/x1/vctrl" "x1/x2/v1" 1.79027
+cap "x1/x1/vsrc" "x1/x1/vinj_en_b" 1.33114
+cap "x1/x2/v2" "x1/x1/vsrc" 1.84889
+cap "x1/x2/int4" "x1/x1/vsrc" 0.768578
+cap "x1/x1/vsrc" "x1/tg5v0_0/en" -0.328405
+cap "x1/x2/VSS" "x1/x2/int2" 5.83023
+cap "x1/x1/vinj" "x1/x1/vsrc" 23.4733
+cap "x1/x2/int1" "x1/x1/vinj" 0.45973
+cap "x1/x1/vsrc" "x1/x1/a_697_110#" 0.693547
+cap "x1/x1/vinj" "x1/tg5v0_0/vout" 0.267373
+cap "x1/x2/VSS" "x1/x1/vinj_en_b" 20.9811
+cap "x1/x2/v2" "x1/x2/VSS" 8.28673
+cap "x1/x2/int5" "x1/x1/vinj" 0.0306922
+cap "x1/x2/int4" "x1/x2/VSS" 8.55541
+cap "x1/x2/v1" "x1/x1/vinj_en_b" 0.0562302
+cap "x1/x2/int3" "x1/x1/vinj" -0.0175033
+cap "x1/x2/VSS" "x1/tg5v0_0/en" 0.942737
+cap "x1/x2/vb" "x1/x2/VSS" 19.0592
+cap "x1/x1/vinj" "x1/x1/vctrl" 13.0391
+cap "x1/x2/VSS" "x1/x1/vinj" 68.517
+cap "x1/x1/vinj" "x1/x2/v1" 34.5285
+cap "x1/x2/int1" "x1/x1/vsrc" 0.344986
+cap "x1/x2/VSS" "x1/x1/vtun" 4.16472
+cap "x1/x1/vtun" "x1/x1/vctrl" -2.45424
+cap "x1/x1/vsrc" "x1/tg5v0_0/vout" -0.184471
+cap "x1/x2/int4" "x1/x1/vinj_en_b" -0.68679
+cap "x1/tg5v0_0/en" "x1/tg5v0_0/vout" 0.869018
+cap "x1/x1/vinj_en_b" "x1/tg5v0_0/vout" 6.28424
+cap "x1/x2/v1" "x1/x1/vsrc" 13.2358
+cap "x1/x1/vinj" "x1/x2/v1" 0.837427
+cap "x1/x1/vinj_en_b" "x1/x2/v1" -1.26139
+cap "x1/x2/VSS" "x1/x1/vsrc" 0.218366
+cap "x1/x2/VSS" "x1/x1/vinj_en_b" 3.30069
+cap "x1/x2/v2" "x1/x1/vsrc" 5.29312
+cap "x1/x2/int3" "x1/x1/vsrc" 0.14136
+cap "x1/x2/v2" "x1/x1/vinj_en_b" -3.24264
+cap "x1/x1/vinj_en_b" "x1/x2/int3" -0.0932794
+cap "x1/x2/VSS" "x1/tg5v0_0/vout" 2.04667
+cap "x1/x2/v2" "x1/tg5v0_0/vout" 0.586042
+cap "x1/x2/int1" "x1/x1/vsrc" 0.652783
+cap "x1/x2/int1" "x1/x1/vinj_en_b" -0.386004
+cap "x1/x1/vinj" "x1/x1/vsrc" 50.0525
+cap "x1/tg5v0_0/en" "x1/x1/vsrc" 0.544418
+cap "x1/x1/vinj_en_b" "x1/x1/vsrc" 38.1174
+cap "x1/x1/vinj" "x1/x1/vinj_en_b" -3.52824
+cap "x1/x1/vctrl" "x1/x1/vinj_en_b" -1.47488
+cap "x1/x2/int4" "x1/x1/vsrc" 1.45375
+cap "x1/tg5v0_0/vout" "x1/x1/vsrc" 0.346006
+cap "x1/x1/vinj" "x1/tg5v0_0/vout" 4.74264
 merge "x1/VSUBS" "VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "x1/x1/vfg" "a_1526_n2396#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "x1/x1/VGND" "m1_1660_n2020#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x1/tg5v0_0/en" "row_en_b" -50.1966 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2560 -208 0 0 0 0 0 0 0 0 0 0
+merge "x1/x1/vsrc" "vsrc" -162.182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10000 -400 0 0 0 0 0 0 0 0
+merge "x1/x2/v1" "x1/x1/vfg" -300.762 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3240 -228 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x1/x1/vfg" "a_1526_n2396#"
+merge "x1/x2/VDD" "vdd" -783.466 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41920 -1208 0 0 0 0 0 0 0 0 0 0
+merge "x1/x2/VSS" "VGND" -991.445 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -38472 -1612 0 0 0 0 0 0 0 0 0 0
+merge "x1/tg5v0_0/vout" "m1_4126_n2118#" -105.339 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7744 -352 0 0 0 0 0 0 0 0 0 0
+merge "x1/x1/vinj_en_b" "row_en" -73.9836 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2480 -240 0 0 0 0 0 0 0 0 0 0
+merge "x1/x1/vtun" "vtun" -280.896 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -38700 -816 0 0 0 0 0 0 0 0
+merge "x1/x1/vinj" "vinj" -455.614 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -19600 -560 0 0 0 0 0 0 0 0 0 0

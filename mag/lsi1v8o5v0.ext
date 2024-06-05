@@ -1,4 +1,4 @@
-timestamp 1717387046
+timestamp 1717570567
 version 8.3
 tech sky130A
 style ngspice()
@@ -10,43 +10,74 @@ parameters sky130_fd_pr__nfet_g5v0d16v0 l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters sky130_fd_pr__pfet_g5v0d10v5 l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters sky130_fd_pr__pfet_20v0 l=l w=w a1=as a2=ad p1=ps p2=pd
 parameters sky130_fd_pr__pfet_g5v0d16v0 l=l w=w a1=as p1=ps a2=ad p2=pd
-port "out_b" 2 2522 252 2602 332 m1
-port "out" 3 2522 144 2602 224 m1
+port "out_b" 2 2662 252 2742 332 m1
+port "out" 3 2662 144 2742 224 m1
 port "in" 1 60 230 120 296 m1
-port "vdd_h" 5 2490 468 2536 514 m1
+port "vdd_h" 5 2630 468 2676 514 m1
 port "vdd_l" 4 146 468 192 514 m1
 port "vss" 6 -18 -82 28 -36 m1
-node "out_b" 0 0 2522 252 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "in_bb" 0 0 298 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "out" 0 0 2522 144 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "t2" 0 0 780 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "t1" 0 0 838 240 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "in_b" 0 0 -18 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "in" 0 0 60 230 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd_h" 0 0 2490 468 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd_l" 0 0 146 468 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "vss" 0 0 -18 -82 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 2378 0 2379 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 2220 0 2221 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 2062 0 2063 1 l=100 w=100 "vss" "out" 200 0 "out_b" 100 2900,158 "vss" 100 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 1904 0 1905 1 l=100 w=100 "vss" "out" 200 0 "vss" 100 2900,158 "out_b" 100 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 1746 0 1747 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 1588 0 1589 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 1430 0 1431 1 l=100 w=100 "vss" "t1" 200 0 "out" 100 2900,158 "vss" 100 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 1272 0 1273 1 l=100 w=100 "vss" "t1" 200 0 "vss" 100 5800,316 "out" 100 2900,158
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 996 0 997 1 l=100 w=100 "vss" "in_bb" 200 0 "vss" 100 2900,158 "t1" 100 5800,316
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 838 0 839 1 l=100 w=100 "vss" "in_b" 200 0 "t2" 100 5800,316 "vss" 100 2900,158
+node "out_b" 1671 182.291 2662 252 m1 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 11600 632 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19176 1264 56820 1760 0 0 0 0 0 0 0 0 0 0
+node "in_bb" 854 648.904 298 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21800 636 0 0 18928 1208 46944 2088 0 0 0 0 0 0 0 0 0 0
+node "out" 2334 1618.8 2662 144 m1 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 11600 632 0 0 0 0 0 0 0 0 0 0 0 0 0 0 165872 3252 0 0 23392 1376 119936 3836 0 0 0 0 0 0 0 0 0 0
+node "t2" 855 223.712 920 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21800 636 0 0 20608 1268 15572 752 0 0 0 0 0 0 0 0 0 0
+node "t1" 1631 1255.31 978 240 p 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 187672 3888 0 0 32656 1624 22580 1160 0 0 0 0 0 0 0 0 0 0
+node "in_b" 1258 859.136 -18 0 mvndif 0 0 0 0 0 0 0 0 0 0 0 0 5800 316 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70200 1804 0 0 22624 1452 50492 2280 0 0 0 0 0 0 0 0 0 0
+node "in" 249 328.992 60 230 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48400 1168 0 0 3696 244 3960 252 0 0 0 0 0 0 0 0 0 0
+node "vdd_h" 16811 2696.11 2630 468 m1 0 0 0 0 604160 4416 0 0 0 0 0 0 59296 3556 34800 1896 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 110680 5380 80776 3604 0 0 0 0 0 0 0 0 0 0
+node "vdd_l" 3429 741.978 146 468 m1 0 0 0 0 172160 1716 0 0 0 0 0 0 13396 856 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22056 1192 24840 1172 0 0 0 0 0 0 0 0 0 0
+substrate "vss" 0 0 -18 -82 m1 0 0 0 0 0 0 0 0 0 0 0 0 52200 2844 90780 5408 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90856 2432 0 0 295600 8676 123924 5480 0 0 0 0 0 0 0 0 0 0
+cap "in" "in_bb" 13.436
+cap "t1" "out" 310.972
+cap "vdd_l" "in" 112.853
+cap "t2" "vdd_h" 247.299
+cap "in_b" "vdd_h" 7.07603
+cap "t1" "in" 2.94302
+cap "out" "vdd_h" 642.109
+cap "t2" "in_b" 81.3644
+cap "t2" "out" 11.9294
+cap "in" "vdd_h" 0.224297
+cap "out" "in_b" 2.39574
+cap "out_b" "t1" 7.3763
+cap "t2" "in" 0.429742
+cap "in" "in_b" 204.144
+cap "out_b" "vdd_h" 317.94
+cap "out" "in" 0.139678
+cap "vdd_l" "in_bb" 53.6026
+cap "t1" "in_bb" 122.091
+cap "t1" "vdd_l" 1.76805
+cap "out_b" "out" 654.43
+cap "vdd_h" "in_bb" 0.712086
+cap "vdd_l" "vdd_h" 9.17771
+cap "t2" "in_bb" 95.2654
+cap "t1" "vdd_h" 641.835
+cap "t2" "vdd_l" 4.37043
+cap "in_b" "in_bb" 551.964
+cap "vdd_l" "in_b" 213.47
+cap "out" "in_bb" 17.2051
+cap "t1" "t2" 317.275
+cap "vdd_l" "out" 2.57936
+cap "t1" "in_b" 92.3316
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 2518 0 2519 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 2360 0 2361 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 2202 0 2203 1 l=100 w=100 "vss" "out" 200 0 "out_b" 100 2900,158 "vss" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 2044 0 2045 1 l=100 w=100 "vss" "out" 200 0 "vss" 100 2900,158 "out_b" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1886 0 1887 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1728 0 1729 1 l=100 w=100 "vss" "vss" 200 0 "vss" 0 0 "vss" 200 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1570 0 1571 1 l=100 w=100 "vss" "t1" 200 0 "out" 100 2900,158 "vss" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1412 0 1413 1 l=100 w=100 "vss" "t1" 200 0 "vss" 100 5800,316 "out" 100 2900,158
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 1136 0 1137 1 l=100 w=100 "vss" "in_bb" 200 0 "vss" 100 2900,158 "t1" 100 5800,316
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 978 0 979 1 l=100 w=100 "vss" "in_b" 200 0 "t2" 100 5800,316 "vss" 100 2900,158
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 198 0 199 1 l=100 w=100 "vss" "in_b" 200 0 "vss" 100 2900,158 "in_bb" 100 5800,316
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 40 0 41 1 l=100 w=100 "vss" "in" 200 0 "in_b" 100 5800,316 "vss" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 2378 332 2379 333 l=100 w=100 "vdd_h" "out" 200 0 "out_b" 100 2900,158 "vdd_h" 100 5800,316
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 2220 332 2221 333 l=100 w=100 "vdd_h" "out" 200 0 "vdd_h" 100 2900,158 "out_b" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 2062 332 2063 333 l=100 w=100 "vdd_h" "out" 200 0 "out_b" 100 2900,158 "vdd_h" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 1904 332 1905 333 l=100 w=100 "vdd_h" "out" 200 0 "vdd_h" 100 2900,158 "out_b" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 1746 332 1747 333 l=100 w=100 "vdd_h" "t1" 200 0 "out" 100 2900,158 "vdd_h" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 1588 332 1589 333 l=100 w=100 "vdd_h" "t1" 200 0 "vdd_h" 100 2900,158 "out" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 1430 332 1431 333 l=100 w=100 "vdd_h" "t1" 200 0 "out" 100 2900,158 "vdd_h" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 1272 332 1273 333 l=100 w=100 "vdd_h" "t1" 200 0 "vdd_h" 100 5800,316 "out" 100 2900,158
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 996 332 997 333 l=100 w=100 "vdd_h" "t2" 200 0 "vdd_h" 100 2900,158 "t1" 100 5800,316
-device msubckt sky130_fd_pr__pfet_g5v0d10v5 838 332 839 333 l=100 w=100 "vdd_h" "t1" 200 0 "t2" 100 5800,316 "vdd_h" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 2518 332 2519 333 l=100 w=100 "vdd_h" "out" 200 0 "out_b" 100 2900,158 "vdd_h" 100 5800,316
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 2360 332 2361 333 l=100 w=100 "vdd_h" "out" 200 0 "vdd_h" 100 2900,158 "out_b" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 2202 332 2203 333 l=100 w=100 "vdd_h" "out" 200 0 "out_b" 100 2900,158 "vdd_h" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 2044 332 2045 333 l=100 w=100 "vdd_h" "out" 200 0 "vdd_h" 100 2900,158 "out_b" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1886 332 1887 333 l=100 w=100 "vdd_h" "t1" 200 0 "out" 100 2900,158 "vdd_h" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1728 332 1729 333 l=100 w=100 "vdd_h" "t1" 200 0 "vdd_h" 100 2900,158 "out" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1570 332 1571 333 l=100 w=100 "vdd_h" "t1" 200 0 "out" 100 2900,158 "vdd_h" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1412 332 1413 333 l=100 w=100 "vdd_h" "t1" 200 0 "vdd_h" 100 5800,316 "out" 100 2900,158
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 1136 332 1137 333 l=100 w=100 "vdd_h" "t2" 200 0 "vdd_h" 100 2900,158 "t1" 100 5800,316
+device msubckt sky130_fd_pr__pfet_g5v0d10v5 978 332 979 333 l=100 w=100 "vdd_h" "t1" 200 0 "t2" 100 5800,316 "vdd_h" 100 2900,158
 device msubckt sky130_fd_pr__pfet_g5v0d10v5 198 332 199 333 l=100 w=100 "vdd_l" "in_b" 200 0 "vdd_l" 100 2900,158 "in_bb" 100 5800,316
 device msubckt sky130_fd_pr__pfet_g5v0d10v5 40 332 41 333 l=100 w=100 "vdd_l" "in" 200 0 "in_b" 100 5800,316 "vdd_l" 100 2900,158

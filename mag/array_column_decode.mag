@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1717473404
+timestamp 1717569530
 << nwell >>
 rect 1000 12515 1452 12605
 rect 1000 11715 1452 11805
@@ -1433,110 +1433,110 @@ rect 1007 6523 1010 6597
 rect 930 6520 1010 6523
 use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717473404
+timestamp 1717569530
 transform -1 0 1203 0 -1 7296
 box -19 -24 157 296
 use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_1
 array 0 0 452 0 7 800
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 1066 0 1 6624
 box -19 -24 157 296
 use sky130_fd_sc_hd__decap_3  sky130_fd_sc_hd__decap_3_2
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -215 0 1 12924
 box -19 -24 157 296
 use sky130_fd_sc_hd__nand2_2  sky130_fd_sc_hd__nand2_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 383 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717473404
+timestamp 1717569530
 transform -1 0 1387 0 -1 7296
 box -19 -24 203 296
 use sky130_fd_sc_hd__nor3_1  sky130_fd_sc_hd__nor3_1_1
 array 0 0 -452 0 7 800
-timestamp 1717473404
+timestamp 1717569530
 transform -1 0 1388 0 1 6624
 box -19 -24 203 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
 array 0 0 -452 0 7 -800
-timestamp 1717473404
+timestamp 1717569530
 transform -1 0 1433 0 -1 7296
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_1
 array 0 0 -452 0 7 -800
-timestamp 1717473404
+timestamp 1717569530
 transform -1 0 1065 0 -1 7296
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_2
 array 0 0 452 0 7 800
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 1020 0 1 6624
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_3
 array 0 0 452 0 7 800
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 1388 0 1 6624
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_4
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -1181 0 1 12924
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_5
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 843 0 1 12924
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_6
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13917
 box -19 -24 65 296
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_7
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13319
 box -19 -24 65 296
 use sky130_fd_sc_hd__inv_1  x2 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13871
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x3
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13733
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x4
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13595
 box -19 -24 157 296
 use sky130_fd_sc_hd__inv_1  x5
-timestamp 1717473404
+timestamp 1717569530
 transform 0 1 -1876 -1 0 13457
 box -19 -24 157 296
 use sky130_fd_sc_hd__nand2_2  x6
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 613 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x8
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 153 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x9
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -77 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x10
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -445 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x11
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -675 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x12
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -905 0 1 12924
 box -19 -24 249 296
 use sky130_fd_sc_hd__nand2_2  x13
-timestamp 1717473404
+timestamp 1717569530
 transform 1 0 -1135 0 1 12924
 box -19 -24 249 296
 << labels >>

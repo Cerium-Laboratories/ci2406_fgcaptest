@@ -1,0 +1,15 @@
+* NGSPICE file created from vb_divider.ext - technology: sky130A
+
+.subckt vb_divider VDD VGND vout_1v
+X0 a_668_1320# a_556_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X1 a_332_1320# a_556_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X2 vout_1v a_1116_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X3 VGND a_444_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X4 a_892_1320# a_1116_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X5 a_892_1320# a_780_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X6 a_332_1320# a_220_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X7 vout_1v a_444_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X8 a_668_1320# a_780_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+X9 VDD a_220_220# VGND sky130_fd_pr__res_xhigh_po_0p35 l=3.5
+.ends
+
