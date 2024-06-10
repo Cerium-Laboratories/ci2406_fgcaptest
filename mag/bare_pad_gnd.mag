@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1717393140
+timestamp 1717628967
 << psubdiff >>
 rect 300 7228 6240 7240
 rect 300 312 312 7228
@@ -102,7 +102,7 @@ rect 6100 312 6152 412
 rect 6228 312 6270 7228
 rect 270 270 6270 312
 use sky130_ef_io__bare_pad  sky130_ef_io__bare_pad_0 $PDKPATH/libs.ref/sky130_fd_io/mag
-timestamp 1716601000
+timestamp 1717628967
 transform 1 0 270 0 1 270
 box -270 -270 6270 7270
 << end >>

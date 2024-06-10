@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717597306
+timestamp 1717628967
 << error_p >>
 rect 1982 29160 2302 29230
 rect 366 28916 606 28940
@@ -4105,7 +4105,7 @@ rect 38602 104 38626 296
 rect 38386 80 38626 104
 use fgcell_amp_MOS_cap_thick_poly_2  fgcell_amp_MOS_cap_thick_poly_2_0
 array 0 9 4000 0 9 3000
-timestamp 1717597221
+timestamp 1717628967
 transform 1 0 -140 0 1 7210
 box 140 -7210 4106 -4964
 << end >>
