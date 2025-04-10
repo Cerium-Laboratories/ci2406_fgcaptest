@@ -1,8 +1,0 @@
-** sch_path: /home/amedcalf/projects/ci2406_fgcaptest/xschem/fgcell_amp.sch
-.subckt fgcell_amp vb row_en_6v0 vinj vout row_en_6v0_b vtun vctrl vsrc VGND vfg
-*.PININFO vinj:I row_en_6v0_b:I vtun:I vctrl:I vsrc:I vb:I VGND:I vout:O vfg:B row_en_6v0:I
-x1 vctrl vtun vinj row_en_6v0_b vsrc vfg VGND fgcell
-x2 vfg net1 VGND vinj vb net1 diffamp_nmos
-x3 net1 vout row_en_6v0 row_en_6v0_b vinj VGND tg5v0
-.ends
-.end
