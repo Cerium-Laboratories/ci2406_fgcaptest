@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -22,16 +21,16 @@ L 4 0 80 0 100 {}
 L 4 -100 0 -80 0 {}
 L 4 -100 20 -80 20 {}
 L 7 40 80 40 100 {}
-B 5 -22.5 97.5 -17.5 102.5 {name=vb dir=in}
-B 5 17.5 -112.5 22.5 -107.5 {name=row_en_6v0 dir=in}
-B 5 -102.5 -22.5 -97.5 -17.5 {name=vinj dir=in}
-B 5 97.5 -82.5 102.5 -77.5 {name=vout dir=out}
-B 5 -2.5 -112.5 2.5 -107.5 {name=row_en_6v0_b dir=in}
-B 5 -22.5 -112.5 -17.5 -107.5 {name=vtun dir=in}
-B 5 -2.5 97.5 2.5 102.5 {name=vctrl dir=in}
-B 5 -102.5 -2.5 -97.5 2.5 {name=vsrc dir=in}
-B 5 -102.5 17.5 -97.5 22.5 {name=VGND dir=in}
-B 5 37.5 97.5 42.5 102.5 {name=vfg dir=inout}
+B 5 37.5 97.5 42.5 102.5 {name=vfg dir=inout sim_pinnumber=1}
+B 5 -2.5 97.5 2.5 102.5 {name=vctrl dir=in sim_pinnumber=2}
+B 5 -102.5 -22.5 -97.5 -17.5 {name=vinj dir=in sim_pinnumber=3}
+B 5 -2.5 -112.5 2.5 -107.5 {name=row_en_6v0_b dir=in sim_pinnumber=4}
+B 5 -102.5 -2.5 -97.5 2.5 {name=vsrc dir=in sim_pinnumber=5}
+B 5 -22.5 -112.5 -17.5 -107.5 {name=vtun dir=in sim_pinnumber=6}
+B 5 -102.5 17.5 -97.5 22.5 {name=VGND dir=in sim_pinnumber=7}
+B 5 97.5 -82.5 102.5 -77.5 {name=vout dir=out sim_pinnumber=8}
+B 5 17.5 -112.5 22.5 -107.5 {name=row_en_6v0 dir=in sim_pinnumber=9}
+B 5 -22.5 97.5 -17.5 102.5 {name=vb dir=in sim_pinnumber=10}
 T {@symname} -23 4 0 0 0.3 0.3 {}
 T {@name} 85 -102 0 0 0.2 0.2 {}
 T {vb} -24 75 3 0 0.2 0.2 {}

@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -77,16 +76,16 @@ N 750 -300 1160 -300 {
 lab=VGND}
 N 1160 -390 1160 -300 {
 lab=VGND}
-C {devices/ipin.sym} 220 -440 0 0 {name=p2 lab=vinj}
-C {devices/ipin.sym} 220 -420 0 0 {name=p3 lab=row_en_6v0_b}
-C {devices/ipin.sym} 220 -400 0 0 {name=p4 lab=vtun}
-C {devices/ipin.sym} 220 -380 0 0 {name=p5 lab=vctrl}
-C {devices/ipin.sym} 220 -360 0 0 {name=p6 lab=vsrc}
-C {devices/ipin.sym} 750 -520 0 0 {name=p8 lab=vb}
-C {devices/ipin.sym} 220 -300 0 0 {name=p9 lab=VGND}
-C {devices/opin.sym} 1240 -430 0 0 {name=p7 lab=vout}
-C {devices/iopin.sym} 770 -250 0 0 {name=p10 lab=vfg}
-C {devices/ipin.sym} 220 -500 0 0 {name=p11 lab=row_en_6v0}
+C {devices/ipin.sym} 220 -440 0 0 {name=p2 lab=vinj sim_pinnumber=3}
+C {devices/ipin.sym} 220 -420 0 0 {name=p3 lab=row_en_6v0_b sim_pinnumber=4}
+C {devices/ipin.sym} 220 -400 0 0 {name=p4 lab=vtun sim_pinnumber=6}
+C {devices/ipin.sym} 220 -380 0 0 {name=p5 lab=vctrl sim_pinnumber=2}
+C {devices/ipin.sym} 220 -360 0 0 {name=p6 lab=vsrc sim_pinnumber=5}
+C {devices/ipin.sym} 750 -520 0 0 {name=p8 lab=vb sim_pinnumber=10}
+C {devices/ipin.sym} 220 -300 0 0 {name=p9 lab=VGND sim_pinnumber=7}
+C {devices/opin.sym} 1240 -430 0 0 {name=p7 lab=vout sim_pinnumber=8}
+C {devices/iopin.sym} 770 -250 0 0 {name=p10 lab=vfg sim_pinnumber=1}
+C {devices/ipin.sym} 220 -500 0 0 {name=p11 lab=row_en_6v0 sim_pinnumber=9}
 C {devices/lab_wire.sym} 230 -500 0 1 {name=p12 sig_type=std_logic lab=row_en_6v0}
 C {devices/lab_wire.sym} 230 -420 0 1 {name=p13 sig_type=std_logic lab=row_en_6v0_b}
 C {devices/lab_wire.sym} 1170 -380 2 0 {name=p14 sig_type=std_logic lab=row_en_6v0}

@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -33,12 +32,6 @@ N 320 -390 320 -350 {
 lab=vfg}
 N 120 -350 200 -350 {
 lab=vtun}
-N 200 -390 210 -390 {
-lab=vtun}
-N 190 -390 200 -390 {
-lab=vtun}
-N 190 -390 190 -350 {
-lab=vtun}
 N 320 -350 320 -320 {
 lab=vfg}
 N 290 -280 290 -270 {
@@ -51,11 +44,11 @@ N 320 -280 320 -270 {
 lab=vctrl}
 N 120 -270 290 -270 {
 lab=vctrl}
-C {devices/ipin.sym} 120 -480 0 0 {name=p3 lab=vinj}
-C {devices/ipin.sym} 120 -430 0 0 {name=p4 lab=vinj_en_b}
-C {devices/ipin.sym} 120 -350 0 0 {name=p2 lab=vtun}
-C {devices/ipin.sym} 120 -270 0 0 {name=p1 lab=vctrl}
-C {devices/ipin.sym} 120 -220 0 0 {name=p5 lab=vsrc}
+C {devices/ipin.sym} 120 -480 0 0 {name=p3 lab=vinj sim_pinnumber=0}
+C {devices/ipin.sym} 120 -430 0 0 {name=p4 lab=vinj_en_b sim_pinnumber=1}
+C {devices/ipin.sym} 120 -350 0 0 {name=p2 lab=vtun sim_pinnumber=2}
+C {devices/ipin.sym} 120 -270 0 0 {name=p1 lab=vctrl sim_pinnumber=3}
+C {devices/ipin.sym} 120 -220 0 0 {name=p5 lab=vsrc sim_pinnumber=4}
 C {devices/ipin.sym} 120 -180 0 0 {name=p7 lab=VGND}
 C {devices/opin.sym} 330 -390 0 0 {name=p6 lab=vfg}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 400 -350 0 0 {name=M1
@@ -101,3 +94,5 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
+C {devices/lab_wire.sym} 120 -180 0 1 {name=p8 sig_type=std_logic lab=VGND}
+C {devices/lab_wire.sym} 210 -390 0 0 {name=p9 sig_type=std_logic lab=VGND}

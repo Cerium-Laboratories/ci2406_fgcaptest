@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -29,12 +28,12 @@ N 230 -400 230 -380 {
 lab=en_b}
 N 230 -100 230 -80 {
 lab=en}
-C {devices/ipin.sym} 120 -240 0 0 {name=p1 lab=vin}
-C {devices/opin.sym} 340 -240 0 0 {name=p2 lab=vout}
-C {devices/ipin.sym} 230 -80 3 0 {name=p3 lab=en}
-C {devices/ipin.sym} 230 -400 1 0 {name=p4 lab=en_b}
-C {devices/ipin.sym} 230 -300 3 0 {name=p5 lab=vdd}
-C {devices/ipin.sym} 230 -180 1 0 {name=p6 lab=vss}
+C {devices/ipin.sym} 120 -240 0 0 {name=p1 lab=vin sim_pinnumber=1}
+C {devices/opin.sym} 340 -240 0 0 {name=p2 lab=vout sim_pinnumber=2}
+C {devices/ipin.sym} 230 -80 3 0 {name=p3 lab=en sim_pinnumber=3}
+C {devices/ipin.sym} 230 -400 1 0 {name=p4 lab=en_b sim_pinnumber=4}
+C {devices/ipin.sym} 230 -300 3 0 {name=p5 lab=vdd sim_pinnumber=5}
+C {devices/ipin.sym} 230 -180 1 0 {name=p6 lab=vss sim_pinnumber=6}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 230 -120 1 1 {name=M1
 W=4
 L=0.5
