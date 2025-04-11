@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717642869
+timestamp 1744388948
 << error_s >>
 rect 2764 -1602 3004 -1578
 rect 2764 -1662 2788 -1602
@@ -51,6 +51,8 @@ rect 2764 -3902 3004 -3878
 rect 2764 -4094 2788 -3902
 rect 2980 -4094 3004 -3902
 rect 2764 -4118 3004 -4094
+<< poly >>
+rect 2388 -2420 2488 -2320
 << polycont >>
 rect 1526 -2396 1586 -2342
 << locali >>
@@ -93,6 +95,7 @@ rect 1510 -2415 1600 -2409
 rect 2484 -2328 2724 -2088
 rect 2884 -2178 3024 -2038
 rect 4126 -2118 4214 -2030
+rect 1950 -2766 2034 -2682
 rect 4258 -3254 4310 -3202
 rect 3786 -3442 3838 -3390
 rect 786 -4096 1302 -4020
@@ -126,6 +129,7 @@ rect 3142 -2482 3480 -2472
 rect 3142 -2566 3334 -2482
 rect 3470 -2566 3480 -2482
 rect 3142 -2576 3480 -2566
+rect 2884 -3758 2984 -3558
 rect 914 -3912 1114 -3902
 rect 914 -4014 924 -3912
 rect 780 -4020 924 -4014
@@ -249,17 +253,34 @@ rect 2460 -2328 2484 -2088
 rect 2724 -2328 2748 -2088
 rect 2460 -2352 2748 -2328
 use fgcell_amp  x1
-timestamp 1717628967
+timestamp 1740512921
 transform 1 0 384 0 1 3012
 box 140 -7210 4106 -4964
 << labels >>
+flabel poly 2388 -2420 2488 -2320 0 FreeSans 320 0 0 0 vfg
+port 1 nsew analog bidirectional
+flabel via1 1950 -2766 2034 -2682 0 FreeSans 320 0 0 0 vctrl
+port 2 nsew analog input
 flabel via3 924 -3378 1104 -3198 0 FreeSans 320 0 0 0 vdd
-flabel via4 2764 -1818 3004 -1578 0 FreeSans 320 0 0 0 VGND
+port 3 nsew power input
 flabel via3 2862 -2804 3042 -2624 0 FreeSans 320 0 0 0 vinj
-flabel via2 3334 -2566 3470 -2482 0 FreeSans 320 0 0 0 vsrc
-flabel via4 2764 -4118 3004 -3878 0 FreeSans 320 0 0 0 VGND
-flabel via1 3786 -3442 3838 -3390 0 FreeSans 160 0 0 0 row_en
+port 3 nsew power input
 flabel via1 4258 -3254 4310 -3202 0 FreeSans 160 0 0 0 row_en_b
+port 4 nsew signal input
+flabel via2 3334 -2566 3470 -2482 0 FreeSans 320 0 0 0 vsrc
+port 5 nsew power input
 flabel via4 884 -2498 1124 -2258 0 FreeSans 480 0 0 0 vtun
+port 6 nsew power input
+flabel via4 2764 -1818 3004 -1578 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
+flabel via4 2764 -4118 3004 -3878 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
 flabel via4 2484 -2328 2724 -2088 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
+flabel metal3 4116 -2128 4224 -2020 0 FreeSans 320 0 0 0 vout
+port 8 nsew analog output
+flabel via1 3786 -3442 3838 -3390 0 FreeSans 160 0 0 0 row_en
+port 9 nsew signal input
+flabel metal2 2884 -3758 2984 -3558 0 FreeSans 480 90 0 0 vb
+port 10 nsew analog input
 << end >>

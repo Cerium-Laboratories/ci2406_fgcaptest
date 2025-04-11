@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717628967
+timestamp 1744390430
 << error_s >>
 rect 2122 -5050 2442 -4980
 rect 506 -5294 746 -5270
@@ -45,6 +45,7 @@ rect 2526 -7106 2550 -6914
 rect 2742 -7106 2766 -6914
 rect 2526 -7130 2766 -7106
 << poly >>
+rect 2004 -5432 2104 -5332
 rect 2907 -5477 3240 -5380
 rect 3140 -5864 3240 -5477
 rect 1336 -5964 3240 -5864
@@ -114,6 +115,8 @@ rect 2758 -5496 3142 -5486
 rect 2758 -5576 2992 -5496
 rect 3136 -5576 3142 -5496
 rect 2758 -5586 3142 -5576
+rect 1558 -5786 1658 -5686
+rect 2500 -6770 2600 -6570
 rect 1294 -6812 3240 -6806
 rect 1294 -6900 3140 -6812
 rect 3234 -6900 3240 -6812
@@ -214,12 +217,28 @@ timestamp 1717628967
 transform 0 -1 3100 -1 0 -6070
 box 20 -140 1140 2900
 << labels >>
-flabel metal3 3732 -5140 3840 -5032 0 FreeSans 32 0 0 0 vout
+flabel poly 2004 -5432 2104 -5332 0 FreeSans 320 0 0 0 vfg
+port 1 nsew analog bidirectional
+flabel metal2 1558 -5786 1658 -5686 0 FreeSans 320 0 0 0 vctrl
+port 2 nsew analog input
+flabel via3 506 -6350 686 -6170 0 FreeSans 320 0 0 0 vdd
+port 3 nsew power input
+flabel via3 2506 -5830 2686 -5650 0 FreeSans 320 0 0 0 vinj
+port 3 nsew power input
 flabel metal1 3402 -6458 3454 -6402 0 FreeSans 160 0 0 0 row_en_b
-flabel via1 3874 -6282 3926 -6226 0 FreeSans 160 0 0 0 row_en
+port 4 nsew signal input
+flabel via2 2992 -5576 3136 -5496 0 FreeSans 320 0 0 0 vsrc
+port 5 nsew power input
+flabel via4 506 -5510 746 -5270 0 FreeSans 480 0 0 0 vtun
+port 6 nsew power input
 flabel via4 2146 -5290 2386 -5050 0 FreeSans 320 0 0 0 VGND
-flabel via4 2526 -7130 2766 -6890 0 FreeSans 640 0 0 0 VGND
-flabel via2 2992 -5576 3136 -5496 0 FreeSans 320 0 0 0 VSRC
-flabel via3 2506 -5830 2686 -5650 0 FreeSans 160 0 0 0 vinj
-flabel via3 506 -6350 686 -6170 0 FreeSans 640 0 0 0 vdd
+port 7 nsew ground input
+flabel via4 2526 -7130 2766 -6890 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
+flabel metal3 3732 -5140 3840 -5032 0 FreeSans 320 0 0 0 vout
+port 8 nsew analog output
+flabel via1 3874 -6282 3926 -6226 0 FreeSans 160 0 0 0 row_en
+port 9 nsew signal input
+flabel metal2 2500 -6770 2600 -6570 0 FreeSans 480 90 0 0 vb
+port 10 nsew analog input
 << end >>

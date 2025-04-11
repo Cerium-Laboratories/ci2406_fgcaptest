@@ -51,6 +51,7 @@ rect 1282 -5864 2938 -5814
 rect 1282 -5964 1336 -5864
 rect 1282 -6014 2938 -5964
 << poly >>
+rect 2004 -5432 2104 -5332
 rect 2907 -5477 3240 -5380
 rect 3140 -5864 3240 -5477
 rect 2938 -5964 3240 -5864
@@ -130,6 +131,8 @@ rect 2758 -5494 3142 -5484
 rect 2758 -5578 2996 -5494
 rect 3132 -5578 3142 -5494
 rect 2758 -5588 3142 -5578
+rect 1558 -5786 1658 -5686
+rect 2500 -6770 2600 -6570
 rect 1294 -6812 3240 -6806
 rect 1294 -6900 3140 -6812
 rect 3234 -6900 3240 -6812
@@ -231,11 +234,28 @@ timestamp 1717628967
 transform 0 -1 3100 -1 0 -6070
 box 20 -140 1140 2900
 << labels >>
-flabel via2 2996 -5578 3132 -5494 0 FreeSans 320 0 0 0 vsrc
-flabel via4 2146 -5290 2386 -5050 0 FreeSans 320 0 0 0 VGND
-flabel via4 2426 -7130 2666 -6890 0 FreeSans 320 0 0 0 VGND
-flabel via4 506 -5510 746 -5270 0 FreeSans 320 0 0 0 vtun
+flabel poly 2004 -5432 2104 -5332 0 FreeSans 320 0 0 0 vfg
+port 1 nsew analog bidirectional
+flabel metal2 1558 -5786 1658 -5686 0 FreeSans 320 0 0 0 vctrl
+port 2 nsew analog input
 flabel via3 526 -6390 706 -6210 0 FreeSans 640 0 0 0 vdd
-flabel via1 3402 -6454 3454 -6402 0 FreeSans 32 0 0 0 row_en_b
-flabel via1 3868 -6262 3926 -6200 0 FreeSans 320 0 0 0 row_en
+port 3 nsew power input
+flabel via3 2506 -5830 2686 -5650 0 FreeSans 320 0 0 0 vinj
+port 3 nsew power input
+flabel via1 3402 -6454 3454 -6402 0 FreeSans 160 0 0 0 row_en_b
+port 4 nsew signal input
+flabel via2 2996 -5578 3132 -5494 0 FreeSans 320 0 0 0 vsrc
+port 5 nsew power input
+flabel via4 506 -5510 746 -5270 0 FreeSans 480 0 0 0 vtun
+port 6 nsew power input
+flabel via4 2146 -5290 2386 -5050 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
+flabel via4 2426 -7130 2666 -6890 0 FreeSans 320 0 0 0 VGND
+port 7 nsew ground input
+flabel metal3 3732 -5140 3840 -5032 0 FreeSans 320 0 0 0 vout
+port 8 nsew analog output
+flabel via1 3868 -6262 3926 -6200 0 FreeSans 160 0 0 0 row_en
+port 9 nsew signal input
+flabel metal2 2500 -6770 2600 -6570 0 FreeSans 480 90 0 0 vb
+port 10 nsew analog input
 << end >>

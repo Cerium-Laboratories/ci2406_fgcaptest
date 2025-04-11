@@ -1,0 +1,57 @@
+* NGSPICE file created from fgcell_amp_MOS_cap_thick_poly_cx.ext - technology: sky130A
+
+.subckt fgcell_amp_MOS_cap_thick_poly_cx vfg vctrl vdd row_en_b vsrc vtun VGND vout
++ row_en vb
+X0 a_2707_n5380# vfg vsrc vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.5
+X1 x2.int4 x2.int4 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X2 x2.v2 row_en vout VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X3 vdd x2.int4 x2.v2 vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X4 vinj row_en_b a_2707_n5380# vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.5
+X5 x2.v2 row_en vout VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X6 x2.v2 row_en_b vout vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X7 vout row_en x2.v2 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X8 vout row_en x2.v2 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X9 x2.int4 vfg x2.int1 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X10 x2.v2 row_en_b vout vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X11 x2.v2 row_en vout VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X12 vout row_en_b x2.v2 vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X13 x2.int1 x2.v2 x2.int3 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X14 vfg vtun VGND sky130_fd_pr__cap_var w=1 l=0.5
+X15 vout row_en_b x2.v2 vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X16 vout row_en x2.v2 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X17 vout row_en x2.v2 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X18 x2.int2 x2.int2 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X19 x2.v2 row_en_b vout vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X20 x2.v2 row_en vout VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X21 vout row_en_b x2.v2 vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X22 vout row_en_b x2.v2 vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X23 VGND x2.int2 x2.v2 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X24 x2.v2 row_en_b vout vinj sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X25 vctrl vfg vctrl vctrl sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.58 ps=5.16 w=1 l=0.5
+X26 x2.int2 x2.int3 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X27 x2.int1 vb x2.int5 VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.75 pd=4 as=0.375 ps=2 w=1.5 l=1
+X28 vdd x2.int3 x2.int3 vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+X29 x2.int5 vb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.75 ps=4 w=1.5 l=1
+C0 row_en vout 0.94621f
+C1 vdd x2.int4 0.5854f
+C2 x2.v2 x2.int3 0.93721f
+C3 row_en_b vinj 2.32518f
+C4 x2.int2 x2.int4 0.74292f
+C5 vout x2.v2 0.98693f
+C6 vfg vinj 1.29349f
+C7 vdd x2.int3 1.82136f
+C8 row_en_b x2.v2 0.97743f
+C9 row_en VGND 2.17951f
+C10 vb VGND 0.87111f
+C11 vfg VGND 3.111f
+C12 row_en_b VGND 0.9011f
+C13 vdd VGND 4.75734f
+C14 vctrl VGND 1.80487f
+C15 vtun VGND 1.79976f
+C16 vinj VGND 5.47482f
+C17 x2.v2 VGND 2.19243f
+C18 x2.int3 VGND 1.74817f
+C19 x2.int4 VGND 1.03619f
+C20 x2.int2 VGND 1.40678f
+.ends
+
