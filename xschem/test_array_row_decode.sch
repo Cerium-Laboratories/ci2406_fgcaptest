@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.7RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -13,8 +12,8 @@ ypos2=0.95428955
 divy=5
 subdivy=1
 unity=1
-x1=-1.0723554e-08
-x2=1.0730253e-06
+x1=0
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -46,8 +45,8 @@ ypos2=2.3397301
 divy=5
 subdivy=1
 unity=1
-x1=-1.0723554e-08
-x2=1.0730253e-06
+x1=0
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -78,8 +77,8 @@ ypos2=9.9447947
 divy=5
 subdivy=1
 unity=1
-x1=-1.0723554e-08
-x2=1.0730253e-06
+x1=0
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,15 +130,15 @@ w[29]
 w[30]
 w[31]"}
 B 2 3020 -1070 3820 -670 {flags=graph
-y1=-0.00042474076
-y2=0.00050473742
+y1=-0.00053
+y2=1.3e-05
 ypos1=0.27385214
 ypos2=4.979672
 divy=5
 subdivy=1
 unity=1
-x1=-1.0723554e-08
-x2=1.0730253e-06
+x1=0
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -158,19 +157,18 @@ hilight_wave=-1
 digital=0
 
 
-color="4 5"
-node="i(vpwr)
-i(vgnd)"}
+color=4
+node=i(vpwr)}
 B 2 3020 -670 3820 -270 {flags=graph
-y1=-2.6764632e-05
-y2=3.44936e-08
+y1=-2.1e-06
+y2=1.8e-08
 ypos1=0.27385214
 ypos2=4.979672
 divy=5
 subdivy=1
 unity=1
-x1=-1.0723554e-08
-x2=1.0730253e-06
+x1=0
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -193,6 +191,98 @@ color="4 5 6"
 node="\\"i(vpwr) 300n ravg()\\"
 \\"i(vpwr) avg()\\"
 \\"i(vpwr) 1.8 * 300n ravg()\\""}
+B 2 2220 -270 3020 130 {flags=graph
+y1=-0.029
+y2=1.9
+ypos1=-0.28828481
+ypos2=9.9447947
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+hilight_wave=-1
+
+
+digital=0
+
+color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
+node="w[0]
+w[1]
+w[2]
+w[3]
+w[4]
+w[5]
+w[6]
+w[7]
+w[8]
+w[9]
+w[10]
+w[11]
+w[12]
+w[13]
+w[14]
+w[15]
+w[16]
+w[17]
+w[18]
+w[19]
+w[20]
+w[21]
+w[22]
+w[23]
+w[24]
+w[25]
+w[26]
+w[27]
+w[28]
+w[29]
+w[30]
+w[31]"}
+B 2 3020 -270 3820 130 {flags=graph
+y1=-1.9e-05
+y2=1.9
+ypos1=0.27385214
+ypos2=4.979672
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+hilight_wave=-1
+
+
+digital=0
+
+
+color="4 5 6"
+node="a[0]
+x1.a[0].t0
+x1.VPWR.t58"}
 N 50 -70 50 -50 {
 lab=GND}
 N 150 -70 150 -60 {
@@ -234,26 +324,24 @@ lab=VPWR}
 N 50 -340 720 -340 {
 lab=VPWR}
 N 740 -350 740 -320 {
-lab=VGND}
+lab=GND}
 N 150 -320 740 -320 {
-lab=VGND}
+lab=GND}
 N 150 -320 150 -130 {
-lab=VGND}
+lab=GND}
 N 50 -340 50 -130 {
 lab=VPWR}
+N 150 -130 150 -70 {lab=GND}
 C {array_row_decode.sym} 730 -400 0 0 {name=x1}
 C {devices/vsource.sym} 50 -100 0 1 {name=vpwr value=1.8}
 C {devices/gnd.sym} 50 -50 0 0 {name=l1 lab=GND}
-C {devices/lab_wire.sym} 50 -60 2 1 {name=p25 sig_type=std_logic lab=GND}
 C {devices/lab_wire.sym} 50 -140 0 0 {name=p1 sig_type=std_logic lab=VPWR}
-C {devices/lab_wire.sym} 150 -140 0 0 {name=p2 sig_type=std_logic lab=VGND}
-C {devices/vsource.sym} 230 -100 0 0 {name=va0 value="0 pulse(0 \{VPWR\} 10n 1n 1n 10n 20n)"}
+C {devices/vsource.sym} 230 -100 0 0 {name=va0 value="0 pulse(0 \{VPWR\} \{PW/2\} 1n 1n \{PW/2\} \{PW\})"}
 C {devices/lab_wire.sym} 230 -140 0 0 {name=p3 sig_type=std_logic lab=a[0]}
-C {devices/vsource.sym} 150 -100 0 0 {name=vgnd value=0}
-C {devices/vsource.sym} 290 -130 0 0 {name=va1 value="0 pulse(0 \{VPWR\} 20n 1n 1n 20n 40n)"}
-C {devices/vsource.sym} 340 -160 0 0 {name=va2 value="0 pulse(0 \{VPWR\} 40n 1n 1n 40n 80n)"}
-C {devices/vsource.sym} 390 -190 0 0 {name=va3 value="0 pulse(0 \{VPWR\} 80n 1n 1n 80n 160n)"}
-C {devices/vsource.sym} 440 -220 0 0 {name=va4 value="0 pulse(0 \{VPWR\} 160n 1n 1n 160n 320n)"}
+C {devices/vsource.sym} 290 -130 0 0 {name=va1 value="0 pulse(0 \{VPWR\} \{2*PW/2\} 1n 1n \{2*PW/2\} \{2*PW\})"}
+C {devices/vsource.sym} 340 -160 0 0 {name=va2 value="0 pulse(0 \{VPWR\} \{4*PW/2\} 1n 1n \{4*PW/2\} \{4*PW\})"}
+C {devices/vsource.sym} 390 -190 0 0 {name=va3 value="0 pulse(0 \{VPWR\} \{8*PW/2\} 1n 1n \{8*PW/2\} \{8*PW\})"}
+C {devices/vsource.sym} 440 -220 0 0 {name=va4 value="0 pulse(0 \{VPWR\} \{16*PW/2\} 1n 1n \{16*PW/2\} \{16*PW\})"}
 C {devices/lab_wire.sym} 290 -170 0 0 {name=p4 sig_type=std_logic lab=a[1]}
 C {devices/lab_wire.sym} 340 -200 0 0 {name=p5 sig_type=std_logic lab=a[2]}
 C {devices/lab_wire.sym} 390 -230 0 0 {name=p6 sig_type=std_logic lab=a[3]}
@@ -279,8 +367,10 @@ C {devices/simulator_commands.sym} 1130 -170 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=true 
 value="
+.include ../../spice/pex/rcx/array_row_decode.spice
 .param VPWR=1.8
 .param VSS=0
+.param PW=1u
 .options savecurrents
 .control
   save all
@@ -288,10 +378,11 @@ value="
   remzerovec 
   write test_array_row_decode.raw
   set appendwrite
+
   * tran
-  tran 1n 1u
+  tran 10n 50u
   remzerovec
   write test_array_row_decode.raw
 .endc
 "}
-C {devices/parax_cap.sym} 880 -370 0 0 {name=C1[31:0] gnd=0 value=10f m=1}
+C {devices/parax_cap.sym} 880 -370 0 0 {name=C1[31:0] gnd=GND value=10f m=1}
